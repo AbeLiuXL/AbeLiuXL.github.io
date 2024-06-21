@@ -83,7 +83,7 @@
 
 ---
 
-## Contact Information
+## Other Information
 
 - Email: xiaoliang_liu@smail.nju.edu.cn
 - Address: Room 426, Building of Computer Science and Technology, Xianlin Campus of Nanjing University
