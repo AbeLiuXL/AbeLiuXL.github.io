@@ -15,7 +15,7 @@
 [Department of Computer Science and Technology, Nanjing University](https://cs.nju.edu.cn/main.htm) | [National Key Laboratory for Novel Software Technology](https://keysoftlab.nju.edu.cn/main.htm) | [Robotics Intelligence and Neural Computing (RINC) Research Group](https://cs.nju.edu.cn/rinc/index.html)
 
 ## Latest Updates
-
+- 2024-08-20: "RADAP: A Robust and Adaptive Defense Against Diverse Adversarial Patches on Face Recognition" accepted by *Pattern Recognition*.
 - 2024-06-20: Successfully graduated with a PhD.
 - 2024-05-23: Successfully passed the PhD dissertation defense.
 - 2024-03-31: Updated the paper link.
@@ -47,11 +47,11 @@
 2. **Xiaoliang Liu**, Furao Shen, Jian Zhao and Changhai Nie. Self-supervised learning of monocular 3D geometry understanding with two-and three-view geometric constraints [J]. The Visual Computer, 2024, 40(2): 1193-1204. [Paper](https://link.springer.com/article/10.1007/s00371-023-02840-y) (CCF-C, SCI, JCR-Q2)
 3. **Xiaoliang Liu**, Furao Shen, Jian Zhao and Changhai Nie. EAP: An effective black-box impersonation adversarial patch attack method on face recognition in the physical world [J]. Neurocomputing, 2024: 127517. [Paper](https://www.sciencedirect.com/science/article/abs/pii/S0925231224002881) (CCF-C, SCI, JCR-Q2)
 4. **Xiaoliang Liu**, Furao Shen, Jian Zhao and Changhai Nie. RandoMix: a mixed sample data augmentation method with multiple mixed modes [J]. Multimedia Tools and Applications, 2024: 1-17. [Paper](https://link.springer.com/article/10.1007/s11042-024-18868-8) (CCF-C, SCI, JCR-Q2)
-
+5. **Xiaoliang Liu**, Furao Shen, Jian Zhao, Changhai Nie. "RADAP: A Robust and Adaptive Defense Against Diverse Adversarial Patches on Face Recognition." Pattern Recognition (2024): 110915. [<a href="https://arxiv.org/abs/2311.17339" target="_blank" style="color:rgb(0, 110, 175);">Paper</a>] (CCF-B，SCI，JCR-Q1)
 ### Submitted Papers:
 
 1. **Xiaoliang Liu**, Furao Shen, Feng Han, Jian Zhao and Changhai Nie. NeRFTAP: Enhancing transferability of adversarial patches on face recognition using neural radiance fields [J]. arXiv preprint arXiv:2311.17332, 2023. [Paper](https://arxiv.org/abs/2311.17332) (CCF-B, SCI, Under Review)
-2. **Xiaoliang Liu**, Furao Shen, Jian Zhao and Changhai Nie. RADAP: A robust and adaptive defense against diverse adversarial patches on face recognition [J]. arXiv preprint arXiv:2311.17339, 2023. [Paper](https://arxiv.org/abs/2311.17339) (CCF-B, SCI, Under Review)
+
 
 ### Patents:
 
