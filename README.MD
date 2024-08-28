@@ -8,7 +8,7 @@
 
 ## Xiaoliang Liu
 
-**Email: xiaoliang_liu@smail.nju.edu.cn**
+**Email: 20249197@wzbc.edu.cn**
 
 **Homepage: [abeliuxl.github.io](https://abeliuxl.github.io)**
 
@@ -85,8 +85,8 @@
 
 ## Other Information
 
-- Email: xiaoliang_liu@smail.nju.edu.cn
-- Address: Room 426, Building of Computer Science and Technology, Xianlin Campus of Nanjing University
+- Email: 20249197@wzbc.edu.cn
+- Address: 
 - ORCiD: ![ORCID iD icon](https://orcid.org/sites/default/files/images/orcid_16x16.png) [https://orcid.org/0000-0002-3776-6929](https://orcid.org/0000-0002-3776-6929)
 - Web of Science: [KFQ-9516-2024](https://www.webofscience.com/wos/author/record/KFQ-9516-2024)
 - Google Scholar: [Xiaoliang Liu](https://scholar.google.com/citations?hl=zh-CN&user=Eg6rWc8AAAAJ)
