@@ -4,7 +4,7 @@
 
 [中文](https://abeliuxl.github.io/index_cn.html) | [English](https://abeliuxl.github.io)
 
-<img src="P3.jpeg" alt="Photo" width="150" height="200">
+<img src="P4.jpeg" alt="Photo" width="150" height="200">
 
 ## Xiaoliang Liu
 
@@ -70,7 +70,7 @@
 
 ---
 
-## Research Projects
+## Research Projectsr
 
 - State Grid Corporation of China Headquarters Science and Technology Project, Research and Application of Substation HD Video and Robot Joint Inspection Technology Based on Multi-Dimensional Image Intelligent Matching and Recognition, Project Number: 520950200009. (Participant)
 - Ministry of Science and Technology Major Project - the STI 2030-Major Projects of China, Efficient Learning Mechanism of Spiking Networks Based on Neural Plasticity and Brain-Inspired Intelligence System, Grant Nos: 2021ZD0201300. (Participant)
