@@ -49,6 +49,16 @@
 .text {
   flex: 1; /* 使图片和文本区域灵活伸缩 */
 }
+.custom-list {
+    list-style: none; /* 移除默认的列表标记 */
+    padding-left: 0; /* 移除默认的内边距 */
+  }
+  .custom-list li {
+    counter-increment: custom-counter; /* 定义一个计数器 */
+  }
+  .custom-list li::before {
+    content: "[" counter(custom-counter) "] "; /* 使用计数器的值，并添加方括号 */
+  }
     </style>
 </head>
 <body>
@@ -76,6 +86,7 @@
      <!--<img src="Picture1.png" alt="我的头像" width="100" height="140">-->
         
         <h2>最近动态</h2>
+        <li>2024-11-05: 完成并提交论文，“Region-Guided Attack on the Segment Anything Model (SAM)”。</li>
         <li>2024-08-20: "RADAP: A Robust and Adaptive Defense Against Diverse Adversarial Patches on Face Recognition." 被 Pattern Recognition 接收。 </li>
         <li>2024-06-20: 顺利博士毕业。</li>
         <li>2024-05-23: 顺利通过博士论文答辩。</li>
@@ -98,21 +109,24 @@
         </ul>
  <hr>
         <h2>科研成果</h2>
+        <ol class="custom-list">
         <h4>已录用论文：</h4>
-            <li>[1] <b>Xiaoliang Liu</b>, Furao Shen, Jian Zhao and Changhai Nie. AugRmixAT: A data processing and training method for improving multiple robustness and generalization performance [C]. IEEE International Conference on Multimedia and Expo (ICME). 2022: 1-6. [<a href="https://ieeexplore.ieee.org/document/9859665" target="_blank" style="color:rgb(0, 110, 175);">Paper</a>] (CCF-B类会议，EI索引)
-</li>
-            <li>[2] <b>Xiaoliang Liu</b>, Furao Shen, Jian Zhao and Changhai Nie. Self-supervised learning of monocular 3D geometry understanding with two-and three-view geometric constraints[J]. The Visual Computer, 2024, 40(2): 1193-1204. [<a href="https://link.springer.com/article/10.1007/s00371-023-02840-y" target="_blank" style="color:rgb(0, 110, 175);">Paper</a>] (CCF-C类期刊，SCI索引，JCR-Q2，中科院3区)</li>
-            <li>[3] <b>Xiaoliang Liu</b>, Furao Shen, Jian Zhao and Changhai Nie. EAP: An effective black-box impersonation adversarial patch attack method on face recognition in the physical world[J]. Neurocomputing, 2024: 127517. [<a href="https://www.sciencedirect.com/science/article/abs/pii/S0925231224002881" target="_blank" style="color:rgb(0, 110, 175);">Paper</a>] (CCF-C类期刊，SCI索引，JCR-Q2，中科院2区，TOP)</li>
-            <li>[4] <b>Xiaoliang Liu</b>, Furao Shen, Jian Zhao and Changhai Nie. RandoMix: a mixed sample data augmentation method with multiple mixed modes[J]. Multimedia Tools and Applications, 2024: 1-17. [<a href="https://link.springer.com/article/10.1007/s11042-024-18868-8" target="_blank" style="color:rgb(0, 110, 175);">Paper</a>] (CCF-C类期刊，SCI索引，JCR-Q2，中科院4区)</li>
-            <li>[5] <b>Xiaoliang Liu</b>, Furao Shen, Jian Zhao, Changhai Nie. RADAP: A Robust and Adaptive Defense Against Diverse Adversarial Patches on Face Recognition[J]. Pattern Recognition (2024): 110915. [<a href="https://www.sciencedirect.com/science/article/abs/pii/S0031320324006666" target="_blank" style="color:rgb(0, 110, 175);">Paper</a>] (CCF-B类期刊，SCI索引，JCR-Q1，中科院1区，TOP)</li>
+            <li> <b>Xiaoliang Liu</b>, Furao Shen, Jian Zhao, Changhai Nie. RADAP: A Robust and Adaptive Defense Against Diverse Adversarial Patches on Face Recognition[J]. Pattern Recognition (2024): 110915. [<a href="https://www.sciencedirect.com/science/article/abs/pii/S0031320324006666" target="_blank" style="color:rgb(0, 110, 175);">Paper</a>] (CCF-B类期刊，SCI索引，JCR-Q1，中科院1区，TOP)</li>
+            <li> <b>Xiaoliang Liu</b>, Furao Shen, Jian Zhao and Changhai Nie. EAP: An effective black-box impersonation adversarial patch attack method on face recognition in the physical world[J]. Neurocomputing, 2024: 127517. [<a href="https://www.sciencedirect.com/science/article/abs/pii/S0925231224002881" target="_blank" style="color:rgb(0, 110, 175);">Paper</a>] (CCF-C类期刊，SCI索引，JCR-Q2，中科院2区，TOP)</li>
+            <li> <b>Xiaoliang Liu</b>, Furao Shen, Jian Zhao and Changhai Nie. Self-supervised learning of monocular 3D geometry understanding with two-and three-view geometric constraints[J]. The Visual Computer, 2024, 40(2): 1193-1204. [<a href="https://link.springer.com/article/10.1007/s00371-023-02840-y" target="_blank" style="color:rgb(0, 110, 175);">Paper</a>] (CCF-C类期刊，SCI索引，JCR-Q2，中科院3区)</li>
+            <li><b>Xiaoliang Liu</b>, Furao Shen, Jian Zhao and Changhai Nie. RandoMix: a mixed sample data augmentation method with multiple mixed modes[J]. Multimedia Tools and Applications, 2024: 1-17. [<a href="https://link.springer.com/article/10.1007/s11042-024-18868-8" target="_blank" style="color:rgb(0, 110, 175);">Paper</a>] (CCF-C类期刊，SCI索引，JCR-Q2，中科院4区)</li>
+            <li> <b>Xiaoliang Liu</b>, Furao Shen, Jian Zhao and Changhai Nie. AugRmixAT: A data processing and training method for improving multiple robustness and generalization performance [C]. IEEE International Conference on Multimedia and Expo (ICME). 2022: 1-6. [<a href="https://ieeexplore.ieee.org/document/9859665" target="_blank" style="color:rgb(0, 110, 175);">Paper</a>] (CCF-B类会议，EI索引)</li>
+
         <h4>在投论文：</h4>
-            <li>[6] <b>Xiaoliang Liu</b>, Furao Shen, Feng Han, Jian Zhao and Changhai Nie. NeRFTAP: Enhancing transferability of adversarial patches on face recognition using neural radiance fields[J]. arXiv preprint arXiv:2311.17332, 2023. [<a href="https://arxiv.org/abs/2311.17332" target="_blank" style="color:rgb(0, 110, 175);">Paper</a>] (CCF-B类期刊，Under Review)</li>
+            <li> <b>Xiaoliang Liu</b>, Furao Shen, Feng Han, Jian Zhao and Changhai Nie. NeRFTAP: Enhancing transferability of adversarial patches on face recognition using neural radiance fields[J]. arXiv preprint arXiv:2311.17332, 2023. [<a href="https://arxiv.org/abs/2311.17332" target="_blank" style="color:rgb(0, 110, 175);">Paper</a>] (CCF-B类期刊，SCI，Under Review)</li>
+            <li> <b>Xiaoliang Liu</b>, Furao Shen and Jian Zhao. Region-Guided Attack on the Segment Anything Model (SAM)[J]. arXiv preprint arXiv:2311.17332, 2023. [<a href="https://arxiv.org/abs/2411.02974" target="_blank" style="color:rgb(0, 110, 175);">Paper</a>] (CCF-B类期刊，SCI，Under Review)</li>
 
         <h4>发明专利：</h4>
-            <li>[7] 申富饶,高可攀, <b>刘小亮</b>,等.一种融合UWB和LiDAR的室内定位方法:202011520518[P] [2024-02-28]. (核心算法的提出)</li>
+            <li> 申富饶,高可攀, <b>刘小亮</b>,等.一种融合UWB和LiDAR的室内定位方法:202011520518[P] [2024-02-28]. (核心算法的提出)</li>
 
         <h4>专著：</h4>
-            <li>[8] 申富饶.自组织增量学习神经网络[M].电子工业出版社,2023年09月第一版. (负责第一章)</li>
+            <li> 申富饶.自组织增量学习神经网络[M].电子工业出版社,2023年09月第一版. (负责第一章)</li>
+        </ol>
  <hr>
         <h2>获奖情况</h2>
         <li>2022年08月-2023年03月，首届粤港澳大湾区（黄埔）国际算法算例大赛，深度学习模型的对抗鲁棒防御算法，入围决赛奖。（单人成队）</li>
