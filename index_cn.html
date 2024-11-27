@@ -60,6 +60,21 @@
   .custom-list li::before {
     content: "[" counter(custom-counter) "] "; /* 使用计数器的值，并添加方括号 */
   }
+   .navbar {
+            background-color: #343a40; /* 更改背景颜色 */
+        }
+        .navbar-nav .nav-link {
+            color: rgb(0, 110, 175); /* 更改链接颜色 */
+            font-size: 1.2em; /* 调整字体大小 */
+            margin: 0 15px; /* 调整间距 */
+            padding: 10px 20px; /* 调整内边距 */
+            border-radius: 20px; /* 胶囊式圆角 */
+            transition: background-color 0.3s ease; /* 平滑过渡效果 */
+        }
+        .navbar-nav .nav-link:hover {
+            color: #343a40; /* 鼠标悬停时的链接颜色 */
+            background-color: #ffcc00; /* 鼠标悬停时的背景颜色 */
+        }
     </style>
 </head>
 <body>
@@ -68,7 +83,7 @@
         <h2><a href="https://abeliuxl.github.io" style="color:rgb(0, 110, 175);text-decoration: none;">主页</a> | <a href="https://docs.qq.com/doc/p/574325869aa45ac6bbe9dc1f5b49e9630a873435" style="color:rgb(0, 110, 175);text-decoration: none;" target="_blank">对抗攻击</a> | <a href="https://docs.qq.com/doc/p/a3fa47e29419471627ef8e4b5385a322fee84f42" style="color:rgb(0, 110, 175);text-decoration: none;" target="_blank">对抗防御（鲁棒性）</a> </h2>
         <p><a href="index_cn.html">中文</a> | <a href="index.html">English</a></p>
     </header>
-   <nav class="navbar navbar-expand-lg navbar-light bg-light">
+   <nav class="navbar navbar-expand-lg navbar-light bg-light  ">
     <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
