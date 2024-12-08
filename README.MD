@@ -4,8 +4,7 @@
 
 [中文](https://abeliuxl.github.io/index_cn.html) | [English](https://abeliuxl.github.io)
 
-<img src="P4.jpeg" alt="Photo" width="150" height="200">
-
+![Photo](./P4.jpeg)
 ## Xiaoliang Liu
 
 **Email: 20249197@wzbc.edu.cn**
