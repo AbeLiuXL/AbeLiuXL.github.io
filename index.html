@@ -28,6 +28,23 @@
         height: 220px; /* 设置header的高度 */
         text-align: center;
         padding: 50px;
+        position: relative; /* 设置相对定位，以便伪元素可以绝对定位 */
+        overflow: hidden; /* 防止伪元素溢出header */
+    }
+    header::after {
+    content: ''; /* 伪元素需要内容 */
+    position: absolute; /* 绝对定位 */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3); /* 透明灰色层，0.5是50%透明度 */
+    z-index: 1; /* 确保灰色层在背景图之上，但低于文字 */
+    }
+
+    header * { /* 选择header内的所有元素 */
+        position: relative; /* 相对定位 */
+        z-index: 2; /* 确保所有元素都在灰色层之上 */
     }
     .separator {
             display: inline-block;
