@@ -23,6 +23,11 @@
 
 ---
 
+## Author Biography
+Xiaoliang Liu completed his B.Sc. in Communication Engineering at Fujian University of Technology in 2014, followed by M.Sc. and Ph.D. degrees in Computer Science and Technology from Nanjing University in 2018 and 2024, respectively, under the supervision of Prof. Furao Shen. He is currently an Associate Professor in the School of Information Engineering at Wenzhou Business College. His research focuses on neural network security, adversarial machine learning, and computer vision. 
+
+---
+
 ## Education
 
 - **2018.09 - 2024.06**: Nanjing University, Ph.D. in Computer Science and Technology, Member of RINC Group, Supervisor: Prof. Furao Shen
