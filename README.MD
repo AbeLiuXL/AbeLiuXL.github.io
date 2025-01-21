@@ -5,7 +5,7 @@
 [中文](https://abeliuxl.github.io/index_cn.html) | [English](https://abeliuxl.github.io)
 
 ![Photo](./P4.jpeg)
-## Xiaoliang Liu
+## Xiaoliang Liu (Ph.D., Associate Professor)
 
 **Email: 20249197@wzbc.edu.cn**
 
