@@ -57,7 +57,7 @@ Xiaoliang Liu completed his B.Sc. in Communication Engineering at Fujian Univers
 ### Submitted Papers:
 
 1. **Xiaoliang Liu**, Furao Shen, Feng Han, Jian Zhao and Changhai Nie. NeRFTAP: Enhancing transferability of adversarial patches on face recognition using neural radiance fields [J]. arXiv preprint arXiv:2311.17332, 2023. [Paper](https://arxiv.org/abs/2311.17332) (CCF-B, SCI, Under Review)
-2. **Xiaoliang Liu**, Furao Shen and Jian Zhao. Region-Guided Attack on the Segment Anything Model (SAM)[J]. arXiv preprint arXiv:2411.02974, 2024. [<a href="https://arxiv.org/abs/2411.02974" target="_blank" style="color:rgb(0, 110, 175);">Paper</a>] (SCI，Submitted to Journal)
+2. **Xiaoliang Liu**, Furao Shen and Jian Zhao. Region-Guided Attack on the Segment Anything Model (SAM)[J]. arXiv preprint arXiv:2411.02974, 2024. [<a href="https://arxiv.org/abs/2411.02974" target="_blank" style="color:rgb(0, 110, 175);">Paper</a>] (SCI，Under Review)
 
 
 ### Patents:
