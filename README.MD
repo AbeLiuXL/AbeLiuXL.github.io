@@ -4,7 +4,8 @@
 
 [中文](https://abeliuxl.github.io/index_cn.html) | [English](https://abeliuxl.github.io)
 
-![Photo](./P4.jpeg)
+<img src="./P4.jpeg" alt="Photo" style="max-width: 150px; height: auto;">
+
 ## Xiaoliang Liu (Ph.D., Associate Professor)
 **Memberships: IEEE Member, CCF Member**
 
@@ -12,7 +13,6 @@
 
 **Homepage: [abeliuxl.github.io](https://abeliuxl.github.io)**
 
-[comment]: <> ([Department of Computer Science and Technology, Nanjing University]&#40;https://cs.nju.edu.cn/main.htm&#41; | [National Key Laboratory for Novel Software Technology]&#40;https://keysoftlab.nju.edu.cn/main.htm&#41; | [Robotics Intelligence and Neural Computing &#40;RINC&#41; Research Group]&#40;https://cs.nju.edu.cn/rinc/index.html&#41;)
  **Affiliations:** [School of Information Engineering, Wenzhou Business College](https://zsw.wzbc.edu.cn/Col/Col855/Index.aspx)  | [Robotics Intelligence and Neural Computing (RINC) Research Group, Nanjing University](https://cs.nju.edu.cn/rinc/index.html) 
 
 ## Latest Updates
