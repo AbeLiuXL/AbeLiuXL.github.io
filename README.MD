@@ -16,6 +16,7 @@
  **Affiliations:** [School of Information Engineering, Wenzhou Business College](https://zsw.wzbc.edu.cn/Col/Col855/Index.aspx)  | [Robotics Intelligence and Neural Computing (RINC) Research Group, Nanjing University](https://cs.nju.edu.cn/rinc/index.html) 
 
 ## Latest Updates
+- 2025-03-01:  Released the Region-Guided Attack code.
 - 2024-11-05: Complete and submit the paper "Region-Guided Attack on the Segment Anything Model (SAM)".
 - 2024-08-20: "RADAP: A Robust and Adaptive Defense Against Diverse Adversarial Patches on Face Recognition" accepted by *Pattern Recognition*.
 - 2024-06-20: Successfully graduated with a PhD.
@@ -58,7 +59,7 @@ Xiaoliang Liu completed his B.Sc. in Communication Engineering at Fujian Univers
 ### Submitted Papers:
 
 1. **Xiaoliang Liu**, Furao Shen, Feng Han, Jian Zhao and Changhai Nie. NeRFTAP: Enhancing transferability of adversarial patches on face recognition using neural radiance fields [J]. arXiv preprint arXiv:2311.17332, 2023. [Paper](https://arxiv.org/abs/2311.17332) (CCF-B, SCI, Under Review)
-2. **Xiaoliang Liu**, Furao Shen and Jian Zhao. Region-Guided Attack on the Segment Anything Model (SAM)[J]. arXiv preprint arXiv:2411.02974, 2024. [<a href="https://arxiv.org/abs/2411.02974" target="_blank" style="color:rgb(0, 110, 175);">Paper</a>] (SCI，Under Review)
+2. **Xiaoliang Liu**, Furao Shen and Jian Zhao. Region-Guided Attack on the Segment Anything Model (SAM)[J]. arXiv preprint arXiv:2411.02974, 2024. [<a href="https://arxiv.org/abs/2411.02974" target="_blank" style="color:rgb(0, 110, 175);">Paper</a>][<a href="https://github.com/AbeLiuXL/RGA" target="_blank" style="color:rgb(0, 110, 175);">Code</a>]  (SCI，Under Review)
 
 
 ### Patents:
