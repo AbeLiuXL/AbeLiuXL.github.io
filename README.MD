@@ -7,9 +7,8 @@
 <img src="./P4.jpeg" alt="Photo" style="max-width: 150px; height: auto;">
 
 ## Xiaoliang Liu (Ph.D., Associate Professor)
-**Memberships: IEEE Member, CCF Member**
-
 **Email: 20249197@wzbc.edu.cn**
+**Memberships: IEEE Member, CCF Member, Zhejiang Association for Youth Science and Technology Member**
 
 **Homepage: [abeliuxl.github.io](https://abeliuxl.github.io)**
 
