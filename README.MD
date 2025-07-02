@@ -89,6 +89,7 @@ Xiaoliang Liu completed his B.Sc. in Communication Engineering at Fujian Univers
 ## Research Services
 
 - IEEE Transactions on Circuits and Systems for Video Technology (TCSVT, Peer Reviewer)
+- Pattern Recognition (PR, Peer Reviewer)
 
 ---
 
