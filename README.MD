@@ -95,7 +95,7 @@ Xiaoliang Liu completed his B.Sc. in Communication Engineering at Fujian Univers
 
 ## Other Information
 
-- Email: 20249197@wzbc.edu.cn
+- Email: 20249197@wzbc.edu.cn; xiaoliang_liu@smail.nju.edu.cn
 - Address: Room 108, Zhiyou Building, North Campus of Wenzhou Business College, Chashan Higher Education Park, Wenzhou, China. 
 - ORCiD: ![ORCID iD icon](https://orcid.org/sites/default/files/images/orcid_16x16.png) [https://orcid.org/0000-0002-3776-6929](https://orcid.org/0000-0002-3776-6929)
 - Web of Science: [KFQ-9516-2024](https://www.webofscience.com/wos/author/record/KFQ-9516-2024)
