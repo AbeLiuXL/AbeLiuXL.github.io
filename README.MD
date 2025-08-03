@@ -15,6 +15,7 @@
  **Affiliations:** [School of Information Engineering, Wenzhou Business College](https://zsw.wzbc.edu.cn/Col/Col855/Index.aspx)  | [Robotics Intelligence and Neural Computing (RINC) Research Group, Nanjing University](https://cs.nju.edu.cn/rinc/index.html) 
 
 ## Latest Updates
+- 2025-08-03: Received the second place in the IJCAI 2025 Workshop Challenge (Rotary X-ray Prohibited Objects Detection).
 - 2025-03-17:  Selected as a member of the Big Data and Artificial Intelligence Committee at the Zhejiang Association for Youth Science and Technology.
 - 2025-03-01:  Released the Region-Guided Attack code.
 - 2024-11-05: Complete and submit the paper "Region-Guided Attack on the Segment Anything Model (SAM)".
@@ -74,7 +75,8 @@ Xiaoliang Liu completed his B.Sc. in Communication Engineering at Fujian Univers
 
 ## Awards
 
-- 2022.08 - 2023.03: The First Greater Bay Area (Huangpu) International Algorithm Competition, Adversarial Robustness Defense Algorithm for Deep Learning Models, Finalist Prize. (Individual Participation)
+- 2022.08 - 2023.03, The First Greater Bay Area (Huangpu) International Algorithm Competition, Adversarial Robustness Defense Algorithm for Deep Learning Models, Finalist Prize. (Individual Participation)
+- 2025.05 - 2025.07, IJCAI 2025 Workshop Challenge, Rotated X-ray Prohibited Items Detection, The Second Place. (Individual Participation)
 
 ---
 
