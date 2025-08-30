@@ -15,6 +15,7 @@
  **Affiliations:** [School of Information Engineering, Wenzhou Business College](https://zsw.wzbc.edu.cn/Col/Col855/Index.aspx)  | [Robotics Intelligence and Neural Computing (RINC) Research Group, Nanjing University](https://cs.nju.edu.cn/rinc/index.html) 
 
 ## Latest Updates
+- 2024-08-30: "Region-Guided Attack on the Segment Anything Model (SAM)" accepted by *Neural Networks*(CCF-B).
 - 2025-08-03: Received the second place in the IJCAI 2025（CCF-A）Workshop Challenge (Rotary X-ray Prohibited Objects Detection).
 - 2025-03-17:  Selected as a member of the Big Data and Artificial Intelligence Committee at the Zhejiang Association for Youth Science and Technology.
 - 2025-03-01:  Released the Region-Guided Attack code.
