@@ -110,5 +110,5 @@ Xiaoliang Liu completed his B.Sc. in Communication Engineering at Fujian Univers
 ---
 
 <footer style="text-align: center;">
-<p>Copyright &copy; 2023-2024 Xiaoliang Liu</p>
+<p>Copyright &copy; 2023-2025 Xiaoliang Liu</p>
 </footer>
