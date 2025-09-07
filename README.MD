@@ -4,7 +4,6 @@
 
 [中文](https://abeliuxl.github.io/index_cn.html) | [English](https://abeliuxl.github.io)
 
-<img src="./P4.jpeg" alt="Photo" style="max-width: 150px; height: auto;">
 
 ## Xiaoliang Liu (Ph.D., Associate Professor)
 **Email: 20249197@wzbc.edu.cn**
