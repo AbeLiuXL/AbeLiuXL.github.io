@@ -179,43 +179,54 @@
                     </div>
                 </div>
 
-                <!-- Professional Profile Card (Memberships + Contact) -->
-                <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:border-academic-200 transition-colors">
-                    <h3 class="text-sm font-bold text-slate-800 mb-4 flex items-center gap-2">
-                        <i class="ph-fill ph-identification-card text-academic-600 text-lg"></i> Professional Profile
-                    </h3>
+                 <!-- Contact & Professional Info Block (Wide Layout) -->
+                <div class="glass-card p-6 rounded-xl bg-white/80 border border-slate-200 shadow-sm">
                     <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
 
-                        <!-- Left: Memberships -->
-                        <div class="md:col-span-6 space-y-2">
-                            <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider block mb-2">Memberships</span>
+                        <!-- Memberships -->
+                        <div class="md:col-span-12 space-y-2">
+                            <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider flex items-center gap-2">
+                                <i class="ph-bold ph-certificate text-academic-600"></i> Professional Profile
+                            </h3>
                             <div class="flex flex-wrap gap-2">
-                                <span class="px-2 py-1 bg-slate-50 text-slate-700 text-xs font-semibold rounded border border-slate-200">IEEE Member</span>
-                                <span class="px-2 py-1 bg-slate-50 text-slate-700 text-xs font-semibold rounded border border-slate-200">CCF Member</span>
-                                <span class="px-2 py-1 bg-slate-50 text-slate-700 text-xs font-semibold rounded border border-slate-200">Zhejiang Assn. for Youth Sci-Tech</span>
+                                <span class="px-3 py-1 bg-white border border-slate-200 text-slate-700 text-xs font-semibold rounded-full shadow-sm hover:border-blue-300 transition-colors">
+                                    <span class="text-blue-600">●</span> IEEE Member
+                                </span>
+                                <span class="px-3 py-1 bg-white border border-slate-200 text-slate-700 text-xs font-semibold rounded-full shadow-sm hover:border-emerald-300 transition-colors">
+                                    <span class="text-emerald-600">●</span> CCF Member
+                                </span>
+                                <span class="px-3 py-1 bg-white border border-slate-200 text-slate-700 text-xs font-semibold rounded-full shadow-sm hover:border-purple-300 transition-colors">
+                                    <span class="text-purple-600">●</span> Zhejiang Assn. for Youth Sci-Tech
+                                </span>
                             </div>
                         </div>
 
-                        <!-- Right: Contact -->
-                        <div class="md:col-span-6 space-y-4 md:border-l md:border-slate-100 md:pl-6">
-                            <div>
-                                <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider block mb-2">Email</span>
-                                <div class="flex flex-col gap-1">
-                                    <a href="mailto:20249197@wzbc.edu.cn" class="text-sm font-medium text-academic-700 hover:underline">20249197@wzbc.edu.cn</a>
-                                    <a href="mailto:xiaoliang_liu@smail.nju.edu.cn" class="text-sm font-medium text-academic-700 hover:underline">xiaoliang_liu@smail.nju.edu.cn</a>
-                                </div>
-                            </div>
-                            <div>
-                                <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider block mb-2">Address</span>
-                                <p class="text-xs text-slate-600 leading-relaxed flex items-start gap-2">
-                                    <i class="ph-fill ph-map-pin text-slate-400 flex-shrink-0 mt-0.5"></i>
-                                    Room 220, Zhiyong Building, North Campus of Wenzhou Business College, Chashan Higher Education Park, Wenzhou, China.
-                                </p>
+                        <div class="md:col-span-12 border-t border-slate-100"></div>
+
+                        <!-- Email -->
+                        <div class="md:col-span-5 space-y-2">
+                            <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider flex items-center gap-2">
+                                <i class="ph-bold ph-envelope-simple text-academic-600"></i> Email
+                            </h3>
+                            <div class="flex flex-col gap-1">
+                                <a href="mailto:20249197@wzbc.edu.cn" class="text-sm font-medium text-slate-700 hover:text-academic-600 transition-colors">20249197@wzbc.edu.cn</a>
+                                <a href="mailto:xiaoliang_liu@smail.nju.edu.cn" class="text-sm font-medium text-slate-700 hover:text-academic-600 transition-colors">xiaoliang_liu@smail.nju.edu.cn</a>
                             </div>
                         </div>
 
+                        <!-- Address -->
+                        <div class="md:col-span-7 space-y-2">
+                            <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider flex items-center gap-2">
+                                <i class="ph-bold ph-map-pin text-academic-600"></i> Address
+                            </h3>
+                            <p class="text-sm text-slate-600 leading-relaxed">
+                                Room 220, Zhiyong Building, North Campus of Wenzhou Business College, Chashan Higher Education Park, Wenzhou, China.
+                            </p>
+                        </div>
                     </div>
                 </div>
+
+
 
                 <!-- Dashboard Grid -->
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
