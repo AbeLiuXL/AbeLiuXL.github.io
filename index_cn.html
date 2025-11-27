@@ -66,6 +66,12 @@
             border-color: #94a3b8;
         }
         .tag-badge { @apply px-2 py-0.5 rounded text-[10px] font-bold border; }
+
+        /* Custom Scrollbar for News */
+        .custom-scroll::-webkit-scrollbar { width: 4px; }
+        .custom-scroll::-webkit-scrollbar-track { background: #f1f5f9; }
+        .custom-scroll::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+        .custom-scroll::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
     </style>
 </head>
 <body class="bg-grid-pattern min-h-screen flex flex-col">
@@ -86,7 +92,7 @@
                     <a href="#about" class="text-sm font-medium text-slate-600 hover:text-academic-800 transition-colors">关于我</a>
                     <a href="#publications" class="text-sm font-medium text-slate-600 hover:text-academic-800 transition-colors">发表论文</a>
                     <a href="#projects" class="text-sm font-medium text-slate-600 hover:text-academic-800 transition-colors">科研项目</a>
-                    <a href="#awards" class="text-sm font-medium text-slate-600 hover:text-academic-800 transition-colors">奖项荣誉</a>
+                    <a href="#activities" class="text-sm font-medium text-slate-600 hover:text-academic-800 transition-colors">学术活动</a>
                     <!-- Language Switcher -->
                     <a href="index.html" class="flex items-center gap-1 px-3 py-1.5 text-xs font-bold text-slate-700 bg-white border border-slate-200 rounded-full hover:bg-slate-50 transition-all">
                         <i class="ph-bold ph-globe"></i> English
@@ -109,7 +115,7 @@
                             <img src="P4.jpeg" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iI2cbdjU1Ij48cGF0aCBkPSJNMTIgMTJjMi4yMSAwIDQtMS43OSA0LTQocy0xLjc5LTQtNC00LTQgMS43OS00IDQgMS43OSA0IDQgNHptMCAyYy0yLjY3IDAtOCAxLjM0LTggNHYyaDE2di0yYzAtMi42Ni01LjMzLTQtOC00eiIvPjwvc3ZnPg=='" alt="刘小亮" class="w-full h-full object-cover bg-slate-100">
                         </div>
                         <h1 class="text-2xl font-bold text-slate-800">刘小亮 <span class="text-base font-normal text-slate-500">博士</span></h1>
-                        <p class="text-academic-600 font-medium text-sm mb-4">副教授</p>
+                        <p class="text-academic-600 font-medium text-sm mb-4">副教授 | 硕士生导师</p>
 
                         <div class="w-full space-y-3 text-sm text-slate-600 border-t border-slate-100 pt-4">
                             <div class="flex items-start gap-3">
@@ -131,7 +137,7 @@
                         <div class="grid grid-cols-2 gap-2 w-full mt-6">
                             <a href="https://scholar.google.com/citations?hl=zh-CN&user=Eg6rWc8AAAAJ" target="_blank" class="col-span-2 flex items-center justify-center gap-2 p-2 rounded-lg bg-slate-50 hover:bg-blue-50 hover:text-blue-600 transition-colors border border-slate-100 group/btn">
                                 <i class="ph-fill ph-graduation-cap text-xl group-hover/btn:scale-110 transition-transform"></i>
-                                <span class="text-xs font-bold uppercase">谷歌学术主页</span>
+                                <span class="text-xs font-bold uppercase">学术主页</span>
                             </a>
                             <a href="https://orcid.org/0000-0002-3776-6929" target="_blank" class="flex flex-col items-center justify-center p-2 rounded-lg bg-slate-50 hover:bg-green-50 hover:text-green-600 transition-colors border border-slate-100 group/btn">
                                 <i class="ph-bold ph-id-card text-xl mb-1 group-hover/btn:scale-110 transition-transform"></i>
@@ -156,7 +162,7 @@
                 <div class="prose prose-slate max-w-none">
                     <h2 class="text-2xl font-bold text-slate-800 mb-4">个人简介</h2>
                     <p class="text-slate-600 leading-relaxed">
-                        <b>刘小亮</b>，博士毕业于南京大学计算机科学与技术专业，导师为<b>申富饶教授</b>。现任温州商学院信息工程学院副教授。此前于2018年在南京大学获得硕士学位。
+                        <b>刘小亮</b>，博士毕业于南京大学计算机科学与技术专业（2024），师从<b>申富饶教授</b>。现任温州商学院信息工程学院副教授。此前于2018年在南京大学获得硕士学位。
                     </p>
                     <p class="text-slate-600 leading-relaxed mt-2">
                         作为南京大学机器人智能与神经计算（RINC）研究组成员，他主要致力于<b>人工智能安全</b>与<b>计算机视觉</b>的交叉领域研究。具体研究兴趣包括对抗机器学习、深度神经网络鲁棒性及防御算法设计，旨在提升AI系统在开放环境下的安全性与可靠性。
@@ -168,9 +174,10 @@
                     </div>
                 </div>
 
-                <!-- Contact & Memberships Block (Chinese) -->
+                <!-- Contact & Professional Info Block (Wide Layout) -->
                 <div class="glass-card p-6 rounded-xl bg-white/80 border border-slate-200 shadow-sm">
                     <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+
                         <!-- Memberships -->
                         <div class="md:col-span-12 space-y-2">
                             <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider flex items-center gap-2">
@@ -346,29 +353,58 @@
         </div>
     </section>
 
-    <!-- Awards (Full Width) -->
-    <section id="awards" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-2xl font-bold text-slate-900 mb-8 flex items-center gap-3">
-            <div class="w-1 h-8 bg-academic-600 rounded-full"></div>
-            奖项荣誉
-        </h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div class="flex items-center gap-4 bg-white p-5 rounded-xl border border-slate-100 shadow-sm transition-all hover:shadow-md group">
-                <div class="bg-yellow-100 text-yellow-600 w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 shadow-inner group-hover:scale-110 transition-transform"><i class="ph-fill ph-medal text-2xl"></i></div>
-                <div>
-                    <h4 class="text-base font-bold text-slate-800">亚军</h4>
-                    <p class="text-sm font-medium text-academic-600">IJCAI 2025 Workshop Challenge</p>
-                    <p class="text-xs text-slate-500 mt-1">Rotated X-ray Prohibited Items Detection (单人成队)</p>
+    <!-- Academic Activities (Services & Awards) -->
+    <section id="activities" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+
+            <!-- Academic Services -->
+            <div>
+                <h2 class="text-xl font-bold text-slate-900 mb-6 flex items-center gap-2">
+                    <i class="ph-fill ph-pencil-circle text-academic-600"></i> 学术服务
+                </h2>
+                <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm space-y-4">
+                    <div class="flex items-start gap-3">
+                        <i class="ph-fill ph-check-circle text-academic-500 text-xl mt-0.5"></i>
+                        <div>
+                            <h4 class="text-sm font-bold text-slate-800">期刊审稿人</h4>
+                            <p class="text-sm text-slate-600">IEEE Transactions on Circuits and Systems for Video Technology (TCSVT)</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3 border-t border-slate-50 pt-4">
+                        <i class="ph-fill ph-check-circle text-academic-500 text-xl mt-0.5"></i>
+                        <div>
+                            <h4 class="text-sm font-bold text-slate-800">期刊审稿人</h4>
+                            <p class="text-sm text-slate-600">Pattern Recognition (PR)</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="flex items-center gap-4 bg-white p-5 rounded-xl border border-slate-100 shadow-sm transition-all hover:shadow-md group">
-                <div class="bg-orange-100 text-orange-600 w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 shadow-inner group-hover:scale-110 transition-transform"><i class="ph-fill ph-certificate text-2xl"></i></div>
-                <div>
-                    <h4 class="text-base font-bold text-slate-800">入围决赛奖</h4>
-                    <p class="text-sm font-medium text-academic-600">首届粤港澳大湾区国际算法算例大赛</p>
-                    <p class="text-xs text-slate-500 mt-1">深度学习模型的对抗鲁棒防御算法 (单人成队)</p>
+
+            <!-- Honors & Awards -->
+            <div>
+                <h2 class="text-xl font-bold text-slate-900 mb-6 flex items-center gap-2">
+                    <i class="ph-fill ph-trophy text-academic-600"></i> 奖项荣誉
+                </h2>
+                <div class="space-y-4">
+                    <div class="flex items-center gap-4 bg-white p-5 rounded-xl border border-slate-100 shadow-sm transition-all hover:shadow-md group">
+                        <div class="bg-yellow-100 text-yellow-600 w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 shadow-inner group-hover:scale-110 transition-transform"><i class="ph-fill ph-medal text-2xl"></i></div>
+                        <div>
+                            <h4 class="text-base font-bold text-slate-800">亚军</h4>
+                            <p class="text-sm font-medium text-academic-600">IJCAI 2025 Workshop Challenge</p>
+                            <p class="text-xs text-slate-500 mt-1">Rotated X-ray Prohibited Items Detection (单人成队)</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4 bg-white p-5 rounded-xl border border-slate-100 shadow-sm transition-all hover:shadow-md group">
+                        <div class="bg-orange-100 text-orange-600 w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 shadow-inner group-hover:scale-110 transition-transform"><i class="ph-fill ph-certificate text-2xl"></i></div>
+                        <div>
+                            <h4 class="text-base font-bold text-slate-800">入围决赛奖</h4>
+                            <p class="text-sm font-medium text-academic-600">首届粤港澳大湾区国际算法算例大赛</p>
+                            <p class="text-xs text-slate-500 mt-1">深度学习模型的对抗鲁棒防御算法 (单人成队)</p>
+                        </div>
+                    </div>
                 </div>
             </div>
+
         </div>
     </section>
 

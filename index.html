@@ -69,12 +69,12 @@
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
             border-color: #94a3b8;
         }
-        /* Timeline Line */
-        .timeline-item::before {
-            content: ''; position: absolute; left: -25px; top: 0; bottom: 0; width: 2px; background: #e2e8f0;
-        }
-        .timeline-item:last-child::before { bottom: 50%; }
         .tag-badge { @apply px-2 py-0.5 rounded text-[10px] font-bold border; }
+
+        .custom-scroll::-webkit-scrollbar { width: 4px; }
+        .custom-scroll::-webkit-scrollbar-track { background: #f1f5f9; }
+        .custom-scroll::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+        .custom-scroll::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
     </style>
 </head>
 <body class="bg-grid-pattern min-h-screen flex flex-col">
@@ -95,7 +95,7 @@
                     <a href="#about" class="text-sm font-medium text-slate-600 hover:text-academic-800 transition-colors">About</a>
                     <a href="#publications" class="text-sm font-medium text-slate-600 hover:text-academic-800 transition-colors">Publications</a>
                     <a href="#projects" class="text-sm font-medium text-slate-600 hover:text-academic-800 transition-colors">Projects</a>
-                    <a href="#awards" class="text-sm font-medium text-slate-600 hover:text-academic-800 transition-colors">Awards</a>
+                    <a href="#activities" class="text-sm font-medium text-slate-600 hover:text-academic-800 transition-colors">Activities</a>
                     <!-- Language Switcher -->
                     <a href="index_cn.html" class="flex items-center gap-1 px-3 py-1.5 text-xs font-bold text-slate-700 bg-white border border-slate-200 rounded-full hover:bg-slate-50 transition-all">
                         <i class="ph-bold ph-translate"></i> 中文
@@ -109,7 +109,7 @@
     <header id="about" class="pt-32 pb-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
 
-            <!-- Left Profile (Simplified) -->
+            <!-- LEFT COLUMN: Full Profile Info -->
             <div class="lg:col-span-4 flex flex-col gap-6">
                 <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 relative overflow-hidden group">
                     <div class="absolute top-0 left-0 w-full h-24 bg-slate-800 z-0"></div>
@@ -117,49 +117,49 @@
                         <div class="w-32 h-32 rounded-full border-4 border-white shadow-lg bg-slate-200 overflow-hidden mb-4">
                             <img src="P4.jpeg" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iI2cbdjU1Ij48cGF0aCBkPSJNMTIgMTJjMi4yMSAwIDQtMS43OSA0LTQocy0xLjc5LTQtNC00LTQgMS43OS00IDQgMS43OSA0IDQgNHptMCAyYy0yLjY3IDAtOCAxLjM0LTggNHYyaDE2di0yYzAtMi42Ni01LjMzLTQtOC00eiIvPjwvc3ZnPg=='" alt="Xiaoliang Liu" class="w-full h-full object-cover bg-slate-100">
                         </div>
-                        <h1 class="text-2xl font-bold text-slate-800">Xiaoliang Liu <span class="text-base font-normal text-slate-500">Ph.D.</span></h1>
-                        <p class="text-academic-600 font-medium text-sm mb-4">Associate Professor</p>
+                        <h1 class="text-2xl font-bold text-slate-800 text-center">Xiaoliang Liu <span class="text-base font-normal text-slate-500 block">Ph.D.</span></h1>
+                        <p class="text-academic-600 font-medium text-sm mt-1">Associate Professor</p>
 
-                        <div class="w-full space-y-3 text-sm text-slate-600 border-t border-slate-100 pt-4">
+                        <div class="w-full space-y-3 text-sm text-slate-600 border-t border-slate-100 pt-4 mt-2">
                             <div class="flex items-start gap-3">
-                                <i class="ph-fill ph-bank text-academic-600 mt-0.5 text-lg"></i>
-                                <div>
+                                <i class="ph-fill ph-bank text-academic-600 mt-0.5 text-lg flex-shrink-0"></i>
+                                <div class="leading-tight">
                                     <a href="https://zsw.wzbc.edu.cn/Col/Col855/Index.aspx" target="_blank" class="hover:text-academic-800 hover:underline block font-semibold text-slate-700">Wenzhou Business College</a>
                                     <span class="text-xs text-slate-500">School of Information Engineering</span>
                                 </div>
                             </div>
                             <div class="flex items-start gap-3">
-                                <i class="ph-fill ph-flask text-academic-600 mt-0.5 text-lg"></i>
-                                <div>
+                                <i class="ph-fill ph-flask text-academic-600 mt-0.5 text-lg flex-shrink-0"></i>
+                                <div class="leading-tight">
                                     <a href="https://ai.nju.edu.cn/rinc/index.html" target="_blank" class="hover:text-academic-800 hover:underline block font-semibold text-slate-700">Nanjing University</a>
-                                    <span class="text-xs text-slate-500">Robotic Intelligence & Neural Computing Group</span>
+                                    <span class="text-xs text-slate-500">RINC Group</span>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="grid grid-cols-2 gap-2 w-full mt-6">
-                            <a href="https://scholar.google.com/citations?hl=zh-CN&user=Eg6rWc8AAAAJ" target="_blank" class="col-span-2 flex items-center justify-center gap-2 p-2 rounded-lg bg-slate-50 hover:bg-blue-50 hover:text-blue-600 transition-colors border border-slate-100 group/btn">
-                                <i class="ph-fill ph-graduation-cap text-xl group-hover/btn:scale-110 transition-transform"></i>
+                        <div class="grid grid-cols-2 gap-2 w-full mt-6 pt-4 border-t border-slate-100">
+                            <a href="https://scholar.google.com/citations?hl=zh-CN&user=Eg6rWc8AAAAJ" target="_blank" class="col-span-2 flex items-center justify-center gap-2 p-2 rounded-lg hover:bg-blue-50 hover:text-blue-600 transition-colors border border-slate-100 group/btn" title="Google Scholar">
+                                <i class="ph-fill ph-graduation-cap text-xl text-slate-600 group-hover/btn:text-blue-600"></i>
                                 <span class="text-xs font-bold uppercase">Google Scholar</span>
                             </a>
-                            <a href="https://orcid.org/0000-0002-3776-6929" target="_blank" class="flex flex-col items-center justify-center p-2 rounded-lg bg-slate-50 hover:bg-green-50 hover:text-green-600 transition-colors border border-slate-100 group/btn">
-                                <i class="ph-bold ph-id-card text-xl mb-1 group-hover/btn:scale-110 transition-transform"></i>
-                                <span class="text-[10px] font-bold uppercase">ORCiD</span>
+                            <a href="https://orcid.org/0000-0002-3776-6929" target="_blank" class="flex flex-col items-center justify-center p-2 rounded-lg hover:bg-green-50 hover:text-green-600 transition-colors border border-slate-100 group/btn" title="ORCiD">
+                                <i class="ph-bold ph-id-card text-xl text-slate-600 group-hover/btn:text-green-600"></i>
+                                <span class="text-[10px] font-bold uppercase mt-1">ORCiD</span>
                             </a>
-                            <a href="https://www.webofscience.com/wos/author/record/KFQ-9516-2024" target="_blank" class="flex flex-col items-center justify-center p-2 rounded-lg bg-slate-50 hover:bg-purple-50 hover:text-purple-600 transition-colors border border-slate-100 group/btn">
-                                <i class="ph-bold ph-globe text-xl mb-1 group-hover/btn:scale-110 transition-transform"></i>
-                                <span class="text-[10px] font-bold uppercase">Web of Sci</span>
+                            <a href="https://www.webofscience.com/wos/author/record/KFQ-9516-2024" target="_blank" class="flex flex-col items-center justify-center p-2 rounded-lg hover:bg-purple-50 hover:text-purple-600 transition-colors border border-slate-100 group/btn" title="Web of Science">
+                                <i class="ph-bold ph-globe text-xl text-slate-600 group-hover/btn:text-purple-600"></i>
+                                <span class="text-[10px] font-bold uppercase mt-1">WOS</span>
                             </a>
-                            <a href="https://github.com/abeliuxl" target="_blank" class="flex flex-col items-center justify-center p-2 rounded-lg bg-slate-50 hover:bg-slate-200 hover:text-black transition-colors border border-slate-100 group/btn">
-                                <i class="ph-fill ph-github-logo text-xl mb-1 group-hover/btn:scale-110 transition-transform"></i>
-                                <span class="text-[10px] font-bold uppercase">GitHub</span>
+                            <a href="https://github.com/abeliuxl" target="_blank" class="col-span-2 flex flex-col items-center justify-center p-2 rounded-lg hover:bg-slate-50 hover:text-black transition-colors border border-slate-100 group/btn" title="GitHub">
+                                <i class="ph-fill ph-github-logo text-xl text-slate-600 group-hover/btn:text-black"></i>
+                                <span class="text-[10px] font-bold uppercase mt-1">GitHub</span>
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Right Content -->
+            <!-- RIGHT COLUMN: Main Content -->
             <div class="lg:col-span-8 space-y-8">
 
                 <!-- Bio -->
@@ -179,50 +179,41 @@
                     </div>
                 </div>
 
-                <!-- NEW: Contact & Memberships Block (Wide Layout) -->
-                <div class="glass-card p-6 rounded-xl bg-white/80 border border-slate-200 shadow-sm">
+                <!-- Professional Profile Card (Memberships + Contact) -->
+                <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:border-academic-200 transition-colors">
+                    <h3 class="text-sm font-bold text-slate-800 mb-4 flex items-center gap-2">
+                        <i class="ph-fill ph-identification-card text-academic-600 text-lg"></i> Professional Profile
+                    </h3>
                     <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
-                        <!-- Memberships -->
-                        <div class="md:col-span-12 space-y-2">
-                            <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider flex items-center gap-2">
-                                <i class="ph-bold ph-certificate text-academic-600"></i> Memberships
-                            </h3>
+
+                        <!-- Left: Memberships -->
+                        <div class="md:col-span-6 space-y-2">
+                            <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider block mb-2">Memberships</span>
                             <div class="flex flex-wrap gap-2">
-                                <span class="px-3 py-1 bg-white border border-slate-200 text-slate-700 text-xs font-semibold rounded-full shadow-sm hover:border-blue-300 transition-colors">
-                                    <span class="text-blue-600">●</span> IEEE Member
-                                </span>
-                                <span class="px-3 py-1 bg-white border border-slate-200 text-slate-700 text-xs font-semibold rounded-full shadow-sm hover:border-emerald-300 transition-colors">
-                                    <span class="text-emerald-600">●</span> CCF Member
-                                </span>
-                                <span class="px-3 py-1 bg-white border border-slate-200 text-slate-700 text-xs font-semibold rounded-full shadow-sm hover:border-purple-300 transition-colors">
-                                    <span class="text-purple-600">●</span> Zhejiang Association for Youth Science and Technology Member
-                                </span>
+                                <span class="px-2 py-1 bg-slate-50 text-slate-700 text-xs font-semibold rounded border border-slate-200">IEEE Member</span>
+                                <span class="px-2 py-1 bg-slate-50 text-slate-700 text-xs font-semibold rounded border border-slate-200">CCF Member</span>
+                                <span class="px-2 py-1 bg-slate-50 text-slate-700 text-xs font-semibold rounded border border-slate-200">Zhejiang Assn. for Youth Sci-Tech</span>
                             </div>
                         </div>
 
-                        <!-- Divider -->
-                        <div class="md:col-span-12 border-t border-slate-100"></div>
-
-                        <!-- Email -->
-                        <div class="md:col-span-5 space-y-2">
-                            <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider flex items-center gap-2">
-                                <i class="ph-bold ph-envelope-simple text-academic-600"></i> Email
-                            </h3>
-                            <div class="flex flex-col gap-1">
-                                <a href="mailto:20249197@wzbc.edu.cn" class="text-sm font-medium text-slate-700 hover:text-academic-600 transition-colors">20249197@wzbc.edu.cn</a>
-                                <a href="mailto:xiaoliang_liu@smail.nju.edu.cn" class="text-sm font-medium text-slate-700 hover:text-academic-600 transition-colors">xiaoliang_liu@smail.nju.edu.cn</a>
+                        <!-- Right: Contact -->
+                        <div class="md:col-span-6 space-y-4 md:border-l md:border-slate-100 md:pl-6">
+                            <div>
+                                <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider block mb-2">Email</span>
+                                <div class="flex flex-col gap-1">
+                                    <a href="mailto:20249197@wzbc.edu.cn" class="text-sm font-medium text-academic-700 hover:underline">20249197@wzbc.edu.cn</a>
+                                    <a href="mailto:xiaoliang_liu@smail.nju.edu.cn" class="text-sm font-medium text-academic-700 hover:underline">xiaoliang_liu@smail.nju.edu.cn</a>
+                                </div>
+                            </div>
+                            <div>
+                                <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider block mb-2">Address</span>
+                                <p class="text-xs text-slate-600 leading-relaxed flex items-start gap-2">
+                                    <i class="ph-fill ph-map-pin text-slate-400 flex-shrink-0 mt-0.5"></i>
+                                    Room 220, Zhiyong Building, North Campus of Wenzhou Business College, Chashan Higher Education Park, Wenzhou, China.
+                                </p>
                             </div>
                         </div>
 
-                        <!-- Address -->
-                        <div class="md:col-span-7 space-y-2">
-                            <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider flex items-center gap-2">
-                                <i class="ph-bold ph-map-pin text-academic-600"></i> Address
-                            </h3>
-                            <p class="text-sm text-slate-600 leading-relaxed">
-                                Room 220, Zhiyong Building, North Campus of Wenzhou Business College, Chashan Higher Education Park, Wenzhou, China.
-                            </p>
-                        </div>
                     </div>
                 </div>
 
@@ -304,7 +295,6 @@
                 Research Projects
             </h2>
             <div class="space-y-6">
-                <!-- Project Cards -->
                 <div class="glass-card p-6 rounded-xl border-l-4 border-academic-500 hover:shadow-lg transition-all hover:-translate-y-1">
                     <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-3">
                         <h4 class="text-lg font-bold text-slate-800 leading-snug flex items-center gap-2">
@@ -359,29 +349,58 @@
         </div>
     </section>
 
-    <!-- Awards (Full Width) -->
-    <section id="awards" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-2xl font-serif font-bold text-slate-900 mb-8 flex items-center gap-3">
-            <div class="w-1 h-8 bg-academic-600 rounded-full"></div>
-            Honors & Awards
-        </h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div class="flex items-center gap-4 bg-white p-5 rounded-xl border border-slate-100 shadow-sm transition-all hover:shadow-md group">
-                <div class="bg-yellow-100 text-yellow-600 w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 shadow-inner group-hover:scale-110 transition-transform"><i class="ph-fill ph-medal text-2xl"></i></div>
-                <div>
-                    <h4 class="text-base font-bold text-slate-800">Second Place</h4>
-                    <p class="text-sm font-medium text-academic-600">IJCAI 2025 Workshop Challenge</p>
-                    <p class="text-xs text-slate-500 mt-1">Rotated X-ray Prohibited Items Detection (Individual Participation)</p>
+    <!-- Academic Activities (Services & Awards) -->
+    <section id="activities" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+
+            <!-- Academic Services -->
+            <div>
+                <h2 class="text-xl font-bold text-slate-900 mb-6 flex items-center gap-2">
+                    <i class="ph-fill ph-pencil-circle text-academic-600"></i> Academic Services
+                </h2>
+                <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm space-y-4">
+                    <div class="flex items-start gap-3">
+                        <i class="ph-fill ph-check-circle text-academic-500 text-xl mt-0.5"></i>
+                        <div>
+                            <h4 class="text-sm font-bold text-slate-800">Peer Reviewer</h4>
+                            <p class="text-sm text-slate-600">IEEE Transactions on Circuits and Systems for Video Technology (TCSVT)</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3 border-t border-slate-50 pt-4">
+                        <i class="ph-fill ph-check-circle text-academic-500 text-xl mt-0.5"></i>
+                        <div>
+                            <h4 class="text-sm font-bold text-slate-800">Peer Reviewer</h4>
+                            <p class="text-sm text-slate-600">Pattern Recognition (PR)</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="flex items-center gap-4 bg-white p-5 rounded-xl border border-slate-100 shadow-sm transition-all hover:shadow-md group">
-                <div class="bg-orange-100 text-orange-600 w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 shadow-inner group-hover:scale-110 transition-transform"><i class="ph-fill ph-certificate text-2xl"></i></div>
-                <div>
-                    <h4 class="text-base font-bold text-slate-800">Finalist Prize</h4>
-                    <p class="text-sm font-medium text-academic-600">Greater Bay Area Int'l Algorithm Competition</p>
-                    <p class="text-xs text-slate-500 mt-1">Adversarial Robustness Defense Algorithm (Individual Participation)</p>
+
+            <!-- Honors & Awards -->
+            <div>
+                <h2 class="text-xl font-bold text-slate-900 mb-6 flex items-center gap-2">
+                    <i class="ph-fill ph-trophy text-academic-600"></i> Honors & Awards
+                </h2>
+                <div class="space-y-4">
+                    <div class="flex items-center gap-4 bg-white p-5 rounded-xl border border-slate-100 shadow-sm transition-all hover:shadow-md group">
+                        <div class="bg-yellow-100 text-yellow-600 w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 shadow-inner group-hover:scale-110 transition-transform"><i class="ph-fill ph-medal text-2xl"></i></div>
+                        <div>
+                            <h4 class="text-base font-bold text-slate-800">Second Place</h4>
+                            <p class="text-sm font-medium text-academic-600">IJCAI 2025 Workshop Challenge</p>
+                            <p class="text-xs text-slate-500 mt-1">Rotated X-ray Prohibited Items Detection</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4 bg-white p-5 rounded-xl border border-slate-100 shadow-sm transition-all hover:shadow-md group">
+                        <div class="bg-orange-100 text-orange-600 w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 shadow-inner group-hover:scale-110 transition-transform"><i class="ph-fill ph-certificate text-2xl"></i></div>
+                        <div>
+                            <h4 class="text-base font-bold text-slate-800">Finalist Prize</h4>
+                            <p class="text-sm font-medium text-academic-600">Greater Bay Area Int'l Algorithm Competition</p>
+                            <p class="text-xs text-slate-500 mt-1">Adversarial Robustness Defense Algorithm</p>
+                        </div>
+                    </div>
                 </div>
             </div>
+
         </div>
     </section>
 
@@ -392,7 +411,7 @@
     </footer>
 
     <script>
-        // Data and Scripts
+        // Data
         const news = [
             { date: "2025-08-30", text: "Paper \"Region-Guided Attack...\" accepted by <b>Neural Networks</b>." },
             { date: "2025-08-03", text: "Received 2nd Place in <b>IJCAI 2025</b> Workshop Challenge." },
@@ -441,6 +460,7 @@
             }
         ];
 
+        // Render News
         const newsContainer = document.getElementById('news-container');
         news.forEach(item => {
             const div = document.createElement('div');
@@ -449,10 +469,13 @@
             newsContainer.appendChild(div);
         });
 
+        // Render Papers
         function renderPapers(filter) {
             const list = document.getElementById('papers-list');
             list.innerHTML = '';
             const filtered = filter === 'all' ? papers : papers.filter(p => p.type === filter);
+
+            // Update Buttons
             document.querySelectorAll('.filter-btn').forEach(b => {
                 if(b.id === `btn-${filter}`) {
                     b.classList.add('bg-white', 'shadow-sm', 'text-slate-900');
@@ -462,20 +485,30 @@
                     b.classList.add('text-slate-600');
                 }
             });
+
             filtered.forEach(p => {
                 const tags = p.tags.map(t => `<span class="tag-badge ${t.c}">${t.t}</span>`).join('');
                 let links = '';
                 if(p.links.paper) links += `<a href="${p.links.paper}" class="text-xs font-bold text-academic-600 hover:underline mr-3">PDF</a>`;
                 if(p.links.arxiv) links += `<a href="${p.links.arxiv}" class="text-xs font-bold text-red-600 hover:underline mr-3">ArXiv</a>`;
                 if(p.links.code) links += `<a href="${p.links.code}" class="text-xs font-bold text-slate-600 hover:underline">Code</a>`;
+
                 const card = document.createElement('div');
                 card.className = "glass-card p-5 rounded-lg flex flex-col sm:flex-row gap-4 items-start hover:border-academic-200 transition-all";
-                card.innerHTML = `<div class="flex-1"><h3 class="text-base font-bold text-slate-800 mb-1">${p.title}</h3><p class="text-sm text-slate-500 mb-2">${p.authors.replace('Xiaoliang Liu', '<span class="font-semibold text-slate-900">Xiaoliang Liu</span>')}</p><div class="flex flex-wrap items-center gap-2 mb-2"><span class="font-serif italic text-slate-700 font-medium">${p.venue}, ${p.year}</span>${tags}</div><div class="flex items-center">${links}</div></div>`;
+                card.innerHTML = `
+                    <div class="flex-1">
+                        <h3 class="text-base font-bold text-slate-800 mb-1">${p.title}</h3>
+                        <p class="text-sm text-slate-500 mb-2">${p.authors.replace('Xiaoliang Liu', '<span class="font-semibold text-slate-900">Xiaoliang Liu</span>')}</p>
+                        <div class="flex flex-wrap items-center gap-2 mb-2"><span class="font-serif italic text-slate-700 font-medium">${p.venue}, ${p.year}</span>${tags}</div>
+                        <div class="flex items-center">${links}</div>
+                    </div>
+                `;
                 list.appendChild(card);
             });
         }
         renderPapers('all');
 
+        // Citation Chart (Mock Data)
         const ctx = document.getElementById('citationChart').getContext('2d');
         new Chart(ctx, {
             type: 'bar',
@@ -483,7 +516,7 @@
                 labels: ['2020', '2021', '2022', '2023', '2024', '2025'],
                 datasets: [{
                     label: 'Citations',
-                    data: [5, 12, 25, 38, 42, 6],
+                    data: [5, 12, 25, 38, 42, 6], // Sample data
                     backgroundColor: '#0284c7',
                     borderRadius: 2,
                     barThickness: 10
@@ -493,7 +526,10 @@
                 responsive: true,
                 maintainAspectRatio: false,
                 plugins: { legend: { display: false }, tooltip: { enabled: false } },
-                scales: { x: { display: false }, y: { display: false } },
+                scales: {
+                    x: { display: false },
+                    y: { display: false }
+                },
                 layout: { padding: 0 }
             }
         });
