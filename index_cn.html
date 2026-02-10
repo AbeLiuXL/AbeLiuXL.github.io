@@ -268,7 +268,7 @@
                         </div>
                         <div class="grid grid-cols-3 gap-2 mt-2 z-10">
                             <div class="flex flex-col items-center p-2 rounded-lg hover:bg-slate-50 transition-colors">
-                                <span class="text-3xl font-bold text-slate-800">77</span>
+                                <span class="text-3xl font-bold text-slate-800">80</span>
                                 <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mt-1">总引用</span>
                             </div>
                             <div class="flex flex-col items-center p-2 rounded-lg hover:bg-slate-50 transition-colors">
@@ -405,6 +405,13 @@
                             <p class="text-sm text-slate-600">Engineering Applications of Artificial Intelligence (EAAI，JCR-Q1，中科院一区，TOP)</p>
                         </div>
                     </div>
+                    <div class="flex items-start gap-3 border-t border-slate-50 pt-4">
+                        <i class="ph-fill ph-check-circle text-academic-500 text-xl mt-0.5"></i>
+                        <div>
+                            <h4 class="text-sm font-bold text-slate-800">期刊审稿人</h4>
+                            <p class="text-sm text-slate-600">Applied Soft Computing Journal (ASOC， JCR-Q1，中科院二区，TOP)</p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -483,7 +490,20 @@
                 type: "conference",
                 tags: [{t:"CCF-B",c:"bg-blue-50 text-blue-700 border-blue-100"}, {t:"EI",c:"bg-gray-100 text-gray-600"}],
                 links: { paper: "https://ieeexplore.ieee.org/document/9859665" }
+            },
+            {
+                title: "Self-supervised learning of monocular 3D geometry understanding with two-and three-view geometric constraints",
+                authors: "Xiaoliang Liu, Furao Shen*, Jian Zhao, Changhai Nie",
+                venue: "The Visual Computer",
+                type: 'journal',
+                year: "2024",
+                tags: [{t:"CCF-C",c:"bg-emerald-50 text-emerald-700 border-emerald-100"}, {t:"SCI Q2",c:"bg-blue-50 text-blue-700 border-blue-100"}],
+                links: {
+                    paper: "https://link.springer.com/article/10.1007/s00371-023-02840-y"
+                }
             }
+
+
         ];
 
         const newsContainer = document.getElementById('news-container');
