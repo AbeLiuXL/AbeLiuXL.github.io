@@ -545,9 +545,9 @@
             filtered.forEach(p => {
                 const tags = p.tags.map(t => `<span class="tag-badge ${t.c}">${t.t}</span>`).join('');
                 let links = '';
-                if(p.links.paper) links += `<a href="${p.links.paper}"  target="_blank" class="text-xs font-bold text-academic-600 hover:underline mr-3">PDF</a>`;
-                if(p.links.arxiv) links += `<a href="${p.links.arxiv}"  target="_blank" class="text-xs font-bold text-red-600 hover:underline mr-3">ArXiv</a>`;
-                if(p.links.code) links += `<a href="${p.links.code}"  target="_blank" class="text-xs font-bold text-slate-600 hover:underline">Code</a>`;
+                if(p.links.paper) links += `[<a href="${p.links.paper}"  target="_blank" class="text-xs font-bold text-academic-600 hover:underline mr-3">PDF</a>]`;
+                if(p.links.arxiv) links += `[<a href="${p.links.arxiv}"  target="_blank" class="text-xs font-bold text-red-600 hover:underline mr-3">ArXiv</a>]`;
+                if(p.links.code) links += `[<a href="${p.links.code}"  target="_blank" class="text-xs font-bold text-slate-600 hover:underline">Code</a>]`;
 
                 const card = document.createElement('div');
                 card.className = "glass-card p-5 rounded-lg flex flex-col sm:flex-row gap-4 items-start hover:border-academic-200 transition-all";
