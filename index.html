@@ -143,7 +143,20 @@
                         <p id="profile-position" class="text-academic-600 font-medium text-sm mt-1">Associate Professor</p>
 
                         <div class="w-full space-y-3 text-sm text-slate-600 border-t border-slate-100 pt-4 mt-2" id="profile-affiliations">
-                            <!-- JS Injected -->
+                            <div class="flex items-start gap-3">
+                                <i class="ph-fill ph-bank text-academic-600 mt-0.5 text-lg flex-shrink-0"></i>
+                                <div class="leading-tight">
+                                    <a href="https://zsw.wzbc.edu.cn/Col/Col855/Index.aspx" target="_blank" class="hover:text-academic-800 hover:underline block font-semibold text-slate-700">Wenzhou Business College</a>
+                                    <span class="text-xs text-slate-500">School of Information Engineering</span>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <i class="ph-fill ph-flask text-academic-600 mt-0.5 text-lg flex-shrink-0"></i>
+                                <div class="leading-tight">
+                                    <a href="https://ai.nju.edu.cn/rinc/index.html" target="_blank" class="hover:text-academic-800 hover:underline block font-semibold text-slate-700">Nanjing University</a>
+                                    <span class="text-xs text-slate-500">RINC Group</span>
+                                </div>
+                            </div>
                         </div>
 
                         <div class="grid grid-cols-2 gap-2 w-full mt-6 pt-4 border-t border-slate-100" id="profile-socials">
@@ -159,9 +172,15 @@
                 <!-- Bio -->
                 <div class="prose prose-slate max-w-none">
                     <h2 class="font-serif text-3xl font-bold text-slate-800 mb-4">Biography</h2>
-                    <div id="bio-paragraphs"><!-- JS Injected --></div>
+                    <div id="bio-paragraphs">
+                        <p class="text-slate-600 leading-relaxed">Xiaoliang Liu is currently an Associate Professor at the School of Information Engineering, Wenzhou Business College. He received his Ph.D. degree in Computer Science and Technology from Nanjing University in 2024, under the supervision of Prof. Furao Shen. Prior to that, he obtained his M.Sc. degree from the same institution in 2018.</p>
+                        <p class="text-slate-600 leading-relaxed mt-2">As a core member of the Robotic Intelligence and Neural Computing (RINC) Research Group, his research interests lie in <b>Artificial Intelligence Security</b>. He focuses specifically on developing robust deep neural networks and defending against adversarial attacks in open-world environments.</p>
+                    </div>
                     <div class="flex flex-wrap gap-2 mt-4" id="research-tags">
-                        <!-- JS Injected -->
+                        <span class="px-3 py-1 bg-academic-50 text-academic-700 text-xs font-bold rounded-full border border-academic-100">AI Security</span>
+                        <span class="px-3 py-1 bg-academic-50 text-academic-700 text-xs font-bold rounded-full border border-academic-100">Adversarial Learning</span>
+                        <span class="px-3 py-1 bg-academic-50 text-academic-700 text-xs font-bold rounded-full border border-academic-100">Computer Vision</span>
+                        <span class="px-3 py-1 bg-academic-50 text-academic-700 text-xs font-bold rounded-full border border-academic-100">Deep Neural Networks</span>
                     </div>
                 </div>
 
@@ -187,7 +206,8 @@
                                 <i class="ph-bold ph-envelope-simple text-academic-600"></i> Email
                             </h3>
                             <div class="flex flex-col gap-1" id="email-list">
-                                <!-- JS Injected -->
+                                <a href="mailto:20249197@wzbc.edu.cn" class="text-sm font-medium text-slate-700 hover:text-academic-600 transition-colors">20249197@wzbc.edu.cn</a>
+                                <a href="mailto:xiaoliang_liu@smail.nju.edu.cn" class="text-sm font-medium text-slate-700 hover:text-academic-600 transition-colors">xiaoliang_liu@smail.nju.edu.cn</a>
                             </div>
                         </div>
 
@@ -197,7 +217,7 @@
                                 <i class="ph-bold ph-map-pin text-academic-600"></i> Address
                             </h3>
                             <p id="address-text" class="text-sm text-slate-600 leading-relaxed">
-                                <!-- JS Injected -->
+                                Room 220, Zhiyong Building, North Campus of Wenzhou Business College, Chashan Higher Education Park, Wenzhou, China.
                             </p>
                         </div>
                     </div>
@@ -336,7 +356,8 @@
 
 
 
-    <script src="render.js"></script>
+    <script src="data.js"></script>
+        <script src="render.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => initPage('en'));
     </script>

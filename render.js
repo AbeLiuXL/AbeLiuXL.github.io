@@ -4,13 +4,8 @@
  * Call initPage('en') or initPage('zh') after DOM is ready.
  */
 
-let SITE_DATA = null;
-
-async function loadData() {
-    if (SITE_DATA) return SITE_DATA;
-    const resp = await fetch('data.json?t=' + Date.now());
-    SITE_DATA = await resp.json();
-    return SITE_DATA;
+function loadData() {
+    return window.SITE_DATA;
 }
 
 /* ---------- helper: get localized text ---------- */
@@ -19,38 +14,35 @@ function t(obj, lang) {
     return obj[lang] || obj['en'] || '';
 }
 
+/* ---------- helper: color class map (Tailwind CDN needs full class names) ---------- */
+const COLOR_MAP = {
+    academic: { border: 'border-academic-500', bg50: 'bg-academic-50', text700: 'text-academic-700', border100: 'border-academic-100', textIcon: 'text-academic-500', bg100: 'bg-academic-100', text600: 'text-academic-600' },
+    purple:   { border: 'border-purple-500', bg50: 'bg-purple-50', text700: 'text-purple-700', border100: 'border-purple-100', textIcon: 'text-purple-500', bg100: 'bg-purple-100', text600: 'text-purple-600' },
+    amber:    { border: 'border-amber-500', bg50: 'bg-amber-50', text700: 'text-amber-700', border100: 'border-amber-100', textIcon: 'text-amber-500', bg100: 'bg-amber-100', text600: 'text-amber-600' },
+    blue:     { border: 'border-blue-500', bg50: 'bg-blue-50', text700: 'text-blue-700', border100: 'border-blue-100', textIcon: 'text-blue-500', bg100: 'bg-blue-100', text600: 'text-blue-600' },
+    emerald:  { border: 'border-emerald-500', bg50: 'bg-emerald-50', text700: 'text-emerald-700', border100: 'border-emerald-100', textIcon: 'text-emerald-500', bg100: 'bg-emerald-100', text600: 'text-emerald-600' },
+    yellow:   { border: 'border-yellow-500', bg50: 'bg-yellow-50', text700: 'text-yellow-700', border100: 'border-yellow-100', textIcon: 'text-yellow-500', bg100: 'bg-yellow-100', text600: 'text-yellow-600' },
+    orange:   { border: 'border-orange-500', bg50: 'bg-orange-50', text700: 'text-orange-700', border100: 'border-orange-100', textIcon: 'text-orange-500', bg100: 'bg-orange-100', text600: 'text-orange-600' },
+};
+const MEMBERSHIP_COLOR = {
+    blue: { hover: 'hover:border-blue-300', dot: 'text-blue-600' },
+    emerald: { hover: 'hover:border-emerald-300', dot: 'text-emerald-600' },
+    purple: { hover: 'hover:border-purple-300', dot: 'text-purple-600' },
+};
+const AWARD_COLOR = {
+    yellow: { bg: 'bg-yellow-100', text: 'text-yellow-600' },
+    orange: { bg: 'bg-orange-100', text: 'text-orange-600' },
+};
+
 /* ---------- Profile Card ---------- */
 function renderProfile(d, lang) {
     const p = d.profile;
-    // Name & title
-    const nameEl = document.getElementById('profile-name');
-    const titleEl = document.getElementById('profile-title');
-    const posEl = document.getElementById('profile-position');
-    if (nameEl) nameEl.innerHTML = `${t(p.name, lang)} <span class="text-base font-normal text-slate-500 ${lang === 'zh' ? '' : 'block'}">${t(p.title, lang)}</span>`;
-    if (titleEl) titleEl.textContent = t(p.name, lang);
-    if (posEl) posEl.textContent = t(p.position, lang);
 
     // Photo
     const photoEl = document.getElementById('profile-photo');
     if (photoEl) photoEl.src = p.photo;
 
-    // Affiliations
-    const affContainer = document.getElementById('profile-affiliations');
-    if (affContainer) {
-        affContainer.innerHTML = '';
-        p.affiliations.forEach(a => {
-            affContainer.innerHTML += `
-                <div class="flex items-start gap-3">
-                    <i class="ph-fill ph-${a.icon} text-academic-600 mt-0.5 text-lg flex-shrink-0"></i>
-                    <div class="leading-tight">
-                        <a href="${a.url}" target="_blank" class="hover:text-academic-800 hover:underline block font-semibold text-slate-700">${t(a.name, lang)}</a>
-                        <span class="text-xs text-slate-500">${t(a.detail, lang)}</span>
-                    </div>
-                </div>`;
-        });
-    }
-
-    // Social links
+    // Social links (dynamic - not SEO critical)
     const socialContainer = document.getElementById('profile-socials');
     if (socialContainer) {
         socialContainer.innerHTML = '';
@@ -70,23 +62,8 @@ function renderProfile(d, lang) {
 
 /* ---------- Bio ---------- */
 function renderBio(d, lang) {
-    const container = document.getElementById('bio-paragraphs');
-    if (!container) return;
-    container.innerHTML = '';
-    const bios = lang === 'zh' ? d.bio.zh : d.bio.en;
-    bios.forEach((text, i) => {
-        container.innerHTML += `<p class="text-slate-600 leading-relaxed ${i > 0 ? 'mt-2' : ''}">${text}</p>`;
-    });
-
-    // Research tags
-    const tagContainer = document.getElementById('research-tags');
-    if (tagContainer) {
-        tagContainer.innerHTML = '';
-        const tags = lang === 'zh' ? d.research_tags.zh : d.research_tags.en;
-        tags.forEach(tag => {
-            tagContainer.innerHTML += `<span class="px-3 py-1 bg-academic-50 text-academic-700 text-xs font-bold rounded-full border border-academic-100">${tag}</span>`;
-        });
-    }
+    // Bio and research tags are now static in HTML for SEO
+    // This function is kept as a no-op placeholder for compatibility
 }
 
 /* ---------- Memberships ---------- */
@@ -96,24 +73,18 @@ function renderMemberships(d, lang) {
     container.innerHTML = '';
     const items = lang === 'zh' ? d.memberships.zh : d.memberships.en;
     items.forEach(m => {
+        const mc = MEMBERSHIP_COLOR[m.color] || MEMBERSHIP_COLOR.blue;
         container.innerHTML += `
-            <span class="px-3 py-1 bg-white border border-slate-200 text-slate-700 text-xs font-semibold rounded-full shadow-sm hover:border-${m.color}-300 transition-colors">
-                <span class="text-${m.color}-600">●</span> ${m.text}
+            <span class="px-3 py-1 bg-white border border-slate-200 text-slate-700 text-xs font-semibold rounded-full shadow-sm ${mc.hover} transition-colors">
+                <span class="${mc.dot}">●</span> ${m.text}
             </span>`;
     });
 }
 
 /* ---------- Contact ---------- */
 function renderContact(d, lang) {
-    const emailContainer = document.getElementById('email-list');
-    if (emailContainer) {
-        emailContainer.innerHTML = '';
-        d.profile.emails.forEach(e => {
-            emailContainer.innerHTML += `<a href="mailto:${e}" class="text-sm font-medium text-slate-700 hover:text-academic-600 transition-colors">${e}</a>`;
-        });
-    }
-    const addrEl = document.getElementById('address-text');
-    if (addrEl) addrEl.textContent = t(d.profile.address, lang);
+    // Email and address are now static in HTML for SEO
+    // This function is kept as a no-op placeholder for compatibility
 }
 
 /* ---------- Citation Stats ---------- */
@@ -215,18 +186,18 @@ function renderProjects(d, lang) {
     if (!container) return;
     container.innerHTML = '';
     d.projects.forEach(proj => {
-        const color = proj.color;
+        const c = COLOR_MAP[proj.color] || COLOR_MAP.academic;
         container.innerHTML += `
-            <div class="glass-card p-6 rounded-xl border-l-4 border-${color}-500 hover:shadow-lg transition-all hover:-translate-y-1">
+            <div class="glass-card p-6 rounded-xl border-l-4 ${c.border} hover:shadow-lg transition-all hover:-translate-y-1">
                 <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-3">
                     <h4 class="text-lg font-bold text-slate-800 leading-snug flex items-center gap-2">
                         ${t(proj.title, lang)}
                         <span class="hidden md:inline-block px-2 py-0.5 text-[10px] border border-slate-200 rounded text-slate-400 font-normal uppercase">${proj.id}</span>
                     </h4>
-                    <span class="text-xs bg-${color}-50 text-${color}-700 px-3 py-1 rounded-full font-bold border border-${color}-100 shadow-sm whitespace-nowrap flex items-center gap-1"><i class="ph-fill ph-users"></i> ${t(proj.role, lang)}</span>
+                    <span class="text-xs ${c.bg50} ${c.text700} px-3 py-1 rounded-full font-bold border ${c.border100} shadow-sm whitespace-nowrap flex items-center gap-1"><i class="ph-fill ph-users"></i> ${t(proj.role, lang)}</span>
                 </div>
                 <div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-slate-600 mb-3">
-                    <span class="flex items-center gap-1.5 font-medium"><i class="ph-bold ph-buildings text-${color}-500"></i> ${t(proj.funder, lang)}</span>
+                    <span class="flex items-center gap-1.5 font-medium"><i class="ph-bold ph-buildings ${c.textIcon}"></i> ${t(proj.funder, lang)}</span>
                     <span class="flex items-center gap-1.5"><i class="ph-bold ph-tag text-slate-400"></i> ${t(proj.type, lang)}</span>
                 </div>
                 <p class="text-sm text-slate-500 leading-relaxed">${t(proj.desc, lang)}</p>
@@ -260,9 +231,10 @@ function renderAwards(d, lang) {
     if (!container) return;
     container.innerHTML = '';
     d.awards.forEach(a => {
+        const ac = AWARD_COLOR[a.color] || AWARD_COLOR.yellow;
         container.innerHTML += `
             <div class="flex items-center gap-4 bg-white p-5 rounded-xl border border-slate-100 shadow-sm transition-all hover:shadow-md group">
-                <div class="bg-${a.color}-100 text-${a.color}-600 w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 shadow-inner group-hover:scale-110 transition-transform"><i class="ph-fill ph-${a.icon} text-2xl"></i></div>
+                <div class="${ac.bg} ${ac.text} w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 shadow-inner group-hover:scale-110 transition-transform"><i class="ph-fill ph-${a.icon} text-2xl"></i></div>
                 <div>
                     <h4 class="text-base font-bold text-slate-800">${t(a.title, lang)}</h4>
                     <p class="text-sm font-medium text-academic-600">${t(a.event, lang)}</p>
@@ -273,8 +245,8 @@ function renderAwards(d, lang) {
 }
 
 /* ---------- Master Init ---------- */
-async function initPage(lang) {
-    const d = await loadData();
+function initPage(lang) {
+    const d = loadData();
 
     renderProfile(d, lang);
     renderBio(d, lang);
@@ -291,8 +263,8 @@ async function initPage(lang) {
 }
 
 /* ---------- Publications Page ---------- */
-async function initPublicationsPage() {
-    const d = await loadData();
+function initPublicationsPage() {
+    const d = loadData();
     const rawData = d.full_publications;
 
     // Stats
