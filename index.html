@@ -137,47 +137,17 @@
                     <div class="absolute top-0 left-0 w-full h-24 bg-slate-800 z-0"></div>
                     <div class="relative z-10 flex flex-col items-center mt-8">
                         <div class="w-32 h-32 rounded-full border-4 border-white shadow-lg bg-slate-200 overflow-hidden mb-4">
-                            <img src="P4.jpeg" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iI2cbdjU1Ij48cGF0aCBkPSJNMTIgMTJjMi4yMSAwIDQtMS43OSA0LTQocy0xLjc5LTQtNC00LTQgMS43OS00IDQgMS43OSA0IDQgNHptMCAyYy0yLjY3IDAtOCAxLjM0LTggNHYyaDE2di0yYzAtMi42Ni01LjMzLTQtOC00eiIvPjwvc3ZnPg=='" alt="Xiaoliang Liu" class="w-full h-full object-cover bg-slate-100">
+                            <img id="profile-photo" src="P4.jpeg" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iI2cbdjU1Ij48cGF0aCBkPSJNMTIgMTJjMi4yMSAwIDQtMS43OSA0LTQocy0xLjc5LTQtNC00LTQgMS43OS00IDQgMS43OSA0IDQgNHptMCAyYy0yLjY3IDAtOCAxLjM0LTggNHYyaDE2di0yYzAtMi42Ni01LjMzLTQtOC00eiIvPjwvc3ZnPg=='" alt="Xiaoliang Liu" class="w-full h-full object-cover bg-slate-100">
                         </div>
-                        <h1 class="text-2xl font-bold text-slate-800 text-center">Xiaoliang Liu <span class="text-base font-normal text-slate-500 block">Ph.D.</span></h1>
-                        <p class="text-academic-600 font-medium text-sm mt-1">Associate Professor</p>
+                        <h1 id="profile-name" class="text-2xl font-bold text-slate-800 text-center">Xiaoliang Liu <span class="text-base font-normal text-slate-500 block">Ph.D.</span></h1>
+                        <p id="profile-position" class="text-academic-600 font-medium text-sm mt-1">Associate Professor</p>
 
-                        <div class="w-full space-y-3 text-sm text-slate-600 border-t border-slate-100 pt-4 mt-2">
-                            <div class="flex items-start gap-3">
-                                <i class="ph-fill ph-bank text-academic-600 mt-0.5 text-lg flex-shrink-0"></i>
-                                <div class="leading-tight">
-                                    <a href="https://zsw.wzbc.edu.cn/Col/Col855/Index.aspx" target="_blank" class="hover:text-academic-800 hover:underline block font-semibold text-slate-700">Wenzhou Business College</a>
-                                    <span class="text-xs text-slate-500">School of Information Engineering</span>
-                                </div>
-                            </div>
-                            <div class="flex items-start gap-3">
-                                <i class="ph-fill ph-flask text-academic-600 mt-0.5 text-lg flex-shrink-0"></i>
-                                <div class="leading-tight">
-                                    <a href="https://ai.nju.edu.cn/rinc/index.html" target="_blank" class="hover:text-academic-800 hover:underline block font-semibold text-slate-700">Nanjing University</a>
-                                    <span class="text-xs text-slate-500">RINC Group</span>
-                                </div>
-                            </div>
+                        <div class="w-full space-y-3 text-sm text-slate-600 border-t border-slate-100 pt-4 mt-2" id="profile-affiliations">
+                            <!-- JS Injected -->
                         </div>
 
-                        <div class="grid grid-cols-2 gap-2 w-full mt-6 pt-4 border-t border-slate-100">
-                            <a href="https://scholar.google.com/citations?hl=zh-CN&user=Eg6rWc8AAAAJ" target="_blank" class="col-span-2 flex items-center justify-center gap-2 p-2 rounded-lg hover:bg-blue-50 hover:text-blue-600 transition-colors border border-slate-100 group/btn" title="Google Scholar">
-                                <i class="ph-fill ph-graduation-cap text-xl text-slate-600 group-hover/btn:text-blue-600"></i>
-                                <span class="text-xs font-bold uppercase">Google Scholar</span>
-                            </a>
-                            <a href="https://orcid.org/0000-0002-3776-6929" target="_blank" class="flex flex-col items-center justify-center p-2 rounded-lg hover:bg-green-50 hover:text-green-600 transition-colors border border-slate-100 group/btn" title="ORCiD">
-                                <i class="ph-bold ph-credit-card text-xl text-slate-600 group-hover/btn:text-green-600"></i>
-                                <span class="text-[10px] font-bold uppercase mt-1">ORCiD</span>
-                            </a>
-                            <a href="https://www.webofscience.com/wos/author/record/KFQ-9516-2024" target="_blank" class="flex flex-col items-center justify-center p-2 rounded-lg hover:bg-purple-50 hover:text-purple-600 transition-colors border border-slate-100 group/btn" title="Web of Science">
-                                <i class="ph-bold ph-globe text-xl text-slate-600 group-hover/btn:text-purple-600"></i>
-                                <span class="text-[10px] font-bold uppercase mt-1">Web of Sci</span>
-                            </a>
-
-                            <a href="https://github.com/abeliuxl" target="_blank" class="col-span-2 flex items-center justify-center gap-2 p-2 rounded-lg hover:bg-blue-50 hover:text-blue-600 transition-colors border border-slate-100 group/btn" title="Google Scholar">
-                                <i class="ph-fill ph-github-logo text-xl text-slate-600 group-hover/btn:text-blue-600"></i>
-                                <span class="text-xs font-bold uppercase">GitHub</span>
-                            </a>
-
+                        <div class="grid grid-cols-2 gap-2 w-full mt-6 pt-4 border-t border-slate-100" id="profile-socials">
+                            <!-- JS Injected -->
                         </div>
                     </div>
                 </div>
@@ -189,17 +159,9 @@
                 <!-- Bio -->
                 <div class="prose prose-slate max-w-none">
                     <h2 class="font-serif text-3xl font-bold text-slate-800 mb-4">Biography</h2>
-                    <p class="text-slate-600 leading-relaxed">
-                        Xiaoliang Liu is currently an Associate Professor at the School of Information Engineering, Wenzhou Business College. He received his Ph.D. degree in Computer Science and Technology from Nanjing University in 2024, under the supervision of Prof. Furao Shen. Prior to that, he obtained his M.Sc. degree from the same institution in 2018.
-                    </p>
-                    <p class="text-slate-600 leading-relaxed mt-2">
-                        As a core member of the Robotic Intelligence and Neural Computing (RINC) Research Group, his research interests lie in <b>Artificial Intelligence Security</b> . He focuses specifically on developing robust deep neural networks and defending against adversarial attacks in open-world environments.
-                    </p>
-                    <div class="flex flex-wrap gap-2 mt-4">
-                        <span class="px-3 py-1 bg-academic-50 text-academic-700 text-xs font-bold rounded-full border border-academic-100">AI Security</span>
-                        <span class="px-3 py-1 bg-academic-50 text-academic-700 text-xs font-bold rounded-full border border-academic-100">Adversarial Learning</span>
-                        <span class="px-3 py-1 bg-academic-50 text-academic-700 text-xs font-bold rounded-full border border-academic-100">Computer Vision</span>
-                        <span class="px-3 py-1 bg-academic-50 text-academic-700 text-xs font-bold rounded-full border border-academic-100">Deep Neural Networks</span>
+                    <div id="bio-paragraphs"><!-- JS Injected --></div>
+                    <div class="flex flex-wrap gap-2 mt-4" id="research-tags">
+                        <!-- JS Injected -->
                     </div>
                 </div>
 
@@ -212,16 +174,8 @@
                             <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider flex items-center gap-2">
                                 <i class="ph-bold ph-certificate text-academic-600"></i> Professional Member
                             </h3>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="px-3 py-1 bg-white border border-slate-200 text-slate-700 text-xs font-semibold rounded-full shadow-sm hover:border-blue-300 transition-colors">
-                                    <span class="text-blue-600">●</span> IEEE Member
-                                </span>
-                                <span class="px-3 py-1 bg-white border border-slate-200 text-slate-700 text-xs font-semibold rounded-full shadow-sm hover:border-emerald-300 transition-colors">
-                                    <span class="text-emerald-600">●</span> CCF Member
-                                </span>
-                                <span class="px-3 py-1 bg-white border border-slate-200 text-slate-700 text-xs font-semibold rounded-full shadow-sm hover:border-purple-300 transition-colors">
-                                    <span class="text-purple-600">●</span> Zhejiang Assn. for Youth Sci-Tech
-                                </span>
+                            <div class="flex flex-wrap gap-2" id="memberships-list">
+                                <!-- JS Injected -->
                             </div>
                         </div>
 
@@ -232,9 +186,8 @@
                             <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider flex items-center gap-2">
                                 <i class="ph-bold ph-envelope-simple text-academic-600"></i> Email
                             </h3>
-                            <div class="flex flex-col gap-1">
-                                <a href="mailto:20249197@wzbc.edu.cn" class="text-sm font-medium text-slate-700 hover:text-academic-600 transition-colors">20249197@wzbc.edu.cn</a>
-                                <a href="mailto:xiaoliang_liu@smail.nju.edu.cn" class="text-sm font-medium text-slate-700 hover:text-academic-600 transition-colors">xiaoliang_liu@smail.nju.edu.cn</a>
+                            <div class="flex flex-col gap-1" id="email-list">
+                                <!-- JS Injected -->
                             </div>
                         </div>
 
@@ -243,8 +196,8 @@
                             <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider flex items-center gap-2">
                                 <i class="ph-bold ph-map-pin text-academic-600"></i> Address
                             </h3>
-                            <p class="text-sm text-slate-600 leading-relaxed">
-                                Room 220, Zhiyong Building, North Campus of Wenzhou Business College, Chashan Higher Education Park, Wenzhou, China.
+                            <p id="address-text" class="text-sm text-slate-600 leading-relaxed">
+                                <!-- JS Injected -->
                             </p>
                         </div>
                     </div>
@@ -278,15 +231,15 @@
                         </div>
                         <div class="grid grid-cols-3 gap-2 mt-2 z-10">
                             <div class="flex flex-col items-center p-2 rounded-lg hover:bg-slate-50 transition-colors">
-                                <span class="text-3xl font-bold text-slate-800">87</span>
+                                <span id="cite-total" class="text-3xl font-bold text-slate-800">--</span>
                                 <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mt-1">Citations</span>
                             </div>
                             <div class="flex flex-col items-center p-2 rounded-lg hover:bg-slate-50 transition-colors">
-                                <span class="text-3xl font-bold text-slate-800">5</span>
+                                <span id="cite-h" class="text-3xl font-bold text-slate-800">--</span>
                                 <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mt-1">h-index</span>
                             </div>
                             <div class="flex flex-col items-center p-2 rounded-lg hover:bg-slate-50 transition-colors">
-                                <span class="text-3xl font-bold text-slate-800">4</span>
+                                <span id="cite-i10" class="text-3xl font-bold text-slate-800">--</span>
                                 <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mt-1">i10-index</span>
                             </div>
                         </div>
@@ -329,57 +282,8 @@
                 <div class="w-1 h-8 bg-academic-600 rounded-full"></div>
                 Research Projects
             </h2>
-            <div class="space-y-6">
-                <div class="glass-card p-6 rounded-xl border-l-4 border-academic-500 hover:shadow-lg transition-all hover:-translate-y-1">
-                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-3">
-                        <h4 class="text-lg font-bold text-slate-800 leading-snug flex items-center gap-2">
-                            Research on Novel Neural Networks for Incremental Unsupervised Learning
-                            <span class="hidden md:inline-block px-2 py-0.5 text-[10px] border border-slate-200 rounded text-slate-400 font-normal uppercase">62276127</span>
-                        </h4>
-                        <span class="text-xs bg-blue-50 text-blue-700 px-3 py-1 rounded-full font-bold border border-blue-100 shadow-sm whitespace-nowrap flex items-center gap-1"><i class="ph-fill ph-users"></i> Participant</span>
-                    </div>
-                    <div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-slate-600 mb-3">
-                        <span class="flex items-center gap-1.5 font-medium"><i class="ph-bold ph-buildings text-academic-500"></i> National Natural Science Foundation of China</span>
-                        <span class="flex items-center gap-1.5"><i class="ph-bold ph-tag text-slate-400"></i> General Program</span>
-                    </div>
-                    <p class="text-sm text-slate-500 leading-relaxed">
-                        This project addresses the catastrophic forgetting problem in continuous learning scenarios by developing novel neural network architectures capable of incremental unsupervised learning.
-                    </p>
-                </div>
-
-                <div class="glass-card p-6 rounded-xl border-l-4 border-purple-500 hover:shadow-lg transition-all hover:-translate-y-1">
-                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-3">
-                        <h4 class="text-lg font-bold text-slate-800 leading-snug flex items-center gap-2">
-                            Efficient Learning Mechanism of Spiking Networks Based on Neural Plasticity
-                            <span class="hidden md:inline-block px-2 py-0.5 text-[10px] border border-slate-200 rounded text-slate-400 font-normal uppercase">2021ZD0201300</span>
-                        </h4>
-                        <span class="text-xs bg-purple-50 text-purple-700 px-3 py-1 rounded-full font-bold border border-purple-100 shadow-sm whitespace-nowrap flex items-center gap-1"><i class="ph-fill ph-users"></i> Participant</span>
-                    </div>
-                    <div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-slate-600 mb-3">
-                        <span class="flex items-center gap-1.5 font-medium"><i class="ph-bold ph-buildings text-purple-500"></i> Ministry of Science and Technology</span>
-                        <span class="flex items-center gap-1.5"><i class="ph-bold ph-tag text-slate-400"></i> STI 2030 Major Project</span>
-                    </div>
-                    <p class="text-sm text-slate-500 leading-relaxed">
-                        Part of the "Brain-Inspired Intelligence System" initiative. Research on Spiking Neural Networks (SNNs) utilizing neural plasticity rules to achieve energy-efficient and biologically plausible learning.
-                    </p>
-                </div>
-
-                <div class="glass-card p-6 rounded-xl border-l-4 border-amber-500 hover:shadow-lg transition-all hover:-translate-y-1">
-                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-3">
-                        <h4 class="text-lg font-bold text-slate-800 leading-snug flex items-center gap-2">
-                            Substation HD Video and Robot Joint Inspection Technology
-                            <span class="hidden md:inline-block px-2 py-0.5 text-[10px] border border-slate-200 rounded text-slate-400 font-normal uppercase">520950200009</span>
-                        </h4>
-                        <span class="text-xs bg-amber-50 text-amber-700 px-3 py-1 rounded-full font-bold border border-amber-100 shadow-sm whitespace-nowrap flex items-center gap-1"><i class="ph-fill ph-users"></i> Participant</span>
-                    </div>
-                    <div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-slate-600 mb-3">
-                        <span class="flex items-center gap-1.5 font-medium"><i class="ph-bold ph-buildings text-amber-500"></i> State Grid Corporation of China</span>
-                        <span class="flex items-center gap-1.5"><i class="ph-bold ph-tag text-slate-400"></i> Headquarters S&T Project</span>
-                    </div>
-                    <p class="text-sm text-slate-500 leading-relaxed">
-                        Research and application of multi-dimensional image intelligent matching and recognition technology for automated inspection robots in electrical substations.
-                    </p>
-                </div>
+            <div class="space-y-6" id="projects-list">
+                <!-- JS Injected -->
             </div>
         </div>
     </section>
@@ -398,13 +302,8 @@
                         <i class="ph-fill ph-check-circle text-academic-500 text-xl mt-0.5"></i>
                         <div>
                             <h4 class="text-sm font-bold text-slate-800">Peer Reviewer</h4>
-                            <ul class="text-sm text-slate-600 space-y-1 list-disc pl-5">
-                             <li class="text-sm text-slate-600"> IEEE Transactions on Circuits and Systems for Video Technology (TCSVT,JCR-Q1)</li>
-                             <li class="text-sm text-slate-600"> Pattern Recognition (PR,JCR-Q1)</li>
-                             <li class="text-sm text-slate-600"> Engineering Applications of Artificial Intelligence (EAAI,JCR-Q1)</li>
-                             <li class="text-sm text-slate-600"> Applied Soft Computing Journal (ASOC,JCR-Q1)</li>
-                                <li class="text-sm text-slate-600"> Knowledge-Based Systems (KBS,JCR-Q1)</li>
-                                <li class="text-sm text-slate-600"> Journal of Engineering Research (JER,JCR-Q2)</li>
+                            <ul id="reviewer-journals" class="text-sm text-slate-600 space-y-1 list-disc pl-5">
+                                <!-- JS Injected -->
                             </ul>
                         </div>
                     </div>
@@ -413,7 +312,9 @@
                         <i class="ph-fill ph-check-circle text-academic-500 text-xl mt-0.5"></i>
                         <div>
                             <h4 class="text-sm font-bold text-slate-800">PC Member</h4>
-                            <p class="text-sm text-slate-600">[1] IEEE International Conference on Software Services Engineering (IEEE SSE 2026)</p>
+                            <div id="pc-memberships" class="text-sm text-slate-600">
+                                <!-- JS Injected -->
+                            </div>
                         </div>
                     </div>
 
@@ -425,23 +326,8 @@
                 <h2 class="text-xl font-bold text-slate-900 mb-6 flex items-center gap-2">
                     <i class="ph-fill ph-trophy text-academic-600"></i> Honors & Awards
                 </h2>
-                <div class="space-y-4">
-                    <div class="flex items-center gap-4 bg-white p-5 rounded-xl border border-slate-100 shadow-sm transition-all hover:shadow-md group">
-                        <div class="bg-yellow-100 text-yellow-600 w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 shadow-inner group-hover:scale-110 transition-transform"><i class="ph-fill ph-medal text-2xl"></i></div>
-                        <div>
-                            <h4 class="text-base font-bold text-slate-800">Second Place</h4>
-                            <p class="text-sm font-medium text-academic-600">IJCAI 2025 Workshop Challenge</p>
-                            <p class="text-xs text-slate-500 mt-1">Rotated X-ray Prohibited Items Detection</p>
-                        </div>
-                    </div>
-                    <div class="flex items-center gap-4 bg-white p-5 rounded-xl border border-slate-100 shadow-sm transition-all hover:shadow-md group">
-                        <div class="bg-orange-100 text-orange-600 w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 shadow-inner group-hover:scale-110 transition-transform"><i class="ph-fill ph-certificate text-2xl"></i></div>
-                        <div>
-                            <h4 class="text-base font-bold text-slate-800">Finalist Prize</h4>
-                            <p class="text-sm font-medium text-academic-600">Greater Bay Area Int'l Algorithm Competition</p>
-                            <p class="text-xs text-slate-500 mt-1">Adversarial Robustness Defense Algorithm</p>
-                        </div>
-                    </div>
+                <div id="awards-list" class="space-y-4">
+                    <!-- JS Injected -->
                 </div>
             </div>
 
@@ -450,150 +336,15 @@
 
 
 
+    <script src="render.js"></script>
     <script>
-        // Data
-        const news = [
-            { date: "2026-02-15", text: "Invited to serve as a Program Committee Member (PC Member) for IEEE SSE 2026." },
-            { date: "2025-08-30", text: "Paper \"Region-Guided Attack...\" accepted by <b>Neural Networks</b>." },
-            { date: "2025-08-03", text: "Received 2nd Place in <b>IJCAI 2025</b> Workshop Challenge." },
-            { date: "2025-03-17", text: "Selected as member of Big Data & AI Committee (Zhejiang)." },
-            { date: "2025-03-01", text: "Released Region-Guided Attack code on GitHub." },
-            { date: "2024-08-20", text: "Paper \"RADAP\" accepted by <b>Pattern Recognition</b>." },
-            { date: "2024-06-20", text: "Successfully graduated with a Ph.D. degree." }
-        ];
-
-        const papers = [
-            {
-                title: "Region-Guided Attack on the Segment Anything Model (SAM)",
-                authors: "Xiaoliang Liu*, Furao Shen, Jian Zhao",
-                venue: "Neural Networks",
-                year: "2025",
-                type: "journal",
-                tags: [{t:"CCF-B",c:"bg-blue-50 text-blue-700 border-blue-100"}, {t:"SCI Q1",c:"bg-red-50 text-red-700 border-red-100"}],
-                links: { paper: "https://www.sciencedirect.com/science/article/pii/S0893608025009384", arxiv: "https://arxiv.org/abs/2411.02974", code: "https://github.com/AbeLiuXL/RGA" }
-            },
-            {
-                title: "RADAP: A Robust and Adaptive Defense Against Diverse Adversarial Patches",
-                authors: "Xiaoliang Liu, Furao Shen*, Jian Zhao, Changhai Nie",
-                venue: "Pattern Recognition",
-                year: "2024",
-                type: "journal",
-                tags: [{t:"CCF-B",c:"bg-blue-50 text-blue-700 border-blue-100"}, {t:"SCI Q1",c:"bg-red-50 text-red-700 border-red-100"}],
-                links: { paper: "https://www.sciencedirect.com/science/article/abs/pii/S0031320324006666" }
-            },
-            {
-                title: "EAP: An effective black-box impersonation adversarial patch attack method",
-                authors: "Xiaoliang Liu, Furao Shen*, et al.",
-                venue: "Neurocomputing",
-                year: "2024",
-                type: "journal",
-                tags: [{t:"CCF-C",c:"bg-emerald-50 text-emerald-700 border-emerald-100"}, {t:"SCI Q1",c:"bg-red-50 text-red-700 border-red-100"}],
-                links: { paper: "https://www.sciencedirect.com/science/article/abs/pii/S0925231224002881" }
-            },
-            {
-                title: "AugRmixAT: A data processing and training method...",
-                authors: "Xiaoliang Liu, Furao Shen*, et al.",
-                venue: "IEEE ICME",
-                year: "2022",
-                type: "conference",
-                tags: [{t:"CCF-B",c:"bg-blue-50 text-blue-700 border-blue-100"}, {t:"EI",c:"bg-gray-100 text-gray-600"}],
-                links: { paper: "https://ieeexplore.ieee.org/document/9859665" }
-            },
-            {
-                title: "Self-supervised learning of monocular 3D geometry understanding with two-and three-view geometric constraints",
-                authors: "Xiaoliang Liu, Furao Shen*, Jian Zhao, Changhai Nie",
-                venue: "The Visual Computer",
-                type: 'journal',
-                year: "2024",
-                tags: [{t:"CCF-C",c:"bg-emerald-50 text-emerald-700 border-emerald-100"}, {t:"SCI Q2",c:"bg-blue-50 text-blue-700 border-blue-100"}],
-                links: {
-                    paper: "https://link.springer.com/article/10.1007/s00371-023-02840-y"
-                }
-            }
-        ];
-
-        // Render News
-        const newsContainer = document.getElementById('news-container');
-        news.forEach(item => {
-            const div = document.createElement('div');
-            div.className = "flex gap-3 text-sm pb-2 border-b border-slate-50 last:border-0";
-            div.innerHTML = `<span class="font-mono text-xs text-slate-400 pt-0.5 whitespace-nowrap">${item.date}</span><span class="text-slate-600 leading-snug">${item.text}</span>`;
-            newsContainer.appendChild(div);
-        });
-
-        // Render Papers
-        function renderPapers(filter) {
-            const list = document.getElementById('papers-list');
-            list.innerHTML = '';
-            const filtered = filter === 'all' ? papers : papers.filter(p => p.type === filter);
-
-            // Update Buttons
-            document.querySelectorAll('.filter-btn').forEach(b => {
-                if(b.id === `btn-${filter}`) {
-                    b.classList.add('bg-white', 'shadow-sm', 'text-slate-900');
-                    b.classList.remove('text-slate-600');
-                } else {
-                    b.classList.remove('bg-white', 'shadow-sm', 'text-slate-900');
-                    b.classList.add('text-slate-600');
-                }
-            });
-
-            filtered.forEach(p => {
-                const tags = p.tags.map(t => `<span class="tag-badge ${t.c}">${t.t}</span>`).join('');
-                let links = '';
-                if(p.links.paper) links += `<a href="${p.links.paper}"  target="_blank" class="text-xs font-bold text-academic-700 hover:underline ">PDF</a>`;
-                if(p.links.arxiv) links += `<a href="${p.links.arxiv}"  target="_blank" class="text-xs font-bold text-red-700 hover:underline ml-3">ArXiv</a>`;
-                if(p.links.code) links += `<a href="${p.links.code}"  target="_blank" class="text-xs font-bold text-slate-700 hover:underline ml-3">Code</a>`;
-
-                const card = document.createElement('div');
-                card.className = "glass-card p-5 rounded-lg flex flex-col sm:flex-row gap-4 items-start hover:border-academic-200 transition-all";
-                card.innerHTML = `
-                    <div class="flex-1">
-                        <h3 class="text-base font-bold text-slate-800 mb-1">${p.title}</h3>
-                        <p class="text-sm text-slate-500 mb-2">${p.authors.replace('Xiaoliang Liu', '<span class="font-semibold text-slate-900">Xiaoliang Liu</span>')}</p>
-                        <div class="flex flex-wrap items-center gap-2 mb-2"><span class="font-serif italic text-slate-700 font-medium">${p.venue}, ${p.year}</span>${tags}, [${links}]</div>
-<!--                        <div class="flex items-center">${links}</div>-->
-                    </div>
-                `;
-                list.appendChild(card);
-            });
-        }
-        renderPapers('all');
-
-        // Citation Chart (Mock Data)
-        const ctx = document.getElementById('citationChart').getContext('2d');
-        new Chart(ctx, {
-            type: 'bar',
-            data: {
-                labels: ['2020', '2021', '2022', '2023', '2024', '2025'],
-                datasets: [{
-                    label: 'Citations',
-                    data: [5, 12, 25, 38, 42, 6], // Sample data
-                    backgroundColor: '#0284c7',
-                    borderRadius: 2,
-                    barThickness: 10
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: { legend: { display: false }, tooltip: { enabled: false } },
-                scales: {
-                    x: { display: false },
-                    y: { display: false }
-                },
-                layout: { padding: 0 }
-            }
-        });
+        document.addEventListener('DOMContentLoaded', () => initPage('en'));
     </script>
     <script>
         // Toggle mobile menu
         const btn_en = document.getElementById('menuBtn_en');
         const menu_en = document.getElementById('mobileMenu_en');
-
-        btn_en.addEventListener('click', () => {
-            menu_en.classList.toggle('hidden');
-        });
+        btn_en.addEventListener('click', () => { menu_en.classList.toggle('hidden'); });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/@phosphor-icons/web"></script>
    <footer class="bg-slate-850 text-slate-300 py-12 mt-auto border-t border-slate-700">

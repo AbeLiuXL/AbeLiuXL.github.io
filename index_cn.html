@@ -131,46 +131,17 @@
                     <div class="absolute top-0 left-0 w-full h-24 bg-slate-800 z-0"></div>
                     <div class="relative z-10 flex flex-col items-center mt-8">
                         <div class="w-32 h-32 rounded-full border-4 border-white shadow-lg bg-slate-200 overflow-hidden mb-4">
-                            <img src="P4.jpeg" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iI2cbdjU1Ij48cGF0aCBkPSJNMTIgMTJjMi4yMSAwIDQtMS43OSA0LTQocy0xLjc5LTQtNC00LTQgMS43OS00IDQgMS43OSA0IDQgNHptMCAyYy0yLjY3IDAtOCAxLjM0LTggNHYyaDE2di0yYzAtMi42Ni01LjMzLTQtOC00eiIvPjwvc3ZnPg=='" alt="刘小亮" class="w-full h-full object-cover bg-slate-100">
+                            <img id="profile-photo" src="P4.jpeg" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iI2cbdjU1Ij48cGF0aCBkPSJNMTIgMTJjMi4yMSAwIDQtMS43OSA0LTQocy0xLjc5LTQtNC00LTQgMS43OS00IDQgMS43OSA0IDQgNHptMCAyYy0yLjY3IDAtOCAxLjM0LTggNHYyaDE2di0yYzAtMi42Ni01LjMzLTQtOC00eiIvPjwvc3ZnPg=='" alt="刘小亮" class="w-full h-full object-cover bg-slate-100">
                         </div>
-                        <h1 class="text-2xl font-bold text-slate-800">刘小亮 <span class="text-base font-normal text-slate-500">博士</span></h1>
-                        <p class="text-academic-600 font-medium text-sm mb-4">副教授 </p>
+                        <h1 id="profile-name" class="text-2xl font-bold text-slate-800">刘小亮 <span class="text-base font-normal text-slate-500">博士</span></h1>
+                        <p id="profile-position" class="text-academic-600 font-medium text-sm mb-4">副教授 </p>
 
-                        <div class="w-full space-y-3 text-sm text-slate-600 border-t border-slate-100 pt-4">
-                            <div class="flex items-start gap-3">
-                                <i class="ph-fill ph-bank text-academic-600 mt-0.5 text-lg"></i>
-                                <div>
-                                    <a href="https://zsw.wzbc.edu.cn/Col/Col855/Index.aspx" target="_blank" class="hover:text-academic-800 hover:underline block font-semibold text-slate-700">温州商学院</a>
-                                    <span class="text-xs text-slate-500">信息工程学院</span>
-                                </div>
-                            </div>
-                            <div class="flex items-start gap-3">
-                                <i class="ph-fill ph-flask text-academic-600 mt-0.5 text-lg"></i>
-                                <div>
-                                    <a href="https://ai.nju.edu.cn/rinc/index.html" target="_blank" class="hover:text-academic-800 hover:underline block font-semibold text-slate-700">南京大学 RINC研究组</a>
-                                    <span class="text-xs text-slate-500">机器人智能与神经计算</span>
-                                </div>
-                            </div>
+                        <div class="w-full space-y-3 text-sm text-slate-600 border-t border-slate-100 pt-4" id="profile-affiliations">
+                            <!-- JS Injected -->
                         </div>
 
-                        <div class="grid grid-cols-2 gap-2 w-full mt-6">
-                            <a href="https://scholar.google.com/citations?hl=zh-CN&user=Eg6rWc8AAAAJ" target="_blank" class="col-span-2 flex items-center justify-center gap-2 p-2 rounded-lg bg-slate-50 hover:bg-blue-50 hover:text-blue-600 transition-colors border border-slate-100 group/btn">
-                                <i class="ph-fill ph-graduation-cap text-xl group-hover/btn:scale-110 transition-transform"></i>
-                                <span class="text-xs font-bold uppercase">谷歌学术主页</span>
-                            </a>
-                            <a href="https://orcid.org/0000-0002-3776-6929" target="_blank" class="flex flex-col items-center justify-center p-2 rounded-lg bg-slate-50 hover:bg-green-50 hover:text-green-600 transition-colors border border-slate-100 group/btn">
-                                <i class="ph-bold ph-credit-card text-xl mb-1 group-hover/btn:scale-110 transition-transform"></i>
-                                <span class="text-[10px] font-bold uppercase">ORCiD</span>
-                            </a>
-                            <a href="https://www.webofscience.com/wos/author/record/KFQ-9516-2024" target="_blank" class="flex flex-col items-center justify-center p-2 rounded-lg bg-slate-50 hover:bg-purple-50 hover:text-purple-600 transition-colors border border-slate-100 group/btn">
-                                <i class="ph-bold ph-globe text-xl mb-1 group-hover/btn:scale-110 transition-transform"></i>
-                                <span class="text-[10px] font-bold uppercase">Web of Sci</span>
-                            </a>
-                            <a href="https://github.com/abeliuxl" target="_blank" class="col-span-2 flex items-center justify-center gap-2 p-2 rounded-lg hover:bg-blue-50 hover:text-blue-600 transition-colors border border-slate-100 group/btn" title="Google Scholar">
-                                <i class="ph-fill ph-github-logo text-xl text-slate-600 group-hover/btn:text-blue-600"></i>
-                                <span class="text-xs font-bold uppercase">GitHub</span>
-                            </a>
-
+                        <div class="grid grid-cols-2 gap-2 w-full mt-6" id="profile-socials">
+                            <!-- JS Injected -->
                         </div>
                     </div>
                 </div>
@@ -181,17 +152,9 @@
                 <!-- Updated Bio -->
                 <div class="prose prose-slate max-w-none">
                     <h2 class="text-2xl font-bold text-slate-800 mb-4">个人简介</h2>
-                    <p class="text-slate-600 leading-relaxed">
-                        <b>刘小亮</b>，博士毕业于南京大学计算机科学与技术专业（2024），师从<b>申富饶教授</b>。现任温州商学院信息工程学院副教授。此前于2018年在南京大学获得硕士学位。
-                    </p>
-                    <p class="text-slate-600 leading-relaxed mt-2">
-                        作为南京大学机器人智能与神经计算（RINC）研究组成员，他主要致力于<b>人工智能安全</b>领域研究。具体研究兴趣包括对抗机器学习、深度神经网络鲁棒性及防御算法设计，旨在提升AI系统在开放环境下的安全性与可靠性。
-                    </p>
-                    <div class="flex flex-wrap gap-2 mt-4">
-                        <span class="px-3 py-1 bg-academic-50 text-academic-700 text-xs font-bold rounded-full border border-academic-100">人工智能安全</span>
-                        <span class="px-3 py-1 bg-academic-50 text-academic-700 text-xs font-bold rounded-full border border-academic-100">对抗机器学习</span>
-                        <span class="px-3 py-1 bg-academic-50 text-academic-700 text-xs font-bold rounded-full border border-academic-100">深度神经网络</span>
-                        <span class="px-3 py-1 bg-academic-50 text-academic-700 text-xs font-bold rounded-full border border-academic-100">计算机视觉</span>
+                    <div id="bio-paragraphs"><!-- JS Injected --></div>
+                    <div class="flex flex-wrap gap-2 mt-4" id="research-tags">
+                        <!-- JS Injected -->
                     </div>
                 </div>
 
@@ -204,16 +167,8 @@
                             <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider flex items-center gap-2">
                                 <i class="ph-bold ph-certificate text-academic-600"></i> 专业会员
                             </h3>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="px-3 py-1 bg-white border border-slate-200 text-slate-700 text-xs font-semibold rounded-full shadow-sm hover:border-blue-300 transition-colors">
-                                    <span class="text-blue-600">●</span> IEEE会员
-                                </span>
-                                <span class="px-3 py-1 bg-white border border-slate-200 text-slate-700 text-xs font-semibold rounded-full shadow-sm hover:border-emerald-300 transition-colors">
-                                    <span class="text-emerald-600">●</span> CCF会员
-                                </span>
-                                <span class="px-3 py-1 bg-white border border-slate-200 text-slate-700 text-xs font-semibold rounded-full shadow-sm hover:border-purple-300 transition-colors">
-                                    <span class="text-purple-600">●</span> 浙江省青科协会员
-                                </span>
+                            <div class="flex flex-wrap gap-2" id="memberships-list">
+                                <!-- JS Injected -->
                             </div>
                         </div>
 
@@ -224,9 +179,8 @@
                             <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider flex items-center gap-2">
                                 <i class="ph-bold ph-envelope-simple text-academic-600"></i> 电子邮箱
                             </h3>
-                            <div class="flex flex-col gap-1">
-                                <a href="mailto:20249197@wzbc.edu.cn" class="text-sm font-medium text-slate-700 hover:text-academic-600 transition-colors">20249197@wzbc.edu.cn</a>
-                                <a href="mailto:xiaoliang_liu@smail.nju.edu.cn" class="text-sm font-medium text-slate-700 hover:text-academic-600 transition-colors">xiaoliang_liu@smail.nju.edu.cn</a>
+                            <div class="flex flex-col gap-1" id="email-list">
+                                <!-- JS Injected -->
                             </div>
                         </div>
 
@@ -235,8 +189,8 @@
                             <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider flex items-center gap-2">
                                 <i class="ph-bold ph-map-pin text-academic-600"></i> 通讯地址
                             </h3>
-                            <p class="text-sm text-slate-600 leading-relaxed">
-                                浙江省温州市茶山高教园区，温州商学院北校区，致用楼220室
+                            <p id="address-text" class="text-sm text-slate-600 leading-relaxed">
+                                <!-- JS Injected -->
                             </p>
                         </div>
                     </div>
@@ -268,15 +222,15 @@
                         </div>
                         <div class="grid grid-cols-3 gap-2 mt-2 z-10">
                             <div class="flex flex-col items-center p-2 rounded-lg hover:bg-slate-50 transition-colors">
-                                <span class="text-3xl font-bold text-slate-800">87</span>
+                                <span id="cite-total" class="text-3xl font-bold text-slate-800">--</span>
                                 <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mt-1">总引用</span>
                             </div>
                             <div class="flex flex-col items-center p-2 rounded-lg hover:bg-slate-50 transition-colors">
-                                <span class="text-3xl font-bold text-slate-800">5</span>
+                                <span id="cite-h" class="text-3xl font-bold text-slate-800">--</span>
                                 <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mt-1">h-index</span>
                             </div>
                             <div class="flex flex-col items-center p-2 rounded-lg hover:bg-slate-50 transition-colors">
-                                <span class="text-3xl font-bold text-slate-800">4</span>
+                                <span id="cite-i10" class="text-3xl font-bold text-slate-800">--</span>
                                 <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mt-1">i10-index</span>
                             </div>
                         </div>
@@ -319,57 +273,8 @@
                 <div class="w-1 h-8 bg-academic-600 rounded-full"></div>
                 科研项目
             </h2>
-            <div class="space-y-6">
-                <div class="glass-card p-6 rounded-xl border-l-4 border-academic-500 hover:shadow-lg transition-all hover:-translate-y-1">
-                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-3">
-                        <h4 class="text-lg font-bold text-slate-800 leading-snug flex items-center gap-2">
-                            面向增量式无监督学习的新型神经网络研究
-                            <span class="hidden md:inline-block px-2 py-0.5 text-[10px] border border-slate-200 rounded text-slate-400 font-normal uppercase">62276127</span>
-                        </h4>
-                        <span class="text-xs bg-blue-50 text-blue-700 px-3 py-1 rounded-full font-bold border border-blue-100 shadow-sm whitespace-nowrap flex items-center gap-1"><i class="ph-fill ph-users"></i> 参与</span>
-                    </div>
-                    <div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-slate-600 mb-3">
-                        <span class="flex items-center gap-1.5 font-medium"><i class="ph-bold ph-buildings text-academic-500"></i> 国家自然科学基金</span>
-                        <span class="flex items-center gap-1.5"><i class="ph-bold ph-tag text-slate-400"></i> 面上项目</span>
-                    </div>
-                    <p class="text-sm text-slate-500 leading-relaxed">
-                        针对连续学习场景中的灾难性遗忘问题，研究具有增量式无监督学习能力的新型神经网络架构。
-                    </p>
-                </div>
-
-                <div class="glass-card p-6 rounded-xl border-l-4 border-purple-500 hover:shadow-lg transition-all hover:-translate-y-1">
-                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-3">
-                        <h4 class="text-lg font-bold text-slate-800 leading-snug flex items-center gap-2">
-                            基于神经可塑性的脉冲网络高效学习机制与类脑智能系统
-                            <span class="hidden md:inline-block px-2 py-0.5 text-[10px] border border-slate-200 rounded text-slate-400 font-normal uppercase">2021ZD0201300</span>
-                        </h4>
-                        <span class="text-xs bg-purple-50 text-purple-700 px-3 py-1 rounded-full font-bold border border-purple-100 shadow-sm whitespace-nowrap flex items-center gap-1"><i class="ph-fill ph-users"></i> 参与</span>
-                    </div>
-                    <div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-slate-600 mb-3">
-                        <span class="flex items-center gap-1.5 font-medium"><i class="ph-bold ph-buildings text-purple-500"></i> 科技部 (科技创新2030)</span>
-                        <span class="flex items-center gap-1.5"><i class="ph-bold ph-tag text-slate-400"></i> 重大项目</span>
-                    </div>
-                    <p class="text-sm text-slate-500 leading-relaxed">
-                        探索基于神经可塑性规则的脉冲神经网络（SNN）高效学习算法，构建低功耗、生物可解释的类脑智能系统。
-                    </p>
-                </div>
-
-                <div class="glass-card p-6 rounded-xl border-l-4 border-amber-500 hover:shadow-lg transition-all hover:-translate-y-1">
-                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-3">
-                        <h4 class="text-lg font-bold text-slate-800 leading-snug flex items-center gap-2">
-                            基于多维图像智能匹配及识别技术的变电站高清视频和机器人联合巡检技术研究及应用
-                            <span class="hidden md:inline-block px-2 py-0.5 text-[10px] border border-slate-200 rounded text-slate-400 font-normal uppercase">520950200009</span>
-                        </h4>
-                        <span class="text-xs bg-amber-50 text-amber-700 px-3 py-1 rounded-full font-bold border border-amber-100 shadow-sm whitespace-nowrap flex items-center gap-1"><i class="ph-fill ph-users"></i> 参与</span>
-                    </div>
-                    <div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-slate-600 mb-3">
-                        <span class="flex items-center gap-1.5 font-medium"><i class="ph-bold ph-buildings text-amber-500"></i> 国家电网总部科技项目</span>
-                        <span class="flex items-center gap-1.5"><i class="ph-bold ph-tag text-slate-400"></i> 企业横向</span>
-                    </div>
-                    <p class="text-sm text-slate-500 leading-relaxed">
-                        研究变电站场景下的多维图像智能分析算法，实现高清视频监控与巡检机器人的联动，提升电力巡检的自动化水平。
-                    </p>
-                </div>
+            <div class="space-y-6" id="projects-list">
+                <!-- JS Injected -->
             </div>
         </div>
     </section>
@@ -388,22 +293,19 @@
                         <i class="ph-fill ph-check-circle text-academic-500 text-xl mt-0.5"></i>
                         <div>
                             <h4 class="text-sm font-bold text-slate-800">期刊审稿人</h4>
-                             <ul class="text-sm text-slate-600 space-y-1 list-disc pl-5">
-                            <li class="text-sm text-slate-600">IEEE Transactions on Circuits and Systems for Video Technology (TCSVT，JCR-Q1，中科院一区，TOP)</li>
-                             <li class="text-sm text-slate-600">Pattern Recognition (PR，JCR-Q1，中科院一区，TOP)</li>
-                            <li class="text-sm text-slate-600">Engineering Applications of Artificial Intelligence (EAAI，JCR-Q1，中科院一区，TOP)</li>
-                            <li class="text-sm text-slate-600">Applied Soft Computing Journal (ASOC， JCR-Q1，中科院二区，TOP)</li>
-                                  <li class="text-sm text-slate-600"> Knowledge-Based Systems (KBS,JCR-Q1，中科院一区，TOP)</li>
-                                <li class="text-sm text-slate-600"> Journal of Engineering Research (JER,JCR-Q2，中科院4区)</li>
-                             </ul>
-                        </div>si
+                            <ul id="reviewer-journals" class="text-sm text-slate-600 space-y-1 list-disc pl-5">
+                                <!-- JS Injected -->
+                            </ul>
+                        </div>
                     </div>
 
                     <div class="flex items-start gap-3 border-t border-slate-50 pt-4">
                         <i class="ph-fill ph-check-circle text-academic-500 text-xl mt-0.5"></i>
                         <div>
                             <h4 class="text-sm font-bold text-slate-800">程序委员会委员（PC Member）</h4>
-                            <p class="text-sm text-slate-600">IEEE International Conference on Software Services Engineering (IEEE SSE 2026,CCF-C)</p>
+                            <div id="pc-memberships" class="text-sm text-slate-600">
+                                <!-- JS Injected -->
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -414,159 +316,23 @@
                 <h2 class="text-xl font-bold text-slate-900 mb-6 flex items-center gap-2">
                     <i class="ph-fill ph-trophy text-academic-600"></i> 奖项荣誉
                 </h2>
-                <div class="space-y-4">
-                    <div class="flex items-center gap-4 bg-white p-5 rounded-xl border border-slate-100 shadow-sm transition-all hover:shadow-md group">
-                        <div class="bg-yellow-100 text-yellow-600 w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 shadow-inner group-hover:scale-110 transition-transform"><i class="ph-fill ph-medal text-2xl"></i></div>
-                        <div>
-                            <h4 class="text-base font-bold text-slate-800">亚军</h4>
-                            <p class="text-sm font-medium text-academic-600">IJCAI 2025 Workshop Challenge</p>
-                            <p class="text-xs text-slate-500 mt-1">Rotated X-ray Prohibited Items Detection (单人成队)</p>
-                        </div>
-                    </div>
-                    <div class="flex items-center gap-4 bg-white p-5 rounded-xl border border-slate-100 shadow-sm transition-all hover:shadow-md group">
-                        <div class="bg-orange-100 text-orange-600 w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 shadow-inner group-hover:scale-110 transition-transform"><i class="ph-fill ph-certificate text-2xl"></i></div>
-                        <div>
-                            <h4 class="text-base font-bold text-slate-800">入围决赛奖</h4>
-                            <p class="text-sm font-medium text-academic-600">首届粤港澳大湾区国际算法算例大赛</p>
-                            <p class="text-xs text-slate-500 mt-1">深度学习模型的对抗鲁棒防御算法 (单人成队)</p>
-                        </div>
-                    </div>
+                <div id="awards-list" class="space-y-4">
+                    <!-- JS Injected -->
                 </div>
             </div>
 
         </div>
     </section>
 
+    <script src="render.js"></script>
     <script>
-        // Data
-        const news = [
-            { date: "2026-02-15", text: "受邀担任IEEE SSE 2026 程序委员会委员（PC Member）。" },
-            { date: "2025-08-30", text: "论文 \"Region-Guided Attack...\" 被 <b>Neural Networks</b> (CCF-B, TOP) 接收。" },
-            { date: "2025-08-03", text: "获得 <b>IJCAI 2025</b> Workshop Challenge (Rotated X-ray) 亚军。" },
-            { date: "2025-03-17", text: "入选浙江省青科协（大数据与人工智能委员会）。" },
-            { date: "2025-03-01", text: "开源 RGA 代码。" },
-            { date: "2024-08-20", text: "论文 \"RADAP\" 被 <b>Pattern Recognition</b> (CCF-B, TOP) 接收。" },
-            { date: "2024-06-20", text: "顺利获得南京大学博士学位。" }
-        ];
-
-        const papers = [
-            {
-                title: "Region-Guided Attack on the Segment Anything Model (SAM)",
-                authors: "Xiaoliang Liu*, Furao Shen, Jian Zhao",
-                venue: "Neural Networks",
-                year: "2025",
-                type: "journal",
-                tags: [{t:"CCF-B",c:"bg-blue-50 text-blue-700 border-blue-100"}, {t:"SCI Q1",c:"bg-red-50 text-red-700 border-red-100"}, {t:"中科院二区",c:"bg-blue-50 text-blue-700 border-blue-100"}, {t:"TOP",c:"bg-red-50 text-red-700 border-red-100"}],
-                links: { paper: "https://www.sciencedirect.com/science/article/pii/S0893608025009384", arxiv: "https://arxiv.org/abs/2411.02974", code: "https://github.com/AbeLiuXL/RGA" }
-            },
-            {
-                title: "RADAP: A Robust and Adaptive Defense Against Diverse Adversarial Patches",
-                authors: "Xiaoliang Liu, Furao Shen*, Jian Zhao, Changhai Nie",
-                venue: "Pattern Recognition",
-                year: "2024",
-                type: "journal",
-                tags: [{t:"CCF-B",c:"bg-blue-50 text-blue-700 border-blue-100"}, {t:"SCI Q1",c:"bg-red-50 text-red-700 border-red-100"}, {t:"中科院一区",c:"bg-red-50 text-red-700 border-red-100"}, {t:"TOP",c:"bg-red-50 text-red-700 border-red-100"}],
-                links: { paper: "https://www.sciencedirect.com/science/article/abs/pii/S0031320324006666" }
-            },
-            {
-                title: "EAP: An effective black-box impersonation adversarial patch attack method",
-                authors: "Xiaoliang Liu, Furao Shen*, et al.",
-                venue: "Neurocomputing",
-                year: "2024",
-                type: "journal",
-                tags: [{t:"CCF-C",c:"bg-emerald-50 text-emerald-700 border-emerald-100"}, {t:"SCI Q1",c:"bg-red-50 text-red-700 border-red-100"}, {t:"中科院二区",c:"bg-blue-50 text-blue-700 border-blue-100"}, {t:"TOP",c:"bg-red-50 text-red-700 border-red-100"}],
-                links: { paper: "https://www.sciencedirect.com/science/article/abs/pii/S0925231224002881" }
-            },
-            {
-                title: "AugRmixAT: A data processing and training method...",
-                authors: "Xiaoliang Liu, Furao Shen*, et al.",
-                venue: "IEEE ICME",
-                year: "2022",
-                type: "conference",
-                tags: [{t:"CCF-B",c:"bg-blue-50 text-blue-700 border-blue-100"}, {t:"EI",c:"bg-gray-100 text-gray-600"}],
-                links: { paper: "https://ieeexplore.ieee.org/document/9859665" }
-            },
-            {
-                title: "Self-supervised learning of monocular 3D geometry understanding with two-and three-view geometric constraints",
-                authors: "Xiaoliang Liu, Furao Shen*, Jian Zhao, Changhai Nie",
-                venue: "The Visual Computer",
-                type: 'journal',
-                year: "2024",
-                tags: [{t:"CCF-C",c:"bg-emerald-50 text-emerald-700 border-emerald-100"}, {t:"SCI Q2",c:"bg-blue-50 text-blue-700 border-blue-100"}],
-                links: {
-                    paper: "https://link.springer.com/article/10.1007/s00371-023-02840-y"
-                }
-            }
-
-
-        ];
-
-        const newsContainer = document.getElementById('news-container');
-        news.forEach(item => {
-            const div = document.createElement('div');
-            div.className = "flex gap-3 text-sm pb-2 border-b border-slate-50 last:border-0";
-            div.innerHTML = `<span class="font-mono text-xs text-slate-400 pt-0.5 whitespace-nowrap">${item.date}</span><span class="text-slate-600 leading-snug">${item.text}</span>`;
-            newsContainer.appendChild(div);
-        });
-
-        function renderPapers(filter) {
-            const list = document.getElementById('papers-list');
-            list.innerHTML = '';
-            const filtered = filter === 'all' ? papers : papers.filter(p => p.type === filter);
-            document.querySelectorAll('.filter-btn').forEach(b => {
-                if(b.id === `btn-${filter}`) {
-                    b.classList.add('bg-white', 'shadow-sm', 'text-slate-900');
-                    b.classList.remove('text-slate-600');
-                } else {
-                    b.classList.remove('bg-white', 'shadow-sm', 'text-slate-900');
-                    b.classList.add('text-slate-600');
-                }
-            });
-            filtered.forEach(p => {
-                const tags = p.tags.map(t => `<span class="tag-badge ${t.c}">${t.t}</span>`).join('');
-                let links = '';
-                if(p.links.paper) links += `<a href="${p.links.paper}"  target="_blank" class="text-xs font-bold text-academic-700 hover:underline ">PDF</a>`;
-                if(p.links.arxiv) links += `<a href="${p.links.arxiv}"  target="_blank" class="text-xs font-bold text-red-700 hover:underline ml-3">ArXiv</a>`;
-                if(p.links.code) links += `<a href="${p.links.code}"  target="_blank" class="text-xs font-bold text-slate-700 hover:underline ml-3">Code</a>`;
-                const card = document.createElement('div');
-                card.className = "glass-card p-5 rounded-lg flex flex-col sm:flex-row gap-4 items-start hover:border-academic-200 transition-all";
-                card.innerHTML = `<div class="flex-1"><h3 class="text-base font-bold text-slate-800 mb-1">${p.title}</h3><p class="text-sm text-slate-500 mb-2">${p.authors.replace('Xiaoliang Liu', '<span class="font-semibold text-slate-900">刘小亮</span>')}</p><div class="flex flex-wrap items-center gap-2 mb-2"><span class="font-serif italic text-slate-700 font-medium">${p.venue}, ${p.year}</span>${tags}, [${links}]</div></div>`;
-                list.appendChild(card);
-            });
-        }
-        renderPapers('all');
-
-        const ctx = document.getElementById('citationChart').getContext('2d');
-        new Chart(ctx, {
-            type: 'bar',
-            data: {
-                labels: ['2020', '2021', '2022', '2023', '2024', '2025'],
-                datasets: [{
-                    label: 'Citations',
-                    data: [5, 12, 25, 38, 42, 6],
-                    backgroundColor: '#0284c7',
-                    borderRadius: 2,
-                    barThickness: 10
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: { legend: { display: false }, tooltip: { enabled: false } },
-                scales: { x: { display: false }, y: { display: false } },
-                layout: { padding: 0 }
-            }
-        });
+        document.addEventListener('DOMContentLoaded', () => initPage('zh'));
     </script>
-
     <script>
         // Toggle mobile menu
         const btn = document.getElementById('menuBtn');
         const menu = document.getElementById('mobileMenu');
-
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-        });
+        btn.addEventListener('click', () => { menu.classList.toggle('hidden'); });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/@phosphor-icons/web"></script>
     <footer class="bg-slate-850 text-slate-300 py-12 mt-auto border-t border-slate-700">
