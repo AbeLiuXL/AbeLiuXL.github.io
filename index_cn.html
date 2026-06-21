@@ -121,147 +121,185 @@
     </div>
 </nav>
 
-    <!-- Hero Section -->
-    <header id="about" class="pt-32 pb-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+<!-- Hero Section -->
+<header id="about" class="pt-32 pb-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
 
-            <!-- Left Profile -->
-            <div class="lg:col-span-4 flex flex-col gap-6">
-                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 relative overflow-hidden group">
-                    <div class="absolute top-0 left-0 w-full h-24 bg-slate-800 z-0"></div>
-                    <div class="relative z-10 flex flex-col items-center mt-8">
-                        <div class="w-32 h-32 rounded-full border-4 border-white shadow-lg bg-slate-200 overflow-hidden mb-4">
-                            <img id="profile-photo" src="P4.jpeg" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iI2cbdjU1Ij48cGF0aCBkPSJNMTIgMTJjMi4yMSAwIDQtMS43OSA0LTQocy0xLjc5LTQtNC00LTQgMS43OS00IDQgMS43OSA0IDQgNHptMCAyYy0yLjY3IDAtOCAxLjM0LTggNHYyaDE2di0yYzAtMi42Ni01LjMzLTQtOC00eiIvPjwvc3ZnPg=='" alt="刘小亮" class="w-full h-full object-cover bg-slate-100">
-                        </div>
-                        <h1 id="profile-name" class="text-2xl font-bold text-slate-800">刘小亮 <span class="text-base font-normal text-slate-500">博士</span></h1>
-                        <p id="profile-position" class="text-academic-600 font-medium text-sm mb-4">副教授 </p>
+        <!-- Left Profile -->
+        <div class="lg:col-span-4 flex flex-col gap-6">
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 relative overflow-hidden group">
+                <div class="absolute top-0 left-0 w-full h-24 bg-slate-800 z-0"></div>
 
-                        <div class="w-full space-y-3 text-sm text-slate-600 border-t border-slate-100 pt-4" id="profile-affiliations">
-                            <div class="flex items-start gap-3">
-                                <i class="ph-fill ph-bank text-academic-600 mt-0.5 text-lg"></i>
-                                <div>
-                                    <a href="https://zsw.wzbc.edu.cn/Col/Col855/Index.aspx" target="_blank" class="hover:text-academic-800 hover:underline block font-semibold text-slate-700">温州商学院</a>
-                                    <span class="text-xs text-slate-500">信息工程学院</span>
-                                </div>
+                <div class="relative z-10 flex flex-col items-center mt-8">
+                    <div class="w-32 h-32 rounded-full border-4 border-white shadow-lg bg-slate-200 overflow-hidden mb-4">
+                        <img id="profile-photo" src="P4.jpeg" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iI2cbdjU1Ij48cGF0aCBkPSJNMTIgMTJjMi4yMSAwIDQtMS43OSA0LTQocy0xLjc5LTQtNC00LTQgMS43OS00IDQgMS43OSA0IDQgNHptMCAyYy0yLjY3IDAtOCAxLjM0LTggNHYyaDE2di0yYzAtMi42Ni01LjMzLTQtOC00eiIvPjwvc3ZnPg=='" alt="刘小亮" class="w-full h-full object-cover bg-slate-100">
+                    </div>
+
+                    <h1 id="profile-name" class="text-2xl font-bold text-slate-800 text-center">
+                        刘小亮
+                        <span class="text-base font-normal text-slate-500 block">博士</span>
+                    </h1>
+
+                    <p id="profile-position" class="text-academic-600 font-medium text-sm mt-1">
+                        副教授
+                    </p>
+
+                    <div class="w-full space-y-3 text-sm text-slate-600 border-t border-slate-100 pt-4 mt-4" id="profile-affiliations">
+                        <div class="flex items-start gap-3">
+                            <i class="ph-fill ph-bank text-academic-600 mt-0.5 text-lg flex-shrink-0"></i>
+                            <div class="leading-tight">
+                                <a href="https://zsw.wzbc.edu.cn/Col/Col855/Index.aspx" target="_blank" class="hover:text-academic-800 hover:underline block font-semibold text-slate-700">
+                                    温州商学院
+                                </a>
+                                <span class="text-xs text-slate-500">信息工程学院</span>
                             </div>
-                            <div class="flex items-start gap-3">
-                                <i class="ph-fill ph-flask text-academic-600 mt-0.5 text-lg"></i>
-                                <div>
-                                    <a href="https://ai.nju.edu.cn/rinc/index.html" target="_blank" class="hover:text-academic-800 hover:underline block font-semibold text-slate-700">南京大学 RINC研究组</a>
-                                    <span class="text-xs text-slate-500">机器人智能与神经计算</span>
-                                </div>
-                            </div>
                         </div>
 
-                        <div class="grid grid-cols-2 gap-2 w-full mt-6" id="profile-socials">
-                            <!-- JS Injected -->
+                        <div class="flex items-start gap-3">
+                            <i class="ph-fill ph-flask text-academic-600 mt-0.5 text-lg flex-shrink-0"></i>
+                            <div class="leading-tight">
+                                <a href="https://ai.nju.edu.cn/rinc/index.html" target="_blank" class="hover:text-academic-800 hover:underline block font-semibold text-slate-700">
+                                    南京大学 RINC研究组
+                                </a>
+                                <span class="text-xs text-slate-500">机器人智能与神经计算</span>
+                            </div>
                         </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-2 w-full mt-6 pt-4 border-t border-slate-100" id="profile-socials">
+                        <!-- JS Injected -->
                     </div>
                 </div>
             </div>
 
-            <!-- Right Content -->
-            <div class="lg:col-span-8 space-y-8">
-                <!-- Updated Bio -->
-                <div class="prose prose-slate max-w-none">
-                    <h2 class="text-2xl font-bold text-slate-800 mb-4">个人简介</h2>
-                    <div id="bio-paragraphs">
-                        <p class="text-slate-600 leading-relaxed"><b>刘小亮</b>，博士毕业于南京大学计算机科学与技术专业（2024），师从<b>申富饶教授</b>。现任温州商学院信息工程学院副教授。此前于2018年在南京大学获得硕士学位。</p>
-                        <p class="text-slate-600 leading-relaxed mt-2">作为南京大学机器人智能与神经计算（RINC）研究组成员，他主要致力于<b>人工智能安全</b>领域研究。具体研究兴趣包括对抗机器学习、深度神经网络鲁棒性及防御算法设计，旨在提升AI系统在开放环境下的安全性与可靠性。</p>
+            <!-- Citation Stats -->
+            <div class="glass-card p-5 rounded-xl h-64 flex flex-col relative overflow-hidden group">
+                <div class="flex items-center justify-between mb-2 z-10">
+                    <h3 class="font-bold text-slate-800 flex items-center gap-2">
+                        <i class="ph-fill ph-quotes text-academic-600"></i> 引用统计
+                    </h3>
+
+                    <a href="https://scholar.google.com/citations?hl=zh-CN&user=Eg6rWc8AAAAJ" target="_blank" class="text-[10px] font-bold bg-slate-100 text-slate-600 px-2 py-1 rounded-full hover:bg-academic-600 hover:text-white transition-colors flex items-center gap-1">
+                        Google Scholar <i class="ph-bold ph-arrow-up-right"></i>
+                    </a>
+                </div>
+
+                <div class="grid grid-cols-3 gap-2 mt-6 z-10">
+                    <div class="flex flex-col items-center p-2 rounded-lg hover:bg-slate-50 transition-colors">
+                        <span id="cite-total" class="text-3xl font-bold text-slate-800">--</span>
+                        <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mt-1">总引用</span>
                     </div>
-                    <div class="flex flex-wrap gap-2 mt-4" id="research-tags">
-                        <span class="px-3 py-1 bg-academic-50 text-academic-700 text-xs font-bold rounded-full border border-academic-100">人工智能安全</span>
-                        <span class="px-3 py-1 bg-academic-50 text-academic-700 text-xs font-bold rounded-full border border-academic-100">对抗机器学习</span>
-                        <span class="px-3 py-1 bg-academic-50 text-academic-700 text-xs font-bold rounded-full border border-academic-100">深度神经网络</span>
-                        <span class="px-3 py-1 bg-academic-50 text-academic-700 text-xs font-bold rounded-full border border-academic-100">计算机视觉</span>
+
+                    <div class="flex flex-col items-center p-2 rounded-lg hover:bg-slate-50 transition-colors">
+                        <span id="cite-h" class="text-3xl font-bold text-slate-800">--</span>
+                        <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mt-1">h-index</span>
+                    </div>
+
+                    <div class="flex flex-col items-center p-2 rounded-lg hover:bg-slate-50 transition-colors">
+                        <span id="cite-i10" class="text-3xl font-bold text-slate-800">--</span>
+                        <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mt-1">i10-index</span>
                     </div>
                 </div>
 
-                <!-- Contact & Professional Info Block (Wide Layout) -->
-                <div class="glass-card p-6 rounded-xl bg-white/80 border border-slate-200 shadow-sm">
-                    <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+                <div class="absolute bottom-0 left-0 w-full h-20 opacity-20 group-hover:opacity-30 transition-opacity">
+                    <canvas id="citationChart"></canvas>
+                </div>
+            </div>
+        </div>
 
-                        <!-- Memberships -->
-                        <div class="md:col-span-12 space-y-2">
-                            <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider flex items-center gap-2">
-                                <i class="ph-bold ph-certificate text-academic-600"></i> 专业会员
-                            </h3>
-                            <div class="flex flex-wrap gap-2" id="memberships-list">
-                                <!-- JS Injected -->
-                            </div>
-                        </div>
+        <!-- Right Content -->
+        <div class="lg:col-span-8 space-y-8">
 
-                        <div class="md:col-span-12 border-t border-slate-100"></div>
+            <!-- Bio -->
+            <div class="prose prose-slate max-w-none">
+                <h2 class="font-serif text-3xl font-bold text-slate-800 mb-4">
+                    个人简介
+                </h2>
 
-                        <!-- Email -->
-                        <div class="md:col-span-5 space-y-2">
-                            <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider flex items-center gap-2">
-                                <i class="ph-bold ph-envelope-simple text-academic-600"></i> 电子邮箱
-                            </h3>
-                            <div class="flex flex-col gap-1" id="email-list">
-                                <a href="mailto:20249197@wzbc.edu.cn" class="text-sm font-medium text-slate-700 hover:text-academic-600 transition-colors">20249197@wzbc.edu.cn</a>
-                                <a href="mailto:xiaoliang_liu@smail.nju.edu.cn" class="text-sm font-medium text-slate-700 hover:text-academic-600 transition-colors">xiaoliang_liu@smail.nju.edu.cn</a>
-                            </div>
-                        </div>
+                <div id="bio-paragraphs">
+                    <p class="text-slate-600 leading-relaxed">
+                        <b>刘小亮</b>，博士毕业于南京大学计算机科学与技术专业（2024），师从<b>申富饶教授</b>。现任温州商学院信息工程学院副教授。此前于2018年在南京大学获得硕士学位。
+                    </p>
 
-                        <!-- Address -->
-                        <div class="md:col-span-7 space-y-2">
-                            <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider flex items-center gap-2">
-                                <i class="ph-bold ph-map-pin text-academic-600"></i> 通讯地址
-                            </h3>
-                            <p id="address-text" class="text-sm text-slate-600 leading-relaxed">
-                                浙江省温州市茶山高教园区，温州商学院北校区，致用楼220室
-                            </p>
-                        </div>
-                    </div>
+                    <p class="text-slate-600 leading-relaxed mt-2">
+                        作为南京大学机器人智能与神经计算（RINC）研究组成员，他主要致力于<b>人工智能安全</b>领域研究。具体研究兴趣包括对抗机器学习、深度神经网络鲁棒性及防御算法设计，旨在提升AI系统在开放环境下的安全性与可靠性。
+                    </p>
                 </div>
 
-                <!-- Dashboard Grid -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <!-- News -->
-                    <div id="news" class="glass-card p-5 rounded-xl h-64 flex flex-col">
-                        <div class="flex items-center justify-between mb-4 border-b border-slate-100 pb-2">
-                            <h3 class="font-bold text-slate-800 flex items-center gap-2">
-                                <i class="ph-fill ph-newspaper text-academic-600"></i> 最新动态
-                            </h3>
-                        </div>
-                        <div class="overflow-y-auto space-y-4 pr-2 flex-1 custom-scroll" id="news-container">
+                <div class="flex flex-wrap gap-2 mt-4" id="research-tags">
+                    <span class="px-3 py-1 bg-academic-50 text-academic-700 text-xs font-bold rounded-full border border-academic-100">人工智能安全</span>
+                    <span class="px-3 py-1 bg-academic-50 text-academic-700 text-xs font-bold rounded-full border border-academic-100">对抗机器学习</span>
+                    <span class="px-3 py-1 bg-academic-50 text-academic-700 text-xs font-bold rounded-full border border-academic-100">深度神经网络</span>
+                    <span class="px-3 py-1 bg-academic-50 text-academic-700 text-xs font-bold rounded-full border border-academic-100">计算机视觉</span>
+                </div>
+            </div>
+
+            <!-- Contact & Professional Info Block -->
+            <div class="glass-card p-6 rounded-xl bg-white/80 border border-slate-200 shadow-sm">
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+
+                    <!-- Memberships -->
+                    <div class="md:col-span-12 space-y-2">
+                        <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider flex items-center gap-2">
+                            <i class="ph-bold ph-certificate text-academic-600"></i> 专业会员
+                        </h3>
+
+                        <div class="flex flex-wrap gap-2" id="memberships-list">
                             <!-- JS Injected -->
                         </div>
                     </div>
 
-                    <!-- Google Scholar Stats -->
-                    <div class="glass-card p-5 rounded-xl h-64 flex flex-col relative overflow-hidden group">
-                        <div class="flex items-center justify-between mb-2 z-10">
-                            <h3 class="font-bold text-slate-800 flex items-center gap-2">
-                                <i class="ph-fill ph-quotes text-academic-600"></i> 引用统计
-                            </h3>
-                            <a href="https://scholar.google.com/citations?hl=zh-CN&user=Eg6rWc8AAAAJ" target="_blank" class="text-[10px] font-bold bg-slate-100 text-slate-600 px-2 py-1 rounded-full hover:bg-academic-600 hover:text-white transition-colors flex items-center gap-1">
-                                Google Scholar <i class="ph-bold ph-arrow-up-right"></i>
+                    <div class="md:col-span-12 border-t border-slate-100"></div>
+
+                    <!-- Email -->
+                    <div class="md:col-span-5 space-y-2">
+                        <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider flex items-center gap-2">
+                            <i class="ph-bold ph-envelope-simple text-academic-600"></i> 电子邮箱
+                        </h3>
+
+                        <div class="flex flex-col gap-1" id="email-list">
+                            <a href="mailto:20249197@wzbc.edu.cn" class="text-sm font-medium text-slate-700 hover:text-academic-600 transition-colors">
+                                20249197@wzbc.edu.cn
+                            </a>
+                            <a href="mailto:xiaoliang_liu@smail.nju.edu.cn" class="text-sm font-medium text-slate-700 hover:text-academic-600 transition-colors">
+                                xiaoliang_liu@smail.nju.edu.cn
                             </a>
                         </div>
-                        <div class="grid grid-cols-3 gap-2 mt-2 z-10">
-                            <div class="flex flex-col items-center p-2 rounded-lg hover:bg-slate-50 transition-colors">
-                                <span id="cite-total" class="text-3xl font-bold text-slate-800">--</span>
-                                <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mt-1">总引用</span>
-                            </div>
-                            <div class="flex flex-col items-center p-2 rounded-lg hover:bg-slate-50 transition-colors">
-                                <span id="cite-h" class="text-3xl font-bold text-slate-800">--</span>
-                                <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mt-1">h-index</span>
-                            </div>
-                            <div class="flex flex-col items-center p-2 rounded-lg hover:bg-slate-50 transition-colors">
-                                <span id="cite-i10" class="text-3xl font-bold text-slate-800">--</span>
-                                <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mt-1">i10-index</span>
-                            </div>
-                        </div>
-                        <div class="absolute bottom-0 left-0 w-full h-20 opacity-20 group-hover:opacity-30 transition-opacity">
-                            <canvas id="citationChart"></canvas>
-                        </div>
+                    </div>
+
+                    <!-- Address -->
+                    <div class="md:col-span-7 space-y-2">
+                        <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider flex items-center gap-2">
+                            <i class="ph-bold ph-map-pin text-academic-600"></i> 通讯地址
+                        </h3>
+
+                        <p id="address-text" class="text-sm text-slate-600 leading-relaxed">
+                            浙江省温州市茶山高教园区，温州商学院北校区，致用楼220室
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dashboard Grid -->
+            <div class="grid grid-cols-1 gap-6">
+                <!-- News -->
+                <div id="news" class="glass-card p-5 rounded-xl h-72 lg:h-[320px] flex flex-col">
+                    <div class="flex items-center justify-between mb-4 border-b border-slate-100 pb-2">
+                        <h3 class="font-bold text-slate-800 flex items-center gap-2">
+                            <i class="ph-fill ph-newspaper text-academic-600"></i> 最新动态
+                        </h3>
+                    </div>
+
+                    <div class="overflow-y-auto space-y-4 pr-2 flex-1 custom-scroll" id="news-container">
+                        <!-- JS Injected -->
                     </div>
                 </div>
             </div>
         </div>
-    </header>
+    </div>
+</header>
+
+
 
     <!-- Publications -->
     <section id="publications" class="py-12 bg-white border-y border-slate-200">
