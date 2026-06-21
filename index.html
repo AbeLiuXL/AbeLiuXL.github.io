@@ -403,9 +403,99 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <p class="text-sm">&copy; 2023-2026 Xiaoliang Liu. All rights reserved.</p>
         </div>
-        <div style="display: flex; align-items: center; justify-content: center; flex-direction: column;">
-         <script type="text/javascript" src="https://www.free-counters.org/count/guw1"></script><br><a href='https://www.pferdeversicherung.at/'>Pferd Versicherung</a> <script type='text/javascript' src='https://whomania.com/ctr?id=9fa96e400c4b3d503d4dd197c0f5a850298cfad6'></script>
-        </div>
+
+<!-- Visit Counter -->
+<div class="flex items-center justify-center gap-4 text-xs text-slate-400 mt-8">
+    <div class="flex items-center gap-1">
+        <i class="ph-bold ph-chart-line-up text-academic-600"></i>
+        <span>Total：</span>
+        <span id="visit-total" class="font-bold text-slate-200">--</span>
+    </div>
+
+    <div class="w-px h-3 bg-slate-200"></div>
+
+    <div class="flex items-center gap-1">
+        <span>Yesterday：</span>
+        <span id="visit-yesterday" class="font-bold text-slate-200">--</span>
+    </div>
+
+    <div class="w-px h-3 bg-slate-200"></div>
+
+    <div class="flex items-center gap-1">
+        <span>Today：</span>
+        <span id="visit-today" class="font-bold text-slate-200">--</span>
+    </div>
+</div>
+
+<script>
+(function () {
+    const NAMESPACE = 'xiaoliang-liu-homepage';
+    const TIME_ZONE = 'Asia/Shanghai';
+
+    const $total = document.getElementById('visit-total');
+    const $today = document.getElementById('visit-today');
+    const $yesterday = document.getElementById('visit-yesterday');
+    const BASE_TOTAL_OFFSET = 9500;
+    function formatDate(offsetDays = 0) {
+        const d = new Date();
+        d.setDate(d.getDate() + offsetDays);
+
+        return new Intl.DateTimeFormat('en-CA', {
+            timeZone: TIME_ZONE,
+            year: 'numeric',
+            month: '2-digit',
+            day: '2-digit'
+        }).format(d);
+    }
+
+    function extractCount(data) {
+        return data.count ??
+               data.value ??
+               data.data?.count ??
+               data.data?.value ??
+               0;
+    }
+
+    async function counterRequest(name, action = '') {
+        const url = `https://api.counterapi.dev/v1/${NAMESPACE}/${name}/${action}`;
+        const res = await fetch(url);
+        if (!res.ok) throw new Error('Counter request failed');
+        return extractCount(await res.json());
+    }
+
+    async function getCounter(name) {
+        try {
+            return await counterRequest(name, '');
+        } catch (e) {
+            return 0;
+        }
+    }
+
+    async function updateVisitCounter() {
+        const todayKey = `visits-${formatDate(0)}`;
+        const yesterdayKey = `visits-${formatDate(-1)}`;
+
+        try {
+            const [totalCount, todayCount, yesterdayCount] = await Promise.all([
+                counterRequest('total-visits', 'up'),
+                counterRequest(todayKey, 'up'),
+                getCounter(yesterdayKey)
+            ]);
+
+            $total.textContent = totalCount + BASE_TOTAL_OFFSET;
+            $today.textContent = todayCount;
+            $yesterday.textContent = yesterdayCount;
+        } catch (e) {
+            $total.textContent = '--';
+            $today.textContent = '--';
+            $yesterday.textContent = '--';
+        }
+    }
+
+    updateVisitCounter();
+})();
+</script>
+
     </footer>
 </body>
 </html>
