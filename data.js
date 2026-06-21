@@ -71,17 +71,43 @@ var SITE_DATA = {
   },
 
   "news": [
+      { "date": "2026-06-21", "text": { "en": "Paper \"Adversarial UV Patch Attack ... \" accepted by <b>Applied Soft Computing</b> (CCF-C, JCR-Q1)..", "zh":  "论文 \"Adversarial UV Patch Attack ... \" 被 <b>Neural Networks</b> (CCF-C, 二区 TOP) 接收。" } },
+      {"date": "2026-06-06", "text": {"en": "Achieved third place in the CVPR 2026 AdvML Workshop Challenge and was invited to deliver an online presentation.", "zh": "获得 CVPR 2026 AdvML Workshop 国际算法挑战赛季军，并受邀作线上汇报。"}},
     { "date": "2026-02-15", "text": { "en": "Invited to serve as a Program Committee Member (PC Member) for IEEE SSE 2026.", "zh": "受邀担任IEEE SSE 2026 程序委员会委员（PC Member）。" } },
-    { "date": "2025-08-30", "text": { "en": "Paper \"Region-Guided Attack...\" accepted by <b>Neural Networks</b>.", "zh": "论文 \"Region-Guided Attack...\" 被 <b>Neural Networks</b> (CCF-B, TOP) 接收。" } },
+    { "date": "2025-08-30", "text": { "en": "Paper \"Region-Guided Attack...\" accepted by <b>Neural Networks</b> (CCF-B, JCR-Q1)..", "zh": "论文 \"Region-Guided Attack...\" 被 <b>Neural Networks</b> (CCF-B, 二区 TOP) 接收。" } },
     { "date": "2025-08-03", "text": { "en": "Received 2nd Place in <b>IJCAI 2025</b> Workshop Challenge.", "zh": "获得 <b>IJCAI 2025</b> Workshop Challenge (Rotated X-ray) 亚军。" } },
     { "date": "2025-03-17", "text": { "en": "Selected as member of Big Data & AI Committee (Zhejiang).", "zh": "入选浙江省青科协（大数据与人工智能委员会）。" } },
     { "date": "2025-03-01", "text": { "en": "Released Region-Guided Attack code on GitHub.", "zh": "开源 RGA 代码。" } },
-    { "date": "2024-08-20", "text": { "en": "Paper \"RADAP\" accepted by <b>Pattern Recognition</b>.", "zh": "论文 \"RADAP\" 被 <b>Pattern Recognition</b> (CCF-B, TOP) 接收。" } },
+    { "date": "2024-08-20", "text": { "en": "Paper \"RADAP\" accepted by <b>Pattern Recognition</b> (CCF-B, JCR-Q1).", "zh": "论文 \"RADAP\" 被 <b>Pattern Recognition</b> (CCF-B, 一区 TOP) 接收。" } },
     { "date": "2024-06-20", "text": { "en": "Successfully graduated with a Ph.D. degree.", "zh": "顺利获得南京大学博士学位。" } }
   ],
 
   "papers": [
-    {
+      {
+        "title": "Adversarial UV Patch Attack from Implicit 3D Face Representation via Model Inversion",
+        "authors": "Xiaoliang Liu*, Furao Shen, Feng Han, Jian Zhao",
+        "venue": "Applied Soft Computing",
+        "year": "2026",
+        "type": "journal",
+        "tags": {
+          "en": [
+            {"t":"CCF-C","c":"bg-blue-50 text-blue-700 border-blue-100"},
+            {"t":"SCI Q1","c":"bg-red-50 text-red-700 border-red-100"}
+          ],
+          "zh": [
+            {"t":"CCF-C","c":"bg-blue-50 text-blue-700 border-blue-100"},
+            {"t":"SCI Q1","c":"bg-red-50 text-red-700 border-red-100"},
+            {"t":"中科院二区","c":"bg-blue-50 text-blue-700 border-blue-100"},
+            {"t":"TOP","c":"bg-red-50 text-red-700 border-red-100"}
+          ]
+        },
+        "links": {
+          "paper": "https://doi.org/10.1016/j.asoc.2026.115810"
+        }
+      },
+
+
+      {
       "title": "Region-Guided Attack on the Segment Anything Model (SAM)",
       "authors": "Xiaoliang Liu*, Furao Shen, Jian Zhao",
       "venue": "Neural Networks",
@@ -199,9 +225,15 @@ var SITE_DATA = {
   },
 
   "awards": [
-    {
+      { "title": { "en": "Third Place", "zh": "季军" },
+        "event": { "en": "CVPR 2026 AdvML Workshop Challenge", "zh": "CVPR 2026 AdvML Workshop 国际算法挑战赛" },
+        "detail": { "en": "Adversarial Multimodal Attacks against Vision-Language Agents", "zh": "面向自动驾驶VQA的多模态对抗攻击" },
+        "icon": "medal",
+        "color": "orange"
+      },
+      {
       "title": { "en": "Second Place", "zh": "亚军" },
-      "event": "IJCAI 2025 Workshop Challenge",
+      "event": { "en": "IJCAI 2025 Workshop Challenge", "zh": "IJCAI 2025 Workshop 国际算法挑战赛" },
       "detail": { "en": "Rotated X-ray Prohibited Items Detection", "zh": "Rotated X-ray Prohibited Items Detection (单人成队)" },
       "icon": "medal",
       "color": "yellow"
@@ -216,14 +248,15 @@ var SITE_DATA = {
   ],
 
   "full_publications": [
-    { "id": 1, "type": "journal", "year": 2025, "title": "Region-Guided Attack on the Segment Anything Model (SAM)", "authors": "Xiaoliang Liu*, Furao Shen, Jian Zhao", "venue": "Neural Networks", "tags": ["CCF-B", "SCI Q1"], "links": { "pdf": "https://www.sciencedirect.com/science/article/pii/S0893608025009384", "arxiv": "https://arxiv.org/abs/2411.02974", "code": "https://github.com/AbeLiuXL/RGA" } },
-    { "id": 2, "type": "journal", "year": 2024, "title": "RADAP: A Robust and Adaptive Defense Against Diverse Adversarial Patches on Face Recognition", "authors": "Xiaoliang Liu, Furao Shen*, Jian Zhao, Changhai Nie", "venue": "Pattern Recognition", "tags": ["CCF-B", "SCI Q1"], "links": { "pdf": "https://www.sciencedirect.com/science/article/abs/pii/S0031320324006666", "arxiv": "https://arxiv.org/abs/2311.17339" } },
-    { "id": 3, "type": "journal", "year": 2024, "title": "EAP: An effective black-box impersonation adversarial patch attack method on face recognition in the physical world", "authors": "Xiaoliang Liu, Furao Shen*, Jian Zhao, Changhai Nie", "venue": "Neurocomputing", "tags": ["CCF-C", "SCI Q1"], "links": { "pdf": "https://www.sciencedirect.com/science/article/abs/pii/S0925231224002881" } },
-    { "id": 4, "type": "journal", "year": 2024, "title": "Self-supervised learning of monocular 3D geometry understanding with two-and three-view geometric constraints", "authors": "Xiaoliang Liu, Furao Shen*, Jian Zhao, Changhai Nie", "venue": "The Visual Computer", "tags": ["CCF-C", "SCI Q2"], "links": { "pdf": "https://link.springer.com/article/10.1007/s00371-023-02840-y" } },
-    { "id": 5, "type": "journal", "year": 2024, "title": "RandoMix: a mixed sample data augmentation method with multiple mixed modes", "authors": "Xiaoliang Liu, Furao Shen*, Jian Zhao, Changhai Nie", "venue": "Multimedia Tools and Applications", "tags": ["CCF-C", "SCI Q2"], "links": { "pdf": "https://link.springer.com/article/10.1007/s11042-024-18868-8" } },
-    { "id": 6, "type": "conference", "year": 2022, "title": "AugRmixAT: A data processing and training method for improving multiple robustness and generalization performance", "authors": "Xiaoliang Liu, Furao Shen*, Jian Zhao, Changhai Nie", "venue": "IEEE International Conference on Multimedia and Expo (ICME)", "tags": ["CCF-B", "EI"], "links": { "pdf": "https://ieeexplore.ieee.org/document/9859665" } },
-    { "id": 7, "type": "journal", "year": 2023, "title": "NeRFTAP: Enhancing transferability of adversarial patches on face recognition using neural radiance fields", "authors": "Xiaoliang Liu, Furao Shen, Feng Han, Jian Zhao, Changhai Nie", "venue": "arXiv preprint", "tags": ["Under Review", "SCI"], "links": { "arxiv": "https://arxiv.org/abs/2311.17332" } },
-    { "id": 8, "type": "patent", "year": 2024, "title": "A method for indoor localization by fusing UWB and LiDAR (ZL 2020 1 1520518.X)", "authors": "Furao Shen, Kepan Gao, Xiaoliang Liu, et al.", "venue": "China Invention Patent", "tags": ["Patent"], "links": {} },
-    { "id": 9, "type": "patent", "year": 2023, "title": "Self-Organizing Incremental Learning Neural Networks (Chapter 1: Mathematical Foundations)", "authors": "Furao Shen (Xiaoliang Liu contributed Chapter 1)", "venue": "Electronic Industry Press", "tags": ["Book Chapter"], "links": {} }
+      { "id": 10, "type": "journal", "year": 2026, "title": "Adversarial UV Patch Attack from Implicit 3D Face Representation via Model Inversion", "authors": "Xiaoliang Liu*, Furao Shen, Feng Han, Jian Zhao", "venue": "Applied Soft Computing", "tags": ["CCF-C", "SCI Q1"], "links": { "pdf": "https://doi.org/10.1016/j.asoc.2026.115810" } },
+      { "id": 9, "type": "journal", "year": 2025, "title": "Region-Guided Attack on the Segment Anything Model (SAM)", "authors": "Xiaoliang Liu*, Furao Shen, Jian Zhao", "venue": "Neural Networks", "tags": ["CCF-B", "SCI Q1"], "links": { "pdf": "https://www.sciencedirect.com/science/article/pii/S0893608025009384", "arxiv": "https://arxiv.org/abs/2411.02974", "code": "https://github.com/AbeLiuXL/RGA" } },
+      { "id": 8, "type": "journal", "year": 2024, "title": "RADAP: A Robust and Adaptive Defense Against Diverse Adversarial Patches on Face Recognition", "authors": "Xiaoliang Liu, Furao Shen*, Jian Zhao, Changhai Nie", "venue": "Pattern Recognition", "tags": ["CCF-B", "SCI Q1"], "links": { "pdf": "https://www.sciencedirect.com/science/article/abs/pii/S0031320324006666", "arxiv": "https://arxiv.org/abs/2311.17339" } },
+      { "id": 7, "type": "journal", "year": 2024, "title": "EAP: An effective black-box impersonation adversarial patch attack method on face recognition in the physical world", "authors": "Xiaoliang Liu, Furao Shen*, Jian Zhao, Changhai Nie", "venue": "Neurocomputing", "tags": ["CCF-C", "SCI Q1"], "links": { "pdf": "https://www.sciencedirect.com/science/article/abs/pii/S0925231224002881" } },
+      { "id": 6, "type": "journal", "year": 2024, "title": "Self-supervised learning of monocular 3D geometry understanding with two-and three-view geometric constraints", "authors": "Xiaoliang Liu, Furao Shen*, Jian Zhao, Changhai Nie", "venue": "The Visual Computer", "tags": ["CCF-C", "SCI Q2"], "links": { "pdf": "https://link.springer.com/article/10.1007/s00371-023-02840-y" } },
+      { "id": 5, "type": "journal", "year": 2024, "title": "RandoMix: a mixed sample data augmentation method with multiple mixed modes", "authors": "Xiaoliang Liu, Furao Shen*, Jian Zhao, Changhai Nie", "venue": "Multimedia Tools and Applications", "tags": ["CCF-C", "SCI Q2"], "links": { "pdf": "https://link.springer.com/article/10.1007/s11042-024-18868-8" } },
+      { "id": 4, "type": "conference", "year": 2022, "title": "AugRmixAT: A data processing and training method for improving multiple robustness and generalization performance", "authors": "Xiaoliang Liu, Furao Shen*, Jian Zhao, Changhai Nie", "venue": "IEEE International Conference on Multimedia and Expo (ICME)", "tags": ["CCF-B", "EI"], "links": { "pdf": "https://ieeexplore.ieee.org/document/9859665" } },
+      { "id": 3, "type": "journal", "year": 2023, "title": "NeRFTAP: Enhancing transferability of adversarial patches on face recognition using neural radiance fields", "authors": "Xiaoliang Liu, Furao Shen, Feng Han, Jian Zhao, Changhai Nie", "venue": "arXiv preprint", "tags": ["Under Review", "SCI"], "links": { "arxiv": "https://arxiv.org/abs/2311.17332" } },
+      { "id": 2, "type": "patent", "year": 2024, "title": "A method for indoor localization by fusing UWB and LiDAR (ZL 2020 1 1520518.X)", "authors": "Furao Shen, Kepan Gao, Xiaoliang Liu, et al.", "venue": "China Invention Patent", "tags": ["Patent"], "links": {} },
+      { "id": 1, "type": "patent", "year": 2023, "title": "Self-Organizing Incremental Learning Neural Networks (Chapter 1: Mathematical Foundations)", "authors": "Furao Shen (Xiaoliang Liu contributed Chapter 1)", "venue": "Electronic Industry Press", "tags": ["Book Chapter"], "links": {} }
   ]
 };
