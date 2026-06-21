@@ -29,10 +29,39 @@ const MEMBERSHIP_COLOR = {
     emerald: { hover: 'hover:border-emerald-300', dot: 'text-emerald-600' },
     purple: { hover: 'hover:border-purple-300', dot: 'text-purple-600' },
 };
+
 const AWARD_COLOR = {
-    yellow: { bg: 'bg-yellow-100', text: 'text-yellow-600' },
-    orange: { bg: 'bg-orange-100', text: 'text-orange-600' },
+    yellow: {
+        bg: COLOR_MAP.yellow.bg100,
+        text: COLOR_MAP.yellow.text600
+    },
+    orange: {
+        bg: COLOR_MAP.orange.bg100,
+        text: COLOR_MAP.orange.text600
+    },
+    blue: {
+        bg: COLOR_MAP.blue.bg100,
+        text: COLOR_MAP.blue.text600
+    },
+    emerald: {
+        bg: COLOR_MAP.emerald.bg100,
+        text: COLOR_MAP.emerald.text600
+    },
+    purple: {
+        bg: COLOR_MAP.purple.bg100,
+        text: COLOR_MAP.purple.text600
+    },
+    amber: {
+        bg: COLOR_MAP.amber.bg100,
+        text: COLOR_MAP.amber.text600
+    },
+    academic: {
+        bg: COLOR_MAP.academic.bg100,
+        text: COLOR_MAP.academic.text600
+    },
 };
+
+
 
 /* ---------- Profile Card ---------- */
 function renderProfile(d, lang) {
