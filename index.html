@@ -427,15 +427,18 @@
     </div>
 </div>
 
+
 <script>
 (function () {
     const NAMESPACE = 'xiaoliang-liu-homepage';
     const TIME_ZONE = 'Asia/Shanghai';
 
+    const BASE_TOTAL_OFFSET = 9500;
+
     const $total = document.getElementById('visit-total');
     const $today = document.getElementById('visit-today');
     const $yesterday = document.getElementById('visit-yesterday');
-    const BASE_TOTAL_OFFSET = 9500;
+
     function formatDate(offsetDays = 0) {
         const d = new Date();
         d.setDate(d.getDate() + offsetDays);
@@ -457,15 +460,19 @@
     }
 
     async function counterRequest(name, action = '') {
-        const url = `https://api.counterapi.dev/v1/${NAMESPACE}/${name}/${action}`;
+        const url = action
+            ? `https://api.counterapi.dev/v1/${NAMESPACE}/${name}/${action}`
+            : `https://api.counterapi.dev/v1/${NAMESPACE}/${name}`;
+
         const res = await fetch(url);
         if (!res.ok) throw new Error('Counter request failed');
+
         return extractCount(await res.json());
     }
 
     async function getCounter(name) {
         try {
-            return await counterRequest(name, '');
+            return await counterRequest(name);
         } catch (e) {
             return 0;
         }
@@ -475,14 +482,27 @@
         const todayKey = `visits-${formatDate(0)}`;
         const yesterdayKey = `visits-${formatDate(-1)}`;
 
-        try {
-            const [totalCount, todayCount, yesterdayCount] = await Promise.all([
-                counterRequest('total-visits', 'up'),
-                counterRequest(todayKey, 'up'),
-                getCounter(yesterdayKey)
-            ]);
+        const nav = performance.getEntriesByType('navigation')[0];
+        const navType = nav ? nav.type : 'navigate';
 
-            $total.textContent = totalCount + BASE_TOTAL_OFFSET;
+        // 刷新页面、浏览器前进/后退时不增加访问量
+        const shouldIncrease = navType !== 'reload' && navType !== 'back_forward';
+
+        try {
+            let totalCount;
+            let todayCount;
+
+            if (shouldIncrease) {
+                totalCount = await counterRequest('total-visits', 'up');
+                todayCount = await counterRequest(todayKey, 'up');
+            } else {
+                totalCount = await getCounter('total-visits');
+                todayCount = await getCounter(todayKey);
+            }
+
+            const yesterdayCount = await getCounter(yesterdayKey);
+
+            $total.textContent = Number(totalCount) + BASE_TOTAL_OFFSET;
             $today.textContent = todayCount;
             $yesterday.textContent = yesterdayCount;
         } catch (e) {
@@ -495,6 +515,7 @@
     updateVisitCounter();
 })();
 </script>
+
 
     </footer>
 </body>
