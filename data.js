@@ -71,7 +71,7 @@ var SITE_DATA = {
   },
 
   "news": [
-      { "date": "2026-06-21", "text": { "en": "Paper \"Adversarial UV Patch Attack ... \" accepted by <b>Applied Soft Computing</b> (CCF-C, JCR-Q1).", "zh":  "论文 \"Adversarial UV Patch Attack ... \" 被 <b>Neural Networks</b> (CCF-C, 二区 TOP) 接收。" } },
+      { "date": "2026-06-21", "text": { "en": "Paper \"Adversarial UV Patch Attack ... \" accepted by <b>Applied Soft Computing</b> (CCF-C, JCR-Q1).", "zh":  "论文 \"Adversarial UV Patch Attack ... \" 被 <b>Applied Soft Computing</b> (CCF-C, 二区 TOP) 接收。" } },
       {"date": "2026-06-06", "text": {"en": "Achieved third place in the CVPR 2026 AdvML Workshop Challenge and was invited to deliver an online presentation.", "zh": "获得 CVPR 2026 AdvML Workshop 国际算法挑战赛季军，并受邀作线上汇报。"}},
     { "date": "2026-02-15", "text": { "en": "Invited to serve as a Program Committee Member (PC Member) for IEEE SSE 2026.", "zh": "受邀担任IEEE SSE 2026 程序委员会委员（PC Member）。" } },
     { "date": "2025-08-30", "text": { "en": "Paper \"Region-Guided Attack...\" accepted by <b>Neural Networks</b> (CCF-B, JCR-Q1)..", "zh": "论文 \"Region-Guided Attack...\" 被 <b>Neural Networks</b> (CCF-B, 二区 TOP) 接收。" } },
