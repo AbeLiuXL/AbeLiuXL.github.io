@@ -61,12 +61,12 @@ var SITE_DATA = {
   },
 
   "citation": {
-    "total": 91,
+    "total": 100,
     "h_index": 5,
     "i10_index": 4,
     "yearly": {
       "labels": ["2023", "2024", "2025", "2026"],
-      "data": [10, 23, 40, 20]
+      "data": [10, 23, 40, 29]
     }
   },
 
