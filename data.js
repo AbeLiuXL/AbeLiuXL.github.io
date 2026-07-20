@@ -207,7 +207,7 @@ var SITE_DATA = {
         "Engineering Applications of Artificial Intelligence (EAAI,JCR-Q1)",
         "Applied Soft Computing Journal (ASOC,JCR-Q1)",
         "Knowledge-Based Systems (KBS,JCR-Q1)",
-        "Journal of Engineering Research (JER,JCR-Q2)"
+        "Journal of Engineering Research (JER,JCR-Q1)"
       ],
       "zh": [
         "IEEE Transactions on Circuits and Systems for Video Technology (TCSVT，JCR-Q1，中科院一区，TOP)",
@@ -215,7 +215,7 @@ var SITE_DATA = {
         "Engineering Applications of Artificial Intelligence (EAAI，JCR-Q1，中科院一区，TOP)",
         "Applied Soft Computing Journal (ASOC， JCR-Q1，中科院二区，TOP)",
         "Knowledge-Based Systems (KBS,JCR-Q1，中科院一区，TOP)",
-        "Journal of Engineering Research (JER,JCR-Q2，中科院4区)"
+        "Journal of Engineering Research (JER,JCR-Q1，中科院4区)"
       ]
     },
     "pc_memberships": {
