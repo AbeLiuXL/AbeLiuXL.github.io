@@ -162,8 +162,8 @@ var SITE_DATA = {
       "year": "2024",
       "type": "journal",
       "tags": {
-        "en": [{"t":"CCF-C","c":"bg-emerald-50 text-emerald-700 border-emerald-100"}, {"t":"SCI Q1","c":"bg-blue-50 text-blue-700 border-blue-100"}],
-        "zh": [{"t":"CCF-C","c":"bg-emerald-50 text-emerald-700 border-emerald-100"}, {"t":"SCI Q1","c":"bg-blue-50 text-blue-700 border-blue-100"}]
+        "en": [{"t":"CCF-C","c":"bg-emerald-50 text-emerald-700 border-emerald-100"}, {"t":"SCI Q1","c":"bg-red-50 text-red-700 border-red-100"}],
+        "zh": [{"t":"CCF-C","c":"bg-emerald-50 text-emerald-700 border-emerald-100"}, {"t":"SCI Q1","c":"bg-red-50 text-red-700 border-red-100"}]
       },
       "links": { "paper": "https://link.springer.com/article/10.1007/s00371-023-02840-y" }
     }
