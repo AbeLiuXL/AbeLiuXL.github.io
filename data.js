@@ -61,16 +61,17 @@ var SITE_DATA = {
   },
 
   "citation": {
-    "total": 100,
+    "total": 113,
     "h_index": 5,
     "i10_index": 4,
     "yearly": {
       "labels": ["2023", "2024", "2025", "2026"],
-      "data": [10, 23, 40, 29]
+      "data": [10, 23, 40, 32]
     }
   },
 
   "news": [
+      { "date": "2026-10-15", "text": { "en": "Paper \" Oriented object detection in X⁃ray images with semantic and data dual⁃augmentation \" accepted by <b>Journal of Nanjing University(Natural Sciences)</b> .", "zh":  "论文 \"基于语义与样本双重增强机制的X光图像定向目标检测研究 \" 被 <b>南京大学学报(自然科学版)</b> (浙大核心、CSCD核心、北大核心) 接收。" } },
       { "date": "2026-06-21", "text": { "en": "Paper \"Adversarial UV Patch Attack ... \" accepted by <b>Applied Soft Computing</b> (CCF-C, JCR-Q1).", "zh":  "论文 \"Adversarial UV Patch Attack ... \" 被 <b>Applied Soft Computing</b> (CCF-C, 二区 TOP) 接收。" } },
       {"date": "2026-06-06", "text": {"en": "Achieved third place in the CVPR 2026 AdvML Workshop Challenge and was invited to deliver an online presentation.", "zh": "获得 CVPR 2026 AdvML Workshop 国际算法挑战赛季军，并受邀作线上汇报。"}},
     { "date": "2026-02-15", "text": { "en": "Invited to serve as a Program Committee Member (PC Member) for IEEE SSE 2026.", "zh": "受邀担任IEEE SSE 2026 程序委员会委员（PC Member）。" } },
@@ -254,6 +255,7 @@ var SITE_DATA = {
   ],
 
   "full_publications": [
+      { "id": 10, "type": "journal", "year": 2026, "title": "Oriented object detection in X⁃ray images with semantic and data dual⁃augmentation", "authors": "Xiaoliang Liu*, Furao Shen, Guoqiang Wang, Baile Xu, Yi Lin, Yuan Huan", "venue": "Journal of Nanjing University(Natural Sciences)", "tags": ["浙大核心、CSCD核心、北大核心"], "links": { "pdf": "https://jns.nju.edu.cn/CN/10.13232/j.cnki.jnju.2026.05.005#4" } },
       { "id": 10, "type": "journal", "year": 2026, "title": "Adversarial UV Patch Attack from Implicit 3D Face Representation via Model Inversion", "authors": "Xiaoliang Liu*, Furao Shen, Feng Han, Jian Zhao", "venue": "Applied Soft Computing", "tags": ["CCF-C", "SCI Q1"], "links": { "pdf": "https://doi.org/10.1016/j.asoc.2026.115810" } },
       { "id": 9, "type": "journal", "year": 2025, "title": "Region-Guided Attack on the Segment Anything Model (SAM)", "authors": "Xiaoliang Liu*, Furao Shen, Jian Zhao", "venue": "Neural Networks", "tags": ["CCF-B", "SCI Q1"], "links": { "pdf": "https://www.sciencedirect.com/science/article/pii/S0893608025009384", "arxiv": "https://arxiv.org/abs/2411.02974", "code": "https://github.com/AbeLiuXL/RGA" } },
       { "id": 8, "type": "journal", "year": 2024, "title": "RADAP: A Robust and Adaptive Defense Against Diverse Adversarial Patches on Face Recognition", "authors": "Xiaoliang Liu, Furao Shen*, Jian Zhao, Changhai Nie", "venue": "Pattern Recognition", "tags": ["CCF-B", "SCI Q1"], "links": { "pdf": "https://www.sciencedirect.com/science/article/abs/pii/S0031320324006666", "arxiv": "https://arxiv.org/abs/2311.17339" } },
