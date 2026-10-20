@@ -68,6 +68,9 @@
         .no-scrollbar::-webkit-scrollbar { display: none; }
         .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
     </style>
+<style>
+.publication-entry{padding:24px 0;border-bottom:1px solid #dce3eb;text-align:left;scroll-margin-top:120px}.publication-entry h3{font:600 18px/1.55 Georgia,"Times New Roman",serif;color:#152f4e;margin:0 0 8px}.publication-entry h3 a:hover,.publication-entry a:hover{text-decoration:underline}.publication-authors{font-size:14px;line-height:1.8;color:#475569;margin-bottom:4px}.publication-authors strong{color:#172d47;font-weight:600}.publication-venue{font:italic 15px/1.7 Georgia,serif;color:#334155}.publication-doi{font-size:12px;margin-top:5px;overflow-wrap:anywhere;color:#64748b}.publication-links{display:flex;flex-wrap:wrap;gap:16px;margin-top:12px;font-size:12px;color:#075985;font-weight:600}.citation-panel{margin-top:12px;font-size:12px}.citation-panel summary{cursor:pointer;color:#075985;width:fit-content}.citation-panel[open]{background:#f4f7fa;padding:14px;border-radius:5px}.citation-actions{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0}.citation-actions button,.export-bib{border:1px solid #cbd5e1;border-radius:4px;padding:6px 10px;background:white;color:#164366;cursor:pointer}.citation-panel textarea{width:100%;padding:10px;border:1px solid #cbd5e1;background:white;font:13px/1.6 Georgia,serif;resize:vertical}.citation-panel pre{white-space:pre-wrap;overflow-wrap:anywhere;font:12px/1.7 monospace;margin-top:12px;color:#334155}.publication-year{font:600 27px Georgia,serif;color:#16324e;margin:32px 0 4px}[data-pub-filter][aria-pressed=true]{background:#173954;color:white}button:focus-visible,a:focus-visible,summary:focus-visible{outline:2px solid #0284c7;outline-offset:4px}@media(max-width:640px){.publication-entry h3{font-size:17px}.publication-entry{padding:20px 0}#publications .flex.items-center.gap-4{flex-wrap:wrap}}
+</style>
 </head>
 <body class="bg-grid-pattern min-h-screen flex flex-col">
 
@@ -90,7 +93,7 @@
     <main class="pt-28 pb-20 flex-grow">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
 
-            <!-- Header Stats -->
+            <h1 style="font:600 36px Georgia,serif;color:#173954;margin-bottom:14px">Publications</h1><p style="margin-bottom:24px;font-size:14px;color:#64748b">Research articles, preprints, patents, and book chapters. Journal articles are listed by issue year. * Corresponding author.</p><!-- Header Stats -->
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
                 <div class="bg-white p-4 rounded-xl border border-slate-100 shadow-sm flex flex-col items-center justify-center">
                     <span class="text-3xl font-bold text-academic-600" id="count-journal">0</span>
@@ -122,14 +125,14 @@
 
                 <!-- Filters -->
                 <div class="flex gap-1 overflow-x-auto w-full md:w-auto pb-1 md:pb-0 no-scrollbar">
-                    <button onclick="filterList('all')" class="filter-btn active px-4 py-1.5 text-xs font-bold rounded-lg bg-slate-800 text-white shadow-md transition-all shrink-0">All</button>
-                    <button onclick="filterList('journal')" class="filter-btn px-4 py-1.5 text-xs font-bold rounded-lg bg-white text-slate-600 border border-slate-200 hover:border-academic-300 transition-all shrink-0">Journals</button>
-                    <button onclick="filterList('conference')" class="filter-btn px-4 py-1.5 text-xs font-bold rounded-lg bg-white text-slate-600 border border-slate-200 hover:border-academic-300 transition-all shrink-0">Conferences</button>
-                    <button onclick="filterList('patent')" class="filter-btn px-4 py-1.5 text-xs font-bold rounded-lg bg-white text-slate-600 border border-slate-200 hover:border-academic-300 transition-all shrink-0">Patents/Books</button>
+                    <button data-pub-filter="all" onclick="filterList('all')" class="filter-btn active px-4 py-1.5 text-xs font-bold rounded-lg bg-slate-800 text-white shadow-md transition-all shrink-0">All</button>
+                    <button data-pub-filter="journal" onclick="filterList('journal')" class="filter-btn px-4 py-1.5 text-xs font-bold rounded-lg bg-white text-slate-600 border border-slate-200 hover:border-academic-300 transition-all shrink-0">Journals</button>
+                    <button data-pub-filter="conference" onclick="filterList('conference')" class="filter-btn px-4 py-1.5 text-xs font-bold rounded-lg bg-white text-slate-600 border border-slate-200 hover:border-academic-300 transition-all shrink-0">Conferences</button>
+                    <button data-pub-filter="patent" onclick="filterList('patent')" class="filter-btn px-4 py-1.5 text-xs font-bold rounded-lg bg-white text-slate-600 border border-slate-200 hover:border-academic-300 transition-all shrink-0">Patents</button><button data-pub-filter="preprint" onclick="filterList('preprint')" class="filter-btn px-4 py-1.5 text-xs rounded-lg">Preprints</button><button data-pub-filter="book" onclick="filterList('book')" class="filter-btn px-4 py-1.5 text-xs rounded-lg">Books</button>
                 </div>
             </div>
 
-            <!-- List Container -->
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px"><span id="result-count" aria-live="polite"></span><button class="export-bib" onclick="downloadVisibleBib()">Export results (.bib)</button></div><!-- List Container -->
             <div id="publications-list" class="space-y-4">
                 <!-- Items injected via JS -->
             </div>
@@ -146,7 +149,7 @@
     <!-- Footer -->
     <footer class="bg-slate-850 text-slate-400 py-8 border-t border-slate-700">
         <div class="max-w-5xl mx-auto px-4 text-center text-xs">
-            <p>&copy; 2023-2025 Xiaoliang Liu. All rights reserved.</p>
+            <p>&copy; 2023-2026 Xiaoliang Liu. All rights reserved.</p>
         </div>
     </footer>
 
