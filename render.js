@@ -159,54 +159,63 @@ function renderNews(d, lang) {
     });
 }
 
-/* ---------- Papers ---------- */
-let _papersCache = null;
-function renderPapers(filter) {
-    if (!_papersCache) return;
-    const list = document.getElementById('papers-list');
-    list.innerHTML = '';
-    const filtered = filter === 'all' ? _papersCache : _papersCache.filter(p => p.type === filter);
-
-    document.querySelectorAll('.filter-btn').forEach(b => {
-        if (b.id === `btn-${filter}`) {
-            b.classList.add('bg-white', 'shadow-sm', 'text-slate-900');
-            b.classList.remove('text-slate-600');
-        } else {
-            b.classList.remove('bg-white', 'shadow-sm', 'text-slate-900');
-            b.classList.add('text-slate-600');
-        }
-    });
-
-    filtered.forEach(p => {
-        const tags = p._tags.map(t => `<span class="tag-badge ${t.c}">${t.t}</span>`).join('');
-        let links = '';
-        if (p.links.paper) links += `<a href="${p.links.paper}" target="_blank" class="text-xs font-bold text-academic-700 hover:underline ">PDF</a>`;
-        if (p.links.arxiv) links += `<a href="${p.links.arxiv}" target="_blank" class="text-xs font-bold text-red-700 hover:underline ml-3">ArXiv</a>`;
-        if (p.links.code) links += `<a href="${p.links.code}" target="_blank" class="text-xs font-bold text-slate-700 hover:underline ml-3">Code</a>`;
-
-        const card = document.createElement('div');
-        card.className = "glass-card p-5 rounded-lg flex flex-col sm:flex-row gap-4 items-start hover:border-academic-200 transition-all";
-        card.innerHTML = `
-            <div class="flex-1">
-                <h3 class="text-base font-bold text-slate-800 mb-1">${p.title}</h3>
-                <p class="text-sm text-slate-500 mb-2">${p._authorsHtml}</p>
-                <div class="flex flex-wrap items-center gap-2 mb-2"><span class="font-serif italic text-slate-700 font-medium">${p.venue}, ${p.year}</span>${tags}, [${links}]</div>
-            </div>`;
-        list.appendChild(card);
-    });
+/* ---------- Unified publication records ---------- */
+let _papersCache = [], _paperLang = 'en';
+function esc(s) { return String(s || '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+function citationText(p) {
+    const venue = [p.venue, p.volume, p.pages].filter(Boolean).join(', ');
+    return `${p.citation_authors}. ${p.title}. ${venue}, ${p.year}.${p.doi ? ' https://doi.org/' + p.doi : ''}`;
 }
-
-function preparePapers(d, lang) {
-    _papersCache = d.papers.map(p => {
-        const tags = lang === 'zh' ? p.tags.zh : p.tags.en;
-        const highlightName = lang === 'zh' ? '刘小亮' : 'Xiaoliang Liu';
-        const regex = new RegExp(highlightName, 'g');
-        return {
-            ...p,
-            _tags: tags,
-            _authorsHtml: p.authors.replace(regex, `<span class="font-semibold text-slate-900">${highlightName}</span>`)
-        };
-    });
+function bibtex(p) {
+    const kind = {journal:'article',conference:'inproceedings',preprint:'misc',book:'misc',patent:'misc'}[p.type];
+    const fields = {title:'{' + p.title + '}',author:p.citation_authors.split(', ').join(' and '),year:p.year};
+    fields[p.type === 'conference' ? 'booktitle' : p.type === 'journal' ? 'journal' : 'howpublished'] = p.venue;
+    if (p.volume) fields.volume = p.volume;
+    if (p.pages) fields.pages = p.pages.replace(/–/g,'--');
+    if (p.doi) fields.doi = p.doi;
+    const url = p.doi ? 'https://doi.org/' + p.doi : Object.values(p.links)[0];
+    if (url) fields.url = url;
+    return '@' + kind + '{liu' + p.year + '_' + p.id + ',\n' + Object.entries(fields).map(([k,v]) => '  ' + k + ' = {' + v + '}').join(',\n') + '\n}';
+}
+function downloadBib(ids) {
+    const records = SITE_DATA.full_publications.filter(p => ids.includes(p.id));
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(new Blob([records.map(bibtex).join('\n\n')],{type:'application/x-bibtex;charset=utf-8'}));
+    a.download = records.length === 1 ? 'liu-' + records[0].id + '.bib' : 'xiaoliang-liu-publications.bib';
+    a.click(); setTimeout(() => URL.revokeObjectURL(a.href),1000);
+}
+async function copyCitation(button, id, format) {
+    const p = SITE_DATA.full_publications.find(p => p.id === id);
+    const value = format === 'bib' ? bibtex(p) : citationText(p);
+    const original = button.textContent;
+    try {
+        if (!navigator.clipboard) throw Error('Clipboard unavailable');
+        await navigator.clipboard.writeText(value);
+        button.textContent = _paperLang === 'zh' ? '已复制' : 'Copied';
+    } catch (_) {
+        const area = button.closest('details').querySelector('textarea');
+        area.value = value; area.focus(); area.select();
+        button.textContent = _paperLang === 'zh' ? '请按 Ctrl/Cmd+C' : 'Press Ctrl/Cmd+C';
+    }
+    setTimeout(() => button.textContent = original,2200);
+}
+function publicationCard(p, lang) {
+    const zh = lang === 'zh';
+    const article = document.createElement('article');
+    article.className = 'publication-entry'; article.id = 'publication-' + p.id;
+    const url = p.doi ? 'https://doi.org/' + p.doi : p.links.publisher || p.links.arxiv;
+    const authors = esc(p.authors).replace(/Xiaoliang Liu/g,'<strong>Xiaoliang Liu</strong>');
+    const meta = [esc(p.venue), p.volume ? '<b>' + esc(p.volume) + '</b>' : '', esc(p.pages), p.year].filter(Boolean).join(', ');
+    const links = Object.entries(p.links).map(([k,v]) => `<a href="${esc(v)}" target="_blank" rel="noopener noreferrer">${({publisher:zh?'出版商页面':'Publisher',arxiv:'arXiv',code:zh?'代码':'Code'})[k] || esc(k)}</a>`).join('');
+    const scholarly = ['journal','conference','preprint'].includes(p.type);
+    article.innerHTML = `<h3>${url ? `<a href="${esc(url)}" target="_blank" rel="noopener noreferrer">${esc(p.title)}</a>` : esc(p.title)}</h3><p class="publication-authors">${authors}</p><p class="publication-venue">${meta}</p>${p.doi ? `<p class="publication-doi">DOI: <a href="https://doi.org/${esc(p.doi)}">${esc(p.doi)}</a></p>` : ''}<div class="publication-links">${links}<a href="publications.html#publication-${p.id}" aria-label="Permalink">${zh?'永久链接':'Permalink'}</a></div>${scholarly ? `<details class="citation-panel"><summary>${zh?'引用与 BibTeX':'Cite / BibTeX'}</summary><div class="citation-actions"><button onclick="copyCitation(this,${p.id},'text')">${zh?'复制引用':'Copy citation'}</button><button onclick="copyCitation(this,${p.id},'bib')">${zh?'复制 BibTeX':'Copy BibTeX'}</button><button onclick="downloadBib([${p.id}])">${zh?'下载 .bib':'Download .bib'}</button></div><textarea readonly aria-label="Citation text" rows="3">${esc(citationText(p))}</textarea><pre>${esc(bibtex(p))}</pre></details>` : ''}`;
+    return article;
+}
+function preparePapers(d,lang) { _paperLang = lang; _papersCache = d.full_publications.filter(p => p.selected).sort((a,b)=>b.year-a.year); }
+function renderPapers(filter) {
+    const list = document.getElementById('papers-list'); list.replaceChildren();
+    _papersCache.filter(p=>filter==='all'||p.type===filter).forEach(p=>list.append(publicationCard(p,_paperLang)));
+    document.querySelectorAll('#publications .filter-btn').forEach(b=>{b.setAttribute('aria-pressed',b.id==='btn-'+filter);b.classList.toggle('bg-white',b.id==='btn-'+filter);});
 }
 
 /* ---------- Projects ---------- */
@@ -291,88 +300,24 @@ function initPage(lang) {
     renderAwards(d, lang);
 }
 
-/* ---------- Publications Page ---------- */
+/* ---------- Publications archive ---------- */
 function initPublicationsPage() {
-    const d = loadData();
-    const rawData = d.full_publications;
-
-    // Stats
-    const counts = { journal: 0, conference: 0, patent: 0, other: 0 };
-    rawData.forEach(item => {
-        if (item.type === 'journal') counts.journal++;
-        else if (item.type === 'conference') counts.conference++;
-        else if (item.type === 'patent') {
-            if (item.tags.includes("Patent")) counts.patent++;
-            else counts.other++;
-        }
-    });
-    document.getElementById('count-journal').innerText = counts.journal;
-    document.getElementById('count-conf').innerText = counts.conference;
-    document.getElementById('count-patent').innerText = counts.patent;
-    document.getElementById('count-other').innerText = counts.other;
-
-    function renderList(data) {
-        const container = document.getElementById('publications-list');
-        container.innerHTML = '';
-        if (data.length === 0) { document.getElementById('empty-state').classList.remove('hidden'); return; }
-        document.getElementById('empty-state').classList.add('hidden');
-        data.sort((a, b) => b.year - a.year);
-        data.forEach(item => {
-            const tagsHtml = item.tags.map(t => {
-                let cls = 'bg-slate-100 text-slate-600 border-slate-200';
-                if (t.includes('Q1') || t.includes('TOP')) cls = 'tag-q1';
-                else if (t.includes('Q2')) cls = 'tag-q2';
-                else if (t.includes('CCF-B')) cls = 'tag-ccf-b';
-                else if (t.includes('CCF-C')) cls = 'tag-ccf-c';
-                return `<span class="tag ${cls}">${t}</span>`;
-            }).join('');
-            let buttonsHtml = '';
-            if (item.links.pdf) buttonsHtml += `<a href="${item.links.pdf}" target="_blank" class="flex items-center gap-1 text-xs font-bold text-academic-600 bg-academic-50 hover:bg-academic-100 px-3 py-1.5 rounded-md transition-colors"><i class="ph-bold ph-file-pdf"></i> PDF</a>`;
-            if (item.links.arxiv) buttonsHtml += `<a href="${item.links.arxiv}" target="_blank" class="flex items-center gap-1 text-xs font-bold text-red-600 bg-red-50 hover:bg-red-100 px-3 py-1.5 rounded-md transition-colors"><i class="ph-bold ph-file-text"></i> ArXiv</a>`;
-            if (item.links.code) buttonsHtml += `<a href="${item.links.code}" target="_blank" class="flex items-center gap-1 text-xs font-bold text-slate-700 bg-slate-100 hover:bg-slate-200 px-3 py-1.5 rounded-md transition-colors"><i class="ph-bold ph-code"></i> Code</a>`;
-            const authorHtml = item.authors.replace(/Xiaoliang Liu/g, '<b class="text-slate-900 font-semibold">Xiaoliang Liu</b>');
-            let icon = 'ph-article';
-            if (item.type === 'conference') icon = 'ph-users-three';
-            if (item.tags.includes('Patent')) icon = 'ph-certificate';
-            if (item.tags.includes('Book')) icon = 'ph-book-open';
-            const card = document.createElement('div');
-            card.className = 'bg-white p-5 rounded-xl paper-card relative border-l-4 ' + (item.type === 'journal' ? 'border-l-academic-500' : item.type === 'conference' ? 'border-l-indigo-500' : 'border-l-amber-500');
-            card.innerHTML = `
-                <div class="absolute top-5 right-5 text-slate-200 text-3xl"><i class="ph-duotone ${icon}"></i></div>
-                <div class="pr-12">
-                    <h3 class="text-lg font-bold text-slate-800 leading-snug mb-2">${item.title}</h3>
-                    <p class="text-sm text-slate-500 mb-3">${authorHtml}</p>
-                    <div class="flex flex-wrap items-center gap-3 mb-4">
-                        <span class="text-sm font-serif italic text-slate-700 bg-slate-50 px-2 py-0.5 rounded border border-slate-100">${item.venue}, ${item.year}</span>
-                        ${tagsHtml}
-                    </div>
-                    <div class="flex gap-3">${buttonsHtml}</div>
-                </div>`;
-            container.appendChild(card);
-        });
+    const raw = SITE_DATA.full_publications;
+    const counts = {journal:'journal',conf:'conference',patent:'patent',other:'book'};
+    Object.entries(counts).forEach(([id,type])=>document.getElementById('count-'+id).textContent=raw.filter(p=>p.type===type).length);
+    let filter='all', query='';
+    function render() {
+        const items=raw.filter(p=>(filter==='all'||p.type===filter)&&[p.title,p.authors,p.venue,p.year,p.doi].join(' ').toLowerCase().includes(query)).sort((a,b)=>b.year-a.year||b.id-a.id);
+        const list=document.getElementById('publications-list');list.replaceChildren();
+        let year=null;
+        items.forEach(p=>{if(year!==p.year){year=p.year;const h=document.createElement('h2');h.className='publication-year';h.textContent=year;list.append(h);}list.append(publicationCard(p,'en'));});
+        document.getElementById('empty-state').classList.toggle('hidden',items.length>0);
+        document.querySelectorAll('[data-pub-filter]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.pubFilter===filter));
+        document.getElementById('result-count').textContent=items.length+' records';
+        window.downloadVisibleBib=()=>downloadBib(items.filter(p=>['journal','conference','preprint'].includes(p.type)).map(p=>p.id));
     }
-
-    let currentFilter = 'all';
-    let searchQuery = '';
-    function applyFilters() {
-        let filtered = rawData;
-        if (currentFilter !== 'all') filtered = filtered.filter(i => i.type === currentFilter);
-        if (searchQuery) {
-            const q = searchQuery.toLowerCase();
-            filtered = filtered.filter(i => i.title.toLowerCase().includes(q) || i.venue.toLowerCase().includes(q) || i.year.toString().includes(q));
-        }
-        renderList(filtered);
-    }
-    window.filterList = function (type) {
-        currentFilter = type;
-        document.querySelectorAll('.filter-btn').forEach(btn => {
-            btn.className = 'filter-btn px-4 py-1.5 text-xs font-bold rounded-lg bg-white text-slate-600 border border-slate-200 hover:border-academic-300 transition-all shrink-0';
-        });
-        const map = { all: 0, journal: 1, conference: 2, patent: 3 };
-        const btns = document.querySelectorAll('.filter-btn');
-        if (btns[map[type]]) btns[map[type]].className = 'filter-btn active px-4 py-1.5 text-xs font-bold rounded-lg bg-slate-800 text-white shadow-md transition-all shrink-0';
-        applyFilters();
-    };
-    document.getElementById('searchInput').addEventListener('input', e => { searchQuery = e.target.value; applyFilters(); });
-    renderList(rawData);
+    window.filterList=type=>{filter=type;render();};
+    document.getElementById('searchInput').addEventListener('input',e=>{query=e.target.value.trim().toLowerCase();render();});
+    render();
+    if(location.hash) requestAnimationFrame(()=>document.getElementById(location.hash.slice(1))?.scrollIntoView());
 }
