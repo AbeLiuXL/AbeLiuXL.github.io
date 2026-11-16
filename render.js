@@ -199,6 +199,17 @@ async function copyCitation(button, id, format) {
     }
     setTimeout(() => button.textContent = original,2200);
 }
+function tagBadgeHtml(tags) {
+    const style = tg => {
+        if (tg.includes('CCF-A')) return 'bg-academic-50 text-academic-700 border-academic-100';
+        if (tg.includes('CCF-B')) return 'bg-blue-50 text-blue-700 border-blue-100';
+        if (tg.includes('CCF-C')) return 'bg-slate-50 text-slate-600 border-slate-200';
+        if (tg.includes('Q1') || tg.includes('TOP')) return 'bg-emerald-50 text-emerald-700 border-emerald-100';
+        if (tg.includes('Q2')) return 'bg-amber-50 text-amber-700 border-amber-100';
+        return 'bg-slate-50 text-slate-500 border-slate-200';
+    };
+    return (tags || []).map(tg => `<span class="px-2 py-0.5 rounded text-[10px] font-bold border whitespace-nowrap ${style(tg)}">${esc(tg)}</span>`).join('');
+}
 function publicationCard(p, lang) {
     const zh = lang === 'zh';
     const article = document.createElement('article');
@@ -206,9 +217,10 @@ function publicationCard(p, lang) {
     const url = p.doi ? 'https://doi.org/' + p.doi : p.links.publisher || p.links.arxiv;
     const authors = esc(p.authors).replace(/Xiaoliang Liu/g,'<strong>Xiaoliang Liu</strong>');
     const meta = [esc(p.venue), p.volume ? '<b>' + esc(p.volume) + '</b>' : '', esc(p.pages), p.year].filter(Boolean).join(', ');
+    const tags = tagBadgeHtml(p.tags) ? `<div class="flex flex-wrap gap-1.5 mt-1">${tagBadgeHtml(p.tags)}</div>` : '';
     const links = Object.entries(p.links).map(([k,v]) => `<a href="${esc(v)}" target="_blank" rel="noopener noreferrer">${({publisher:zh?'出版商页面':'Publisher',arxiv:'arXiv',code:zh?'代码':'Code'})[k] || esc(k)}</a>`).join('');
     const scholarly = ['journal','conference','preprint'].includes(p.type);
-    article.innerHTML = `<h3>${url ? `<a href="${esc(url)}" target="_blank" rel="noopener noreferrer">${esc(p.title)}</a>` : esc(p.title)}</h3><p class="publication-authors">${authors}</p><p class="publication-venue">${meta}</p>${p.doi ? `<p class="publication-doi">DOI: <a href="https://doi.org/${esc(p.doi)}">${esc(p.doi)}</a></p>` : ''}<div class="publication-links">${links}</div>${scholarly ? `<details class="citation-panel"><summary>${zh?'引用与 BibTeX':'Cite / BibTeX'}</summary><div class="citation-actions"><button onclick="copyCitation(this,${p.id},'text')">${zh?'复制引用':'Copy citation'}</button><button onclick="copyCitation(this,${p.id},'bib')">${zh?'复制 BibTeX':'Copy BibTeX'}</button><button onclick="downloadBib([${p.id}])">${zh?'下载 .bib':'Download .bib'}</button></div><textarea readonly aria-label="Citation text" rows="3">${esc(citationText(p))}</textarea><pre>${esc(bibtex(p))}</pre></details>` : ''}`;
+    article.innerHTML = `<h3>${url ? `<a href="${esc(url)}" target="_blank" rel="noopener noreferrer">${esc(p.title)}</a>` : esc(p.title)}</h3><p class="publication-authors">${authors}</p><p class="publication-venue">${meta}</p>${p.doi ? `<p class="publication-doi">DOI: <a href="https://doi.org/${esc(p.doi)}">${esc(p.doi)}</a></p>` : ''}${tags}<div class="publication-links">${links}</div>${scholarly ? `<details class="citation-panel"><summary>${zh?'引用与 BibTeX':'Cite / BibTeX'}</summary><div class="citation-actions"><button onclick="copyCitation(this,${p.id},'text')">${zh?'复制引用':'Copy citation'}</button><button onclick="copyCitation(this,${p.id},'bib')">${zh?'复制 BibTeX':'Copy BibTeX'}</button><button onclick="downloadBib([${p.id}])">${zh?'下载 .bib':'Download .bib'}</button></div><textarea readonly aria-label="Citation text" rows="3">${esc(citationText(p))}</textarea><pre>${esc(bibtex(p))}</pre></details>` : ''}`;
     return article;
 }
 function preparePapers(d,lang) { _paperLang = lang; _papersCache = d.full_publications.filter(p => p.selected).sort((a,b)=>b.year-a.year); }

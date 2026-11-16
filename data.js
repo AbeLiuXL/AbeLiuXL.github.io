@@ -515,8 +515,7 @@ var SITE_DATA = {
       "authors": "Xiaoliang Liu, Furao Shen*, Jian Zhao, Changhai Nie",
       "venue": "Multimedia Tools and Applications",
       "tags": [
-        "CCF-C",
-        "SCI Q2"
+        "CCF-C"
       ],
       "links": {
         "publisher": "https://link.springer.com/article/10.1007/s11042-024-18868-8"
